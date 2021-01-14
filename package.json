@@ -2,9 +2,14 @@
   "name": "fic_design_comp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-SASS": "sass --watch sass:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OwenM-Edwards/fic_design_comp.git"
   },
   "author": "",
   "license": "ISC"
