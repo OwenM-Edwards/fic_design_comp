@@ -20,6 +20,7 @@
    <body>
       <!-- Header -->
       <header>
+         <!-- Desktop nav -->
          <nav id="headerNav">
             <div id="mainLogo">
                <a href="./index.html"><h1>myth-des</h1></a>
@@ -31,15 +32,36 @@
                <a href="./contact.html">Contact</a>
                <!-- Night mode toggle -->
                <div class="nightModeToggle-wrapper">
-                  <label class="nightModeToggle" for="checkbox">
+                  <label class="nightModeToggle nightModeCheck" for="checkbox">
                       <input type="checkbox" id="checkbox" />
                       <div class="slider round"></div>
-                </label>
-                <em>Dark Mode</em>
+                  </label>
+                  <em>Dark Mode</em>
               </div> 
             </div>
          </nav>
+
+         <!-- Mobile Nav -->
+         <div id="mobileMenuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="mobileMenu">
+               <li><a href="./about.html">About</a></li>
+               <li><a href="./contact.html">Contact</a></li>
+               <!-- Night mode toggle -->
+               <li><div class="nightModeToggle-wrapper">
+                  <label class="nightModeToggle nightModeCheckMobile" for="checkbox">
+                      <input type="checkbox" id="checkbox" />
+                      <div class="slider round"></div>
+                  </label>
+                  <em>Dark Mode</em>
+              </div></li>
+            </ul>
+         </div>
       </header>
+   
 
       <!-- Main -->
       <main>
@@ -72,6 +94,11 @@
                <div class="hoverText" >Vegan Art Products</div>
             </a>  
          </div>
+
+         <!-- Scroll back to top button -->
+         <div id="scrollBtn-container">
+            <div class="scrollBtnLight" onclick="scrollToTop()" id="scrollBtn"></div>
+         </div>
       </main>
 
       <!-- Footer -->
@@ -79,7 +106,7 @@
          <ul>
             <li><a>Facebook</a></li>
             <li><a>Twitter</a></li>
-            <li><a>myth-des 2021</a></li>
+            <li id="companyName"><span>©</span>myth-des <span>2021</span></li>
          </ul>
       </footer>
 
