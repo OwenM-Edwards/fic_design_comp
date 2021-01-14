@@ -215,6 +215,7 @@ input:checked + .slider:before {
   header {
     width: 100%;
     height: 130px;
+    padding-right: 10px;
   }
 
   #links {
@@ -376,6 +377,30 @@ main #form #submit {
   height: 50px;
   font-size: 1.5rem;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 1100px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+  main #text p {
+    width: 80%;
+    max-width: 600px;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  main #map {
+    margin: 0 auto;
+  }
+  main #form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=contact.css.map */

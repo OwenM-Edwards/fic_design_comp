@@ -215,6 +215,7 @@ input:checked + .slider:before {
   header {
     width: 100%;
     height: 130px;
+    padding-right: 10px;
   }
 
   #links {
@@ -309,9 +310,8 @@ input:checked + .slider:before {
   }
 }
 #header-image {
-  height: 900px;
+  height: 600px;
   width: 100%;
-  background-color: blue;
   background-image: url("../assets/img/myth-sets/1.jpg");
   background-position: center;
   background-size: cover;
@@ -357,6 +357,37 @@ p {
   font-size: 1.3rem;
   max-width: 900px;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 1100px) {
+  #header-image {
+    height: 300px;
+  }
+
+  p {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+
+  #second-image-container {
+    flex-wrap: wrap;
+  }
+  #second-image-container #second-image {
+    width: 100%;
+    background-position: center;
+  }
+  #second-image-container p {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  #third-image {
+    background-image: url("../assets/img/myth-sets/5.jpg");
+    height: 300px;
+  }
 }
 
 /*# sourceMappingURL=myth-sets.css.map */
