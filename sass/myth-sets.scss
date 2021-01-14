@@ -1,9 +1,8 @@
 @use 'template';
 
 #header-image {
-   height:900px;
+   height:600px;
    width:100%;
-   background-color: blue;
    background-image:url("../assets/img/myth-sets/1.jpg") ;
    background-position: center;
    background-size: cover;
@@ -45,11 +44,42 @@ h2 {
    font-size: 2.1rem;
    font-weight: bold;
    margin:20px 0;
-   
 }
 
 p {
    font-size: 1.3rem;
    max-width:900px;
    font-weight: bold;
+}
+
+
+// Media Queries.
+@media only screen and (max-width:1100px) {
+
+   #header-image {
+      height:300px;
+   }
+   p {
+      width:80%;
+      max-width:600px;
+      margin:0 auto;
+      font-size: 1.1rem;
+   }
+   #second-image-container{
+      flex-wrap: wrap;
+      #second-image {
+         width:100%;
+         background-position: center;
+      }
+      p {
+         width:100%;
+         max-width:600px;
+         margin:0 auto;
+      }
+   }
+   #third-image {
+      background-image:url("../assets/img/myth-sets/5.jpg") ;
+      height:300px;
+   }
+   
 }
