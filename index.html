@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
    <head>
       <meta charset="utf-8">
@@ -10,9 +6,9 @@
       <title>Myth-Des</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- CSS -->
       <link rel="stylesheet" href="./css/index.css">
-      <link rel="stylesheet" href="./css/template.css">
-      <!-- Google Font -->
+      <!-- Google Fonts -->
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 
@@ -29,46 +25,52 @@
                <a href="./index.html"><h1>myth-des</h1></a>
             </div>
 
-
             <div id="links">
-               <a>About</a>
-               <a>Contact</a>
+               <a href="./about.html">About</a>
+               <p>||</p>
+               <a href="./contact.html">Contact</a>
+               <!-- Night mode toggle -->
+               <div class="nightModeToggle-wrapper">
+                  <label class="nightModeToggle" for="checkbox">
+                      <input type="checkbox" id="checkbox" />
+                      <div class="slider round"></div>
+                </label>
+                <em>Dark Mode</em>
+              </div> 
             </div>
-
          </nav>
       </header>
 
       <!-- Main -->
       <main>
-         <div class="contentGrid">
+         <div class="contentGrid-a">
             <a class="gridItem" id="a-keyborders" href="./keyborders.html">
                <div class="hoverText" id="a-keyborders-hover">Keyborders</div>
             </a>
             
-            <a class="gridItem" id="a-myth-sets">
+            <a class="gridItem" id="a-myth-sets" href="./myth-sets.html">
                <div class="hoverText" >myth-sets</div>
             </a>
 
-            <a class="gridItem" id="a-beeston-art">
-               <div class="hoverText" >div3</div>
+            <a class="gridItem" id="a-beeston-art" href="./Beeston-StreetArt.html">
+               <div class="hoverText" >Beeston Street Art</div>
             </a>
 
-            <a class="gridItem" id="div4">
-               <div class="hoverText" >div4</div>
+            <a class="gridItem" id="a-nott-comtemp" href="./nott-contemporary.html">
+               <div class="hoverText" >Nottingham Contemporary</div>
             </a>
-
-            
-            
-            
          </div>
 
          <h2>We build your brand.</h2>
 
-         <div class="contentGrid">
-            <div id="div1"><a></a></div>
-            <div id="div2"><a></a></div>
-            <div id="div3"><a></a></div>
-            <div id="div4"><a></a></div>
+         <div class="contentGrid-b">
+            <a class="gridItem" id="a-china-tea" href="./august-tea.html" >
+               <div class="hoverText" >August Tea</div>
+            </a>
+
+            <a class="gridItem" id="a-vegan-art" href="./vegan-art-products.html">
+               <div class="hoverText" >Vegan Art Products</div>
+            </a>  
          </div>
       </main>
 
@@ -80,5 +82,7 @@
             <li><a>myth-des 2021</a></li>
          </ul>
       </footer>
+
+      <script src="js/template.js"></script>
    </body>
 </html>
