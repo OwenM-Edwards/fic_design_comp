@@ -10,9 +10,11 @@ if (currentTheme) {
 
    if (currentTheme === 'dark') {
       toggleSwitch.checked = true;
-      toggleSwitchMobile.checked = true;
+      scrollButton.classList.remove('scrollBtnLight');
+      scrollButton.classList.add('scrollBtnDark');
    }
 }
+
 
 switchTheme = (e) => {
    if (e.target.checked) {
