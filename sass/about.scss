@@ -8,7 +8,7 @@ main {
    justify-content: space-between;
    div {
       width:50%;
-      background-color:#db8722;
+      background-color:var(--pop-color);
       min-height:600px;
       background-image:url("../assets/img/about/1.png");
       background-size: cover;
