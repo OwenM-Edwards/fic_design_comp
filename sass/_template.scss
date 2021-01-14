@@ -1,0 +1,171 @@
+// Variables.
+// Maintains serpation between fixed header and body
+$header-sizePadding: 160px;
+$base-contentWidth: 1300px;
+
+// Themes.
+:root {
+   --bg-color: #f7f7f7;
+   --font-color:#1b1b1b;
+}
+[data-theme="dark"] {
+   --bg-color: #1b1b1b;
+   --font-color:#f7f7f7;
+}
+
+
+
+html {
+   height:100%;
+   scroll-behavior: smooth;
+   margin: 0;
+   padding: 20px;
+   box-sizing:border-box;
+   width:100%;
+   font-family: 'Khula', sans-serif;
+   background-color: var(--bg-color);
+   color: var(--font-color);
+   transition: background-color 1000ms ease-out;
+   transition: color 1000ms linear;
+}
+
+body {
+   padding:0;
+   margin:0 auto;
+   max-width: $base-contentWidth;
+   z-index: 1;
+   min-height:97vh;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+
+header {
+   width: calc(100% - 40px);
+   max-width: $base-contentWidth;
+   height:$header-sizePadding;
+   position: fixed;
+   top:0;
+   padding-bottom:20px;
+   top:-20px;
+   background-color: var(--bg-color);
+   z-index: 3;
+   transition: background-color 1000ms ease-out;
+   transition: color 1000ms linear;
+   a {
+      color: inherit; 
+      text-decoration: inherit; 
+      &:hover {
+         cursor:pointer;
+      }
+   } 
+
+   nav { 
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+
+      #mainLogo {
+         font-family: 'Josefin Sans', sans-serif;
+         font-size: 2.3rem;
+         position: relative;
+         top:20px;
+      }
+      #links {
+         // font-family: 'Josefin Sans', sans-serif;
+         font-size: 1.4rem;
+      }
+      p {
+         display: inline;
+      }
+   }
+}  
+
+main {
+   width:100%;
+   padding-top:$header-sizePadding;
+}
+
+footer { 
+   margin-top:50px;
+   height:70px;
+   width:100%;
+   // font-family: 'Josefin Sans', sans-serif;
+   font-size: 1.3rem;
+   display:flex;
+   flex-direction:row;
+   justify-content: flex-start;
+   align-items: flex-end;
+   ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+   }
+   li {
+      display:inline;
+   }
+
+}
+
+// Night mode toggle
+.nightModeToggle-wrapper {
+   display: flex;
+   align-items: center;
+
+   em {
+     margin-left: 20px;
+     padding-top:6px;
+     font-size: 1.1rem;
+   }
+}
+
+.nightModeToggle {
+   display: inline-block;
+   height: 24px;
+   position: relative;
+   left:5px;
+   width: 50px;
+   input {
+      display:none;
+   }
+}
+
+.slider {
+   background-color: #ccc;
+   bottom: 0;
+   cursor: pointer;
+   left: 0;
+   position: absolute;
+   right: 0;
+   top: 0;
+   transition: .4s;
+   &:before {
+      background-color: #fff;
+      bottom: 4px;
+      content: "";
+      height: 16px;
+      left: 4px;
+      position: absolute;
+      transition: .4s;
+      width: 16px;
+   }
+}
+
+input:checked + .slider {
+   background-color: #db8722;
+   &:before {
+      transform: translateX(26px);
+   }
+}
+
+.slider.round {
+   border-radius: 34px;
+   &:before {
+      border-radius: 50%;
+   }
+}
+
+ 
+ 
