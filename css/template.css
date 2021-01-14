@@ -1,0 +1,73 @@
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f7f7f7;
+  color: #1b1b1b;
+  font-family: "Khula", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1300px;
+  min-height: 100vh;
+}
+
+header {
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  background-color: #f7f7f7;
+  padding-bottom: 20px;
+  top: -20px;
+}
+header a {
+  color: inherit;
+  /* blue colors for links too */
+  text-decoration: inherit;
+  /* no underline */
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+header nav #mainLogo {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+}
+header nav #links {
+  font-size: 1.4rem;
+}
+
+main {
+  width: 100%;
+  padding-top: 100px;
+}
+
+footer {
+  margin-top: 50px;
+  height: 70px;
+  width: 100%;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer li {
+  display: inline;
+}
+
+/*# sourceMappingURL=template.css.map */
