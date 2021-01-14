@@ -1,0 +1,53 @@
+main .hoverText {
+  transition: 0.5s ease;
+  opacity: 0;
+  color: #ffff;
+  font-size: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75));
+}
+main .contentGrid {
+  height: 900px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+main .contentGrid .gridItem {
+  background-size: cover;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+main .contentGrid .gridItem:hover {
+  cursor: pointer;
+}
+main .contentGrid .gridItem:hover .hoverText {
+  opacity: 1;
+}
+main .contentGrid #a-keyborders {
+  grid-area: 1/1/2/3;
+  background-image: url("../assets/img/keyborders/7kzzn78p51s51.jpg");
+}
+main .contentGrid #a-myth-sets {
+  grid-area: 2/1/4/3;
+  background-image: url("../assets/img/myth-sets/1_2-716acfa652203fc3120a288cf3d6b94bd53731bb88ac617f03f170d15478a6eb.jpg");
+}
+main .contentGrid #a-beeston-art {
+  grid-area: 1/3/3/5;
+  background-image: url("../assets/img/beeston-art/1.jpg");
+}
+main .contentGrid #div4 {
+  grid-area: 3/3/4/5;
+  background-color: pink;
+}
+main h2 {
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=index.css.map */
