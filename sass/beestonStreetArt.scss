@@ -1,0 +1,64 @@
+@use 'template';
+
+#header-image {
+   height:600px;
+   width:100%;
+   background-image:url("../assets/img/beeston-art/1.jpg") ;
+   background-position: center;
+   background-size: cover;
+}
+
+#second-image {
+   height:600px;
+   width:100%;
+   background-image:url("../assets/img/beeston-art/2.jpg") ;
+   background-position: center;
+   background-size: cover;
+}
+
+#sub-image-grid {
+   margin-top:50px;
+   margin-bottom:50px;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-column-gap: 20px;
+   grid-row-gap: 20px; 
+
+   #sub-image-one {
+      height:400px;
+      width:100%;
+      background-image:url("../assets/img/beeston-art/4.jpg") ;
+      background-size: cover;
+      grid-area: 1 / 1 / 3 / 2;
+   }
+
+   #sub-image-two {
+      height:400px;
+      width:100%;
+      background-image:url("../assets/img/beeston-art/5.jpg") ;
+      background-size: cover;
+      grid-area: 1 / 2 / 3 / 3;
+   }
+}
+
+#third-image {
+   height:600px;
+   width:100%;
+   background-image:url("../assets/img/beeston-art/6.jpg") ;
+   background-position: center;
+   background-size: cover;
+}
+
+h2 {
+   font-size: 2.1rem;
+   font-weight: bold;
+   margin:20px 0;
+   
+}
+
+p {
+   font-size: 1.3rem;
+   max-width:900px;
+   font-weight: bold;
+}
