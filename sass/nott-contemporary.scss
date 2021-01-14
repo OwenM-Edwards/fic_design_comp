@@ -93,3 +93,14 @@ p {
       grid-area: 3 / 1 / 5 / 3;
    }
 }
+
+#third-image {
+   margin-top:50px;
+   height:600px;
+   width:100%;
+   background-image:url("../assets/img/nott-contemp/4.jpg") ;
+   background-position: center;
+   background-size: cover;
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+}
