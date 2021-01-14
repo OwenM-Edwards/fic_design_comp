@@ -1,0 +1,79 @@
+// Maintains serpation between fixed header and body
+$header-sizePadding: 100px;
+$base-contentWidth: 1300px;
+
+html {
+   height:100%;
+   scroll-behavior: smooth;
+   margin: 0;
+   padding: 20px;
+   box-sizing:border-box;
+   width:100%;
+   background-color: #f7f7f7;
+   color: #1b1b1b;
+   font-family: 'Khula', sans-serif;
+}
+
+body {
+   padding:0;
+   margin:0 auto;
+   max-width: $base-contentWidth;
+   min-height:100vh;
+}
+
+header {
+   width: calc(100% - 40px);
+   max-width: $base-contentWidth;
+   height:$header-sizePadding;
+   position: fixed;
+   top:0;
+   background-color: #f7f7f7;
+   padding-bottom:20px;
+   top:-20px;
+   a {
+      color: inherit; /* blue colors for links too */
+      text-decoration: inherit; /* no underline */
+    } 
+
+   nav { 
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+
+      #mainLogo {
+         font-family: 'Josefin Sans', sans-serif;
+         font-size: 2rem;
+      }
+      #links {
+         // font-family: 'Josefin Sans', sans-serif;
+         font-size: 1.4rem;
+      }
+   }
+}  
+
+main {
+   width:100%;
+   padding-top:$header-sizePadding;
+}
+
+
+footer { 
+   margin-top:50px;
+   height:70px;
+   width:100%;
+   // font-family: 'Josefin Sans', sans-serif;
+   font-size: 2rem;
+   display:flex;
+   flex-direction:row;
+   justify-content: flex-start;
+   ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+   }
+   li {
+      display:inline;
+   }
+
+}
