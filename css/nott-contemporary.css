@@ -152,84 +152,92 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-main .hoverText {
-  transition: 0.5s ease;
-  opacity: 0;
-  color: #ffff;
-  font-size: 2rem;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75));
-}
-main .contentGrid-a {
-  height: 900px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
-main .contentGrid-a .gridItem {
-  background-size: cover;
-  text-decoration: none;
-  transition: 0.5s ease;
-}
-main .contentGrid-a .gridItem:hover {
-  cursor: pointer;
-}
-main .contentGrid-a .gridItem:hover .hoverText {
-  opacity: 1;
-}
-main .contentGrid-a #a-keyborders {
-  grid-area: 1/1/2/3;
-  background-image: url("../assets/img/keyborders/1.jpg");
-}
-main .contentGrid-a #a-myth-sets {
-  grid-area: 2/1/4/3;
-  background-image: url("../assets/img/myth-sets/3.jpg");
-}
-main .contentGrid-a #a-beeston-art {
-  grid-area: 1/3/3/5;
-  background-image: url("../assets/img/beeston-art/6.jpg");
-}
-main .contentGrid-a #a-nott-comtemp {
-  grid-area: 3/3/4/5;
-  background-image: url("../assets/img/nott-contemp/3.jpg");
-}
-main .contentGrid-b {
+#header-image {
   height: 600px;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
-main .contentGrid-b .gridItem {
+  background-image: url("../assets/img/nott-contemp/1.jpg");
+  background-position: center;
   background-size: cover;
-  text-decoration: none;
-  transition: 0.5s ease;
-}
-main .contentGrid-b .gridItem:hover {
-  cursor: pointer;
-}
-main .contentGrid-b .gridItem:hover .hoverText {
-  opacity: 1;
-}
-main .contentGrid-b #a-china-tea {
-  grid-area: 1/1/2/2;
-  background-image: url("../assets/img/china-tea/10.jpg");
-}
-main .contentGrid-b #a-vegan-art {
-  grid-area: 1/2/2/3;
-  background-image: url("../assets/img/vegan-art/7.jpg");
-}
-main h2 {
-  font-size: 2rem;
 }
 
-/*# sourceMappingURL=index.css.map */
+#small-images-container {
+  display: flex;
+  margin-top: 50px;
+}
+#small-images-container #small-image-one {
+  background-image: url("../assets/img/nott-contemp/2.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  width: 50%;
+}
+#small-images-container #small-image-two {
+  background-image: url("../assets/img/nott-contemp/3.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  width: 50%;
+}
+
+#second-image-container {
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: nowrap;
+}
+#second-image-container #second-image {
+  height: 600px;
+  width: 50%;
+  background-image: url("../assets/img/nott-contemp/7.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#second-image-container p {
+  align-self: center;
+  width: 40%;
+  max-width: 900px;
+  padding: 40px;
+}
+
+h2 {
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 1.3rem;
+  max-width: 900px;
+  font-weight: bold;
+}
+
+#sub-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 50px;
+}
+#sub-image-grid #sub-image-one {
+  height: 400px;
+  width: 100%;
+  background-image: url("../assets/img/nott-contemp/7.jpg");
+  background-size: cover;
+  grid-area: 1/1/3/2;
+}
+#sub-image-grid #sub-image-two {
+  height: 400px;
+  width: 100%;
+  background-image: url("../assets/img/nott-contemp/8.jpg");
+  background-size: cover;
+  grid-area: 1/2/3/3;
+}
+#sub-image-grid #sub-image-three {
+  height: 400px;
+  width: 100%;
+  background-image: url("../assets/img/nott-contemp/6.jpg");
+  background-size: cover;
+  background-position: bottom;
+  grid-area: 3/1/5/3;
+}
+
+/*# sourceMappingURL=nott-contemporary.css.map */
