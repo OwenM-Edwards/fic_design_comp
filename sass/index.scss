@@ -1,6 +1,140 @@
 @use 'template';
 
+#landing-cover {
+   position: absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100vh;
+   background-color:black;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   opacity: 1;
+   transition-property: opacity;
+   transition-duration: 1s;
+   transition-timing-function: ease-in-out;
+   transition-delay: 2.1s;
+}
+
+#landing-cover.landing-cover-hidden {
+   opacity: 0;
+}
+#loadingBounce-a {
+   position: absolute;
+   bottom:15vh;
+   width:3px;
+   height:60px;
+   background-color: white;
+   border-radius: 100%;
+   z-index: 3;
+   left:50vw;
+   opacity: 1;
+   transition-property: transform, left, opacity;
+   transition-duration: 0.5s, 2s, 0.5s ;
+   transition-timing-function: ease-in-out;
+   transition-delay: 0s, 0.3s, 0.9s;
+}
+#loadingBounce-b {
+   position: absolute;
+   bottom:15vh;
+   width:3px;
+   right:50vw;
+   height:60px;
+   background-color:white;
+   border-radius: 100%;
+   z-index: 3;
+   opacity: 1;
+   transition-property: transform, right, opacity;
+   transition-duration: 0.5s, 2s, 0.5s;
+   transition-timing-function: ease-in-out;
+   transition-delay: 0s, 0.3s, 0.9s;
+
+}
+
+#landing-logo {
+   margin:0 auto;
+   color: white;
+   display:inline;
+   align-self: center;
+   position: relative;
+   bottom:30vh;
+   font-size: 4rem;
+   font-family: 'Josefin Sans', sans-serif;
+}
+#landing-logo-cover {
+   position: absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100vh;
+   background-color:black;
+   opacity: 1;
+   transition-property: opacity;
+   transition-duration: 1s;
+   transition-timing-function: ease-in-out;
+   transition-delay: 1.2s;
+}
+#landing-logo-cover.landing-logo-cover-hidden {
+   opacity:0;
+}
+
+#loadingBounce-a.loadingBounceMoveA {
+   transform:translateY(-62vh);
+   left:60vw;
+   opacity:0;
+}
+#loadingBounce-b.loadingBounceMoveB {
+   transform:translateY(-62vh);
+   right:60vw;
+   opacity:0;
+}
+
+
+
+
+
+#landing {
+   position: absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100vh;
+   background-color: purple;
+   background-image: url("../assets/img/landing/plann-8IhVh0xU2Hc-unsplash.jpg");
+   background-size: cover;
+   background-position: center;
+   display:flex;
+   flex-wrap:wrap;
+   .landingPanel1 {
+      position: relative;
+      background-color: red;
+      width:50%;
+      height:50%;
+      
+   }
+   .landingPanel2 {
+      background-color: blue;
+      width:50%;
+      height:50%;
+   }
+   .landingPanel3 {
+      background-color: yellowgreen;
+      width:50%;
+      height:50%;
+   }
+   .landingPanel4 {
+      background-color: pink;
+      width:50%;
+      height:50%;
+   }
+
+}
+
 main {
+
+
+
    .hoverText {
       transition: .5s ease;
       opacity:0;
@@ -26,7 +160,6 @@ main {
          text-decoration: none;
          transition: .5s ease;
          &:hover {
-            cursor: pointer;  
             .hoverText {
                opacity: 1;
             }
