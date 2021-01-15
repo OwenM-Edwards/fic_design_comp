@@ -17,9 +17,22 @@
    </head>
 
 
-   <body>
+   <body onload="loadingBounce()">
+
+      <!-- Animated Landing Page -->
+      <div id="landing">
+         <div id="landing-cover"></div>
+         <h1 id="landing-logo">myth-des</h1>
+         <div id="landing-logo-cover"></div>
+         <div id="loadingBounce-a"></div>
+         <div id="loadingBounce-b"></div>
+      </div>
+
+      
+
+
       <!-- Header -->
-      <header>
+      <header id="header" class="headerRelative">
          <!-- Desktop nav -->
          <nav id="headerNav">
             <div id="mainLogo">
@@ -61,10 +74,11 @@
             </ul>
          </div>
       </header>
-   
 
       <!-- Main -->
-      <main>
+      <main id="main" class="mainHeaderRelative">
+
+         
          <div class="contentGrid-a">
             <a class="gridItem" id="a-keyborders" href="./keyborders.html">
                <div class="hoverText" id="a-keyborders-hover">Keyborders</div>
@@ -79,7 +93,7 @@
             </a>
 
             <a class="gridItem" id="a-nott-comtemp" href="./nott-contemporary.html">
-               <div class="hoverText" >Nottingham Contemporary</div>
+               <div class="hoverText" >Nott Contemporary</div>
             </a>
          </div>
 
@@ -111,5 +125,6 @@
       </footer>
 
       <script src="js/template.js"></script>
+      <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
    </body>
 </html>
