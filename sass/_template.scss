@@ -29,6 +29,7 @@ html {
    color: var(--font-color);
    transition: background-color 1000ms ease-out;
    transition: color 1000ms linear;
+   overflow-x: hidden;
 }
 
 body {
@@ -42,19 +43,36 @@ body {
    justify-content: space-between;
 }
 
-
-header {
+.headerFixed {
    width: calc(100% - 40px);
    max-width: $base-contentWidth;
    height:$header-sizePadding;
    position: fixed;
-   top:0;
    padding-bottom:20px;
    top:-20px;
    background-color: var(--bg-color);
    z-index: 3;
    transition: background-color 1000ms ease-out;
    transition: color 1000ms linear;
+   margin: 0 auto;
+} 
+
+.headerRelative {
+   width: 100%;
+   height:$header-sizePadding;
+   max-width: $base-contentWidth;
+   background-color: var(--bg-color);
+   position: relative;
+   top:98vh;
+   margin:0 auto;
+   padding-bottom:20px;
+   z-index: 3;
+   transition: background-color 1000ms ease-out;
+   transition: color 1000ms linear;
+
+}
+
+header {
    a {
       color: inherit; 
       text-decoration: inherit; 
@@ -84,9 +102,16 @@ header {
    }
 }  
 
+.mainHeaderRelative {
+   padding-top:100vh;
+}
+.mainHeaderFixed {
+   padding-top:115vh;
+}
 main {
    width:100%;
-   padding-top:$header-sizePadding;
+   // padding-top:$header-sizePadding;
+   margin:0 auto;
 }
 
 footer { 
@@ -210,11 +235,10 @@ input:checked + .slider {
 }
 
 
-
 // Media Queries.
-@media only screen and (max-width:1100px) {
+@media only screen and (max-width:900px) {
    .contentGrid-a {
-      height:500px!important;
+      height:400px!important;
       overflow: hidden;
    }
    .contentGrid-b {
