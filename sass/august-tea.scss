@@ -24,33 +24,27 @@ p {
    #sub-image-one {
       height:400px;
       width:100%;
-      background-image:url("../assets/img/china-tea/1.jpg") ;
-      background-size: cover;
+      object-fit: cover;
       grid-area: 1 / 1 / 2 / 2;
    }
 
    #sub-image-two {
       height:400px;
       width:100%;
-      background-image:url("../assets/img/china-tea/2.jpg") ;
-      background-size: cover;
+      object-fit: cover;
       grid-area: 1 / 2 / 2 / 3;
    }
 
    #sub-image-three {
       height:400px;
       width:100%;
-      background-image:url("../assets/img/china-tea/3.jpg") ;
-      background-size: cover;
-      background-position: center;
+      object-fit: cover;
       grid-area: 2 / 2 / 3 / 3;
    }
    #sub-image-four {
       height:400px;
       width:100%;
-      background-image:url("../assets/img/china-tea/4.jpg") ;
-      background-size: cover;
-      background-position: center;
+      object-fit: cover;
       grid-area: 2 / 1 / 3 / 2;
    }
 }
@@ -65,33 +59,27 @@ p {
    #sub-image-one {
       height:400px;
       width:100%;
-      background-image:url("../assets/img/china-tea/6.jpg") ;
-      background-size: cover;
+      object-fit: cover;
       grid-area: 1 / 1 / 2 / 2;
    }
 
    #sub-image-two {
       height:400px;
       width:100%;
-      background-image:url("../assets/img/china-tea/7.jpg") ;
-      background-size: cover;
+      object-fit: cover;
       grid-area: 1 / 2 / 2 / 3;
    }
 
    #sub-image-three {
       height:400px;
       width:100%;
-      background-image:url("../assets/img/china-tea/8.jpg") ;
-      background-size: cover;
-      background-position: center;
+      object-fit: cover;
       grid-area: 2 / 2 / 3 / 3;
    }
    #sub-image-four {
       height:400px;
       width:100%;
-      background-image:url("../assets/img/china-tea/9.jpg") ;
-      background-size: cover;
-      background-position: center;
+      object-fit: cover;
       grid-area: 2 / 1 / 3 / 2;
    }
 }
@@ -99,9 +87,7 @@ p {
 #first-image {
    height:600px;
    width:100%;
-   background-image:url("../assets/img/china-tea/5.jpg") ;
-   background-position: center;
-   background-size: cover;
+   object-fit: cover;
 }
 
 #map {
