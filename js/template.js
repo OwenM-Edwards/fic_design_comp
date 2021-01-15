@@ -1,24 +1,45 @@
 // Switcher header to Fixed when past landing page.
 header = document.getElementById("header");
-main = document.getElementById("main");
+downArrow = document.getElementById("frameCheck");
 
+//Switches header from relative to fixed positioning when user scrolls past landing page and it.
 headerScrollFunction = () => {
-   console.log('test');
-   if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-      header.classList.remove('headerRelative');
-      header.classList.add('headerFixed');
-
-      main.classList.remove('mainHeaderRelative');
-      main.classList.add('mainHeaderFixed');
-   }
-   else {
+   
+   if(!header.classList.contains('headerFixed')){
+      bounding = header.getBoundingClientRect();
+      if (bounding.top < 0){
+         header.classList.remove('headerRelative');
+         header.classList.add('headerFixed');
+         main.classList.remove('mainHeaderRelative');
+         main.classList.add('mainHeaderFixed');
+      }
+   } 
+   else if (isInViewport(downArrow)){
       header.classList.remove('headerFixed');
       header.classList.add('headerRelative');
-
       main.classList.remove('mainHeaderFixed');
       main.classList.add('mainHeaderRelative');
    }
 }
+
+/*!
+ * Determine if an element is in the viewport
+ * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
+ * @param  {Node}    elem The element
+ * @return {Boolean}      Returns true if element is in the viewport
+ */
+var isInViewport = function (elem) {
+	var distance = elem.getBoundingClientRect();
+	return (
+		distance.top >= 0 &&
+		distance.left >= 0 &&
+		distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+		distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+	);
+};
+
+
+
 
 // Scroll back to top of page button.
 scrollButton = document.getElementById("scrollBtn");
@@ -95,3 +116,6 @@ loadingBounce = () => {
    loadingBounceB.classList.add('loadingBounceMoveB');
    loadingLogoCover.classList.add('landing-logo-cover-hidden');
 }
+
+
+// scroll top.
