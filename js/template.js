@@ -1,3 +1,25 @@
+// Switcher header to Fixed when past landing page.
+header = document.getElementById("header");
+main = document.getElementById("main");
+
+headerScrollFunction = () => {
+   console.log('test');
+   if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+      header.classList.remove('headerRelative');
+      header.classList.add('headerFixed');
+
+      main.classList.remove('mainHeaderRelative');
+      main.classList.add('mainHeaderFixed');
+   }
+   else {
+      header.classList.remove('headerFixed');
+      header.classList.add('headerRelative');
+
+      main.classList.remove('mainHeaderFixed');
+      main.classList.add('mainHeaderRelative');
+   }
+}
+
 // Scroll back to top of page button.
 scrollButton = document.getElementById("scrollBtn");
 // Night mode toggle.
@@ -38,7 +60,6 @@ toggleSwitchMobile.addEventListener('change', switchTheme, false);
 
 
 // Show scroll button when user scrolls down.
-window.onscroll = function() {scrollFunction()};
 scrollFunction = () => {
    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       scrollButton.style.display = "block";
@@ -52,4 +73,25 @@ scrollFunction = () => {
 scrollToTop = () => {
    document.body.scrollTop = 0; //Safari
    document.documentElement.scrollTop = 0; //Chrome, FF, IE, Opera.
+}
+
+// handles scroll button and header scroll functions.
+window.onscroll = function() {scrollHandler()};
+scrollHandler = () => {
+   scrollFunction();
+   headerScrollFunction();
+}
+
+
+// Loading bounce animation trigger.
+loadingBounceA = document.getElementById("loadingBounce-a");
+loadingBounceB = document.getElementById("loadingBounce-b");
+loadingLanding = document.getElementById("landing-cover");
+loadingLogoCover = document.getElementById("landing-logo-cover");
+
+loadingBounce = () => {
+   loadingLanding.classList.add('landing-cover-hidden');
+   loadingBounceA.classList.add('loadingBounceMoveA');
+   loadingBounceB.classList.add('loadingBounceMoveB');
+   loadingLogoCover.classList.add('landing-logo-cover-hidden');
 }
