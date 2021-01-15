@@ -1,5 +1,10 @@
 @use 'template';
 
+#frameCheck {
+   position: absolute;
+   bottom:0;
+}
+
 #landing-cover {
    position: absolute;
    top:0;
@@ -35,6 +40,18 @@
    transition-timing-function: ease-in-out;
    transition-delay: 0s, 0.3s, 0.9s;
 }
+
+#downIcon {
+   position: absolute;
+   height:100px;
+   width:50px;
+   bottom:3vh;
+   left:48vw;
+   background-image: url('../assets/icons/noun_scroll-down_54414.png');
+   background-size: cover;
+   background-position: center;
+}
+
 #loadingBounce-b {
    position: absolute;
    bottom:15vh;
