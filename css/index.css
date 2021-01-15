@@ -22,6 +22,7 @@ html {
   color: var(--font-color);
   transition: background-color 1000ms ease-out;
   transition: color 1000ms linear;
+  overflow-x: hidden;
 }
 
 body {
@@ -35,19 +36,34 @@ body {
   justify-content: space-between;
 }
 
-header {
+.headerFixed {
   width: calc(100% - 40px);
   max-width: 1300px;
   height: 160px;
   position: fixed;
-  top: 0;
   padding-bottom: 20px;
   top: -20px;
   background-color: var(--bg-color);
   z-index: 3;
   transition: background-color 1000ms ease-out;
   transition: color 1000ms linear;
+  margin: 0 auto;
 }
+
+.headerRelative {
+  width: 100%;
+  height: 160px;
+  max-width: 1300px;
+  background-color: var(--bg-color);
+  position: relative;
+  top: 98vh;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  z-index: 3;
+  transition: background-color 1000ms ease-out;
+  transition: color 1000ms linear;
+}
+
 header a {
   color: inherit;
   text-decoration: inherit;
@@ -74,9 +90,17 @@ header nav p {
   display: inline;
 }
 
+.mainHeaderRelative {
+  padding-top: 100vh;
+}
+
+.mainHeaderFixed {
+  padding-top: 115vh;
+}
+
 main {
   width: 100%;
-  padding-top: 160px;
+  margin: 0 auto;
 }
 
 footer {
@@ -192,9 +216,9 @@ input:checked + .slider:before {
   display: none;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 900px) {
   .contentGrid-a {
-    height: 500px !important;
+    height: 400px !important;
     overflow: hidden;
   }
 
@@ -309,6 +333,135 @@ input:checked + .slider:before {
     padding: 20px 0;
   }
 }
+#landing-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 2.1s;
+}
+
+#landing-cover.landing-cover-hidden {
+  opacity: 0;
+}
+
+#loadingBounce-a {
+  position: absolute;
+  bottom: 15vh;
+  width: 3px;
+  height: 60px;
+  background-color: white;
+  border-radius: 100%;
+  z-index: 3;
+  left: 50vw;
+  opacity: 1;
+  transition-property: transform, left, opacity;
+  transition-duration: 0.5s, 2s, 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s, 0.3s, 0.9s;
+}
+
+#loadingBounce-b {
+  position: absolute;
+  bottom: 15vh;
+  width: 3px;
+  right: 50vw;
+  height: 60px;
+  background-color: white;
+  border-radius: 100%;
+  z-index: 3;
+  opacity: 1;
+  transition-property: transform, right, opacity;
+  transition-duration: 0.5s, 2s, 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s, 0.3s, 0.9s;
+}
+
+#landing-logo {
+  margin: 0 auto;
+  color: white;
+  display: inline;
+  align-self: center;
+  position: relative;
+  bottom: 30vh;
+  font-size: 4rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#landing-logo-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 1.2s;
+}
+
+#landing-logo-cover.landing-logo-cover-hidden {
+  opacity: 0;
+}
+
+#loadingBounce-a.loadingBounceMoveA {
+  transform: translateY(-62vh);
+  left: 60vw;
+  opacity: 0;
+}
+
+#loadingBounce-b.loadingBounceMoveB {
+  transform: translateY(-62vh);
+  right: 60vw;
+  opacity: 0;
+}
+
+#landing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: purple;
+  background-image: url("../assets/img/landing/plann-8IhVh0xU2Hc-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+#landing .landingPanel1 {
+  position: relative;
+  background-color: red;
+  width: 50%;
+  height: 50%;
+}
+#landing .landingPanel2 {
+  background-color: blue;
+  width: 50%;
+  height: 50%;
+}
+#landing .landingPanel3 {
+  background-color: yellowgreen;
+  width: 50%;
+  height: 50%;
+}
+#landing .landingPanel4 {
+  background-color: pink;
+  width: 50%;
+  height: 50%;
+}
+
 main .hoverText {
   transition: 0.5s ease;
   opacity: 0;
@@ -334,9 +487,6 @@ main .contentGrid-a .gridItem {
   background-size: cover;
   text-decoration: none;
   transition: 0.5s ease;
-}
-main .contentGrid-a .gridItem:hover {
-  cursor: pointer;
 }
 main .contentGrid-a .gridItem:hover .hoverText {
   opacity: 1;
