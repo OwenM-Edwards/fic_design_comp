@@ -222,6 +222,25 @@ footer #companyName span {
   display: none;
 }
 
+main.sub-page-main {
+  padding-top: 200px;
+}
+
+header #header.sub-page-header {
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  height: 160px;
+  max-height: 200px;
+  position: fixed;
+  padding-bottom: 20px;
+  top: -10px;
+  background-color: var(--bg-color);
+  z-index: 3;
+  transition: background-color 1000ms ease-out;
+  transition: color 1000ms linear;
+  margin: 0 auto;
+}
+
 @media only screen and (max-width: 800px) {
   #scrollBtn-container {
     position: fixed;
@@ -258,6 +277,21 @@ footer #companyName span {
     bottom: 20px;
   }
   #header.headerFixed #mobileMenuToggle {
+    position: relative;
+    left: 85vw;
+    bottom: 86px;
+  }
+
+  header #header.sub-page-header {
+    min-width: 100vw;
+    max-height: 40px;
+    padding-bottom: 90px;
+  }
+  header #header.sub-page-header #headerNav {
+    position: relative;
+    bottom: 20px;
+  }
+  header #header.sub-page-header #mobileMenuToggle {
     position: relative;
     left: 85vw;
     bottom: 86px;
