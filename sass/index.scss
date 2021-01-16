@@ -117,41 +117,15 @@
    left:0;
    width:100%;
    height:100vh;
-   background-color: purple;
-   background-image: url("../assets/img/landing/plann-8IhVh0xU2Hc-unsplash.jpg");
+   background-color: black;
+   background-image: url("../assets/img/landing/3.jpg");
    background-size: cover;
    background-position: center;
    display:flex;
    flex-wrap:wrap;
-   .landingPanel1 {
-      position: relative;
-      background-color: red;
-      width:50%;
-      height:50%;
-      
-   }
-   .landingPanel2 {
-      background-color: blue;
-      width:50%;
-      height:50%;
-   }
-   .landingPanel3 {
-      background-color: yellowgreen;
-      width:50%;
-      height:50%;
-   }
-   .landingPanel4 {
-      background-color: pink;
-      width:50%;
-      height:50%;
-   }
-
 }
 
 main {
-
-
-
    .hoverText {
       transition: .5s ease;
       opacity:0;
