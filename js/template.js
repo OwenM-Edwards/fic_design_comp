@@ -3,11 +3,15 @@ let landingPage = document.getElementById("landing");
 // Scroll back to top of page button.
 let scrollButton = document.getElementById("scrollBtn");
 
+// Set app window size
+const appHeight = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+window.addEventListener('resize', appHeight);
+appHeight();
+
 // Header fixed/relative switch.
 if(landingPage){
    let headerObserver = new IntersectionObserver(
       (entries, observer) => {
-         console.log('test');
          if(header.classList.contains('headerRelative')){
             if(entries[0].intersectionRatio==0){
                header.classList.remove('headerRelative');

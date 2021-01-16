@@ -235,6 +235,10 @@ input:checked + .slider:before {
     height: 50px;
   }
 
+  #landing-logo {
+    bottom: 60vh;
+  }
+
   .contentGrid-a {
     height: 400px !important;
     overflow: hidden;

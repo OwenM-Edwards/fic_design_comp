@@ -235,6 +235,10 @@ input:checked + .slider:before {
     height: 50px;
   }
 
+  #landing-logo {
+    bottom: 60vh;
+  }
+
   .contentGrid-a {
     height: 400px !important;
     overflow: hidden;
@@ -352,12 +356,26 @@ input:checked + .slider:before {
     padding: 20px 0;
   }
 }
+#landing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--app-height);
+  background-color: var(--bg-color);
+  background-image: url("../assets/img/landing/3.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 #landing-cover {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: var(--app-height);
   background-color: var(--bg-color);
   display: flex;
   justify-content: center;
@@ -375,7 +393,7 @@ input:checked + .slider:before {
 
 #loadingBounce-a {
   position: absolute;
-  bottom: 15vh;
+  bottom: 0vh;
   width: 3px;
   height: 60px;
   background-color: var(--font-color);
@@ -387,6 +405,34 @@ input:checked + .slider:before {
   transition-duration: 0.5s, 2s, 0.5s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s, 0.3s, 0.9s;
+}
+
+#loadingBounce-b {
+  position: absolute;
+  bottom: 0vh;
+  width: 3px;
+  right: 50vw;
+  height: 60px;
+  background-color: var(--font-color);
+  border-radius: 100%;
+  z-index: 3;
+  opacity: 1;
+  transition-property: transform, right, opacity;
+  transition-duration: 0.5s, 2s, 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s, 0.3s, 0.9s;
+}
+
+#loadingBounce-a.loadingBounceMoveA {
+  transform: translateY(-92vh);
+  left: 70vw;
+  opacity: 0;
+}
+
+#loadingBounce-b.loadingBounceMoveB {
+  transform: translateY(-92vh);
+  right: 70vw;
+  opacity: 0;
 }
 
 #downIconContainer {
@@ -406,29 +452,13 @@ input:checked + .slider:before {
   background-position: center;
 }
 
-#loadingBounce-b {
-  position: absolute;
-  bottom: 15vh;
-  width: 3px;
-  right: 50vw;
-  height: 60px;
-  background-color: var(--font-color);
-  border-radius: 100%;
-  z-index: 3;
-  opacity: 1;
-  transition-property: transform, right, opacity;
-  transition-duration: 0.5s, 2s, 0.5s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s, 0.3s, 0.9s;
-}
-
 #landing-logo {
   margin: 0 auto;
   color: var(--font-color);
   display: inline;
   align-self: center;
   position: relative;
-  bottom: 30vh;
+  bottom: 45vh;
   font-size: 4rem;
   font-family: "Josefin Sans", sans-serif;
 }
@@ -449,32 +479,6 @@ input:checked + .slider:before {
 
 #landing-logo-cover.landing-logo-cover-hidden {
   opacity: 0;
-}
-
-#loadingBounce-a.loadingBounceMoveA {
-  transform: translateY(-62vh);
-  left: 60vw;
-  opacity: 0;
-}
-
-#loadingBounce-b.loadingBounceMoveB {
-  transform: translateY(-62vh);
-  right: 60vw;
-  opacity: 0;
-}
-
-#landing {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: var(--bg-color);
-  background-image: url("../assets/img/landing/3.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 main .hoverText {
@@ -598,6 +602,24 @@ main .contentGrid-b #a-vegan-art {
 }
 main h2 {
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+  #landing-logo {
+    bottom: 40vh;
+  }
+
+  #loadingBounce-a.loadingBounceMoveA {
+    transform: translateY(-86vh);
+    left: 70vw;
+    opacity: 0;
+  }
+
+  #loadingBounce-b.loadingBounceMoveB {
+    transform: translateY(-86vh);
+    right: 70vw;
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
