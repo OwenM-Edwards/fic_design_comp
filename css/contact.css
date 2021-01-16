@@ -45,8 +45,7 @@ body {
 header {
   max-width: 100vw;
 }
-
-.headerFixed {
+header .headerFixed {
   width: calc(100% - 40px);
   max-width: 1300px;
   height: 160px;
@@ -60,17 +59,14 @@ header {
   transition: color 1000ms linear;
   margin: 0 auto;
 }
-
-.headerFixedShown {
+header .headerFixedShown {
   opacity: 1;
 }
-
-.headerFixedHidden {
+header .headerFixedHidden {
   opacity: 0;
   z-index: -1;
 }
-
-.headerRelative {
+header .headerRelative {
   width: 100%;
   height: 160px;
   max-height: 200px;
@@ -84,7 +80,6 @@ header {
   transition: background-color 1000ms ease-out;
   transition: color 1000ms linear;
 }
-
 header a {
   color: inherit;
   text-decoration: inherit;
@@ -111,16 +106,9 @@ header nav p {
   display: inline;
 }
 
-.mainHeaderRelative {
-  padding-top: 100vh;
-}
-
-.mainHeaderFixed {
-  padding-top: 118vh;
-}
-
 main {
   width: 100%;
+  padding-top: 100vh;
   margin: 0 auto;
 }
 
@@ -160,19 +148,17 @@ footer #companyName span {
   padding-top: 6px;
   font-size: 1.1rem;
 }
-
-.nightModeToggle {
+.nightModeToggle-wrapper .nightModeToggle {
   display: inline-block;
   height: 24px;
   position: relative;
   left: 5px;
   width: 50px;
 }
-.nightModeToggle input {
+.nightModeToggle-wrapper .nightModeToggle input {
   display: none;
 }
-
-.slider {
+.nightModeToggle-wrapper .slider {
   background-color: #ccc;
   bottom: 0;
   cursor: pointer;
@@ -182,7 +168,7 @@ footer #companyName span {
   top: 0;
   transition: 0.4s;
 }
-.slider:before {
+.nightModeToggle-wrapper .slider:before {
   background-color: #fff;
   bottom: 4px;
   content: "";
@@ -192,18 +178,16 @@ footer #companyName span {
   transition: 0.4s;
   width: 16px;
 }
-
-input:checked + .slider {
+.nightModeToggle-wrapper input:checked + .slider {
   background-color: #db8722;
 }
-input:checked + .slider:before {
+.nightModeToggle-wrapper input:checked + .slider:before {
   transform: translateX(26px);
 }
-
-.slider.round {
+.nightModeToggle-wrapper .slider.round {
   border-radius: 34px;
 }
-.slider.round:before {
+.nightModeToggle-wrapper .slider.round:before {
   border-radius: 50%;
 }
 
@@ -262,6 +246,21 @@ input:checked + .slider:before {
 
   #links {
     display: none;
+  }
+
+  #header.headerFixed {
+    min-width: 100vw;
+    max-height: 40px;
+    padding-bottom: 90px;
+  }
+  #header.headerFixed #headerNav {
+    position: relative;
+    bottom: 20px;
+  }
+  #header.headerFixed #mobileMenuToggle {
+    position: relative;
+    left: 85vw;
+    bottom: 86px;
   }
 
   #mobileMenuToggle {
