@@ -221,6 +221,7 @@ input:checked + .slider {
       transition: 0.2s linear;
       scale:0.6;
       display:none;
+      cursor:pointer;
       &:hover {
          scale: 0.68;
       }
@@ -241,6 +242,17 @@ input:checked + .slider {
 
 // Media Queries.
 @media only screen and (max-width:900px) {
+   #scrollBtn-container {
+      position:fixed;
+      right:0px;
+      bottom:-40px;
+      width: 100px;
+      height:80px;
+      #scrollBtn {
+         height:50px;
+      }
+   }
+
    .contentGrid-a {
       height:400px!important;
       overflow: hidden;
