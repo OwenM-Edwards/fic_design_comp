@@ -1,47 +1,36 @@
-// Switcher header to Fixed when past landing page.
-header = document.getElementById("header");
-downArrow = document.getElementById("frameCheck");
-
-//Switches header from relative to fixed positioning when user scrolls past landing page and it.
-headerScrollFunction = () => {
-   if(!header.classList.contains('headerFixed')){
-      bounding = header.getBoundingClientRect();
-      if (bounding.top < 0){
-         header.classList.remove('headerRelative');
-         header.classList.add('headerFixed');
-         main.classList.remove('mainHeaderRelative');
-         main.classList.add('mainHeaderFixed');
-      }
-   } 
-   else if (!header.classList.contains('headerRelative') && isInViewport(downArrow)){
-      header.classList.remove('headerFixed');
-      header.classList.add('headerRelative');
-      main.classList.remove('mainHeaderFixed');
-      main.classList.add('mainHeaderRelative');
-   }
-}
-
-/*!
- * Determine if an element is in the viewport
- * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
- * @param  {Node}    elem The element
- * @return {Boolean}      Returns true if element is in the viewport
- */
-var isInViewport = function (elem) {
-	var distance = elem.getBoundingClientRect();
-	return (
-		distance.top >= 0 &&
-		distance.left >= 0 &&
-		distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-		distance.right <= (window.innerWidth || document.documentElement.clientWidth)
-	);
-};
-
-
-
-
+let header = document.getElementById("header");
+let landingPage = document.getElementById("landing");
 // Scroll back to top of page button.
-scrollButton = document.getElementById("scrollBtn");
+let scrollButton = document.getElementById("scrollBtn");
+
+// Header fixed/relative switch.
+let headerObserver = new IntersectionObserver(
+   (entries, observer) => {
+      if(header.classList.contains('headerRelative')){
+         if(entries[0].intersectionRatio==0){
+            header.classList.remove('headerRelative');
+            header.classList.add('headerFixed');
+            main.classList.remove('mainHeaderRelative');
+            main.classList.add('mainHeaderFixed');
+         }
+      }
+      else if(header.classList.contains('headerFixed')) {
+         if(entries[0].intersectionRatio>0){
+            header.classList.remove('headerFixed');
+            header.classList.add('headerRelative');
+            main.classList.remove('mainHeaderFixed');
+            main.classList.add('mainHeaderRelative');
+         }
+      }
+   },
+   {
+      root: null,
+      rootMargin:'0px',
+      threshhold:1
+   }
+);
+headerObserver.observe(landingPage);
+
 // Night mode toggle.
 const toggleSwitch = document.querySelector('.nightModeCheck input[type="checkbox"]');
 const toggleSwitchMobile = document.querySelector('.nightModeCheckMobile input[type="checkbox"]');
@@ -56,8 +45,6 @@ if (currentTheme) {
       scrollButton.classList.add('scrollBtnDark');
    }
 }
-
-
 switchTheme = (e) => {
    if (e.target.checked) {
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -72,11 +59,8 @@ switchTheme = (e) => {
       localStorage.setItem('theme', 'light'); //add this
    }    
 }
-
 toggleSwitch.addEventListener('change', switchTheme, false);
 toggleSwitchMobile.addEventListener('change', switchTheme, false);
-
-
 
 
 // Show scroll button when user scrolls down.
@@ -88,18 +72,16 @@ scrollFunction = () => {
       scrollButton.style.display = "none";
    }
 }
+window.onscroll = function() {scrollHandler()};
+scrollHandler = () => {
+   scrollFunction();
+}
+
 
 // On click, scroll to top.
 scrollToTop = () => {
    document.body.scrollTop = 0; //Safari
    document.documentElement.scrollTop = 0; //Chrome, FF, IE, Opera.
-}
-
-// handles scroll button and header scroll functions.
-window.onscroll = function() {scrollHandler()};
-scrollHandler = () => {
-   scrollFunction();
-   headerScrollFunction();
 }
 
 
@@ -116,5 +98,3 @@ loadingBounce = () => {
    loadingLogoCover.classList.add('landing-logo-cover-hidden');
 }
 
-
-// scroll top.
