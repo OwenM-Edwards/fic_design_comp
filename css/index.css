@@ -350,11 +350,6 @@ input:checked + .slider:before {
     padding: 20px 0;
   }
 }
-#frameCheck {
-  position: absolute;
-  bottom: 0;
-}
-
 #landing-cover {
   position: absolute;
   top: 0;
@@ -392,12 +387,18 @@ input:checked + .slider:before {
   transition-delay: 0s, 0.3s, 0.9s;
 }
 
-#downIcon {
+#downIconContainer {
+  width: 100%;
+  height: 100px;
   position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#downIcon {
+  margin: 0 auto;
   height: 100px;
   width: 50px;
-  bottom: 3vh;
-  left: 48vw;
   background-image: url("../assets/icons/noun_scroll-down_54414.png");
   background-size: cover;
   background-position: center;
@@ -487,7 +488,7 @@ main .hoverText {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75));
 }
 main .contentGrid-a {
-  height: 900px;
+  height: 1000px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -496,31 +497,59 @@ main .contentGrid-a {
   grid-row-gap: 20px;
 }
 main .contentGrid-a .gridItem {
-  background-size: cover;
   text-decoration: none;
   transition: 0.5s ease;
 }
 main .contentGrid-a .gridItem:hover .hoverText {
   opacity: 1;
 }
+main .contentGrid-a #img-keyborders {
+  grid-area: 1/1/2/3;
+}
+main .contentGrid-a #img-keyborders img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
 main .contentGrid-a #a-keyborders {
   grid-area: 1/1/2/3;
-  background-image: url("../assets/img/keyborders/1.jpg");
-  background-position: center;
+}
+main .contentGrid-a #img-myth-sets {
+  grid-area: 2/1/4/3;
+}
+main .contentGrid-a #img-myth-sets img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 main .contentGrid-a #a-myth-sets {
   grid-area: 2/1/4/3;
-  background-image: url("../assets/img/myth-sets/3.jpg");
+}
+main .contentGrid-a #img-beeston-art {
+  grid-area: 1/3/3/5;
+}
+main .contentGrid-a #img-beeston-art img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 main .contentGrid-a #a-beeston-art {
   grid-area: 1/3/3/5;
-  background-image: url("../assets/img/beeston-art/6.jpg");
-  background-position: center;
+}
+main .contentGrid-a #img-nott-comtemp {
+  grid-area: 3/3/4/5;
+}
+main .contentGrid-a #img-nott-comtemp img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 main .contentGrid-a #a-nott-comtemp {
   grid-area: 3/3/4/5;
-  background-image: url("../assets/img/nott-contemp/3.jpg");
-  background-position: center;
 }
 main .contentGrid-b {
   height: 600px;
@@ -532,7 +561,6 @@ main .contentGrid-b {
   grid-row-gap: 20px;
 }
 main .contentGrid-b .gridItem {
-  background-size: cover;
   text-decoration: none;
   transition: 0.5s ease;
 }
@@ -542,15 +570,29 @@ main .contentGrid-b .gridItem:hover {
 main .contentGrid-b .gridItem:hover .hoverText {
   opacity: 1;
 }
+main .contentGrid-b #img-china-tea {
+  grid-area: 1/1/2/2;
+}
+main .contentGrid-b #img-china-tea img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
 main .contentGrid-b #a-china-tea {
   grid-area: 1/1/2/2;
-  background-image: url("../assets/img/china-tea/10.jpg");
-  background-position: center;
+}
+main .contentGrid-b #img-vegan-art {
+  grid-area: 1/2/2/3;
+}
+main .contentGrid-b #img-vegan-art img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 main .contentGrid-b #a-vegan-art {
   grid-area: 1/2/2/3;
-  background-image: url("../assets/img/vegan-art/7.jpg");
-  background-position: center;
 }
 main h2 {
   font-size: 2rem;
