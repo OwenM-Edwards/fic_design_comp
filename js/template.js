@@ -4,7 +4,6 @@ downArrow = document.getElementById("frameCheck");
 
 //Switches header from relative to fixed positioning when user scrolls past landing page and it.
 headerScrollFunction = () => {
-   
    if(!header.classList.contains('headerFixed')){
       bounding = header.getBoundingClientRect();
       if (bounding.top < 0){
@@ -14,7 +13,7 @@ headerScrollFunction = () => {
          main.classList.add('mainHeaderFixed');
       }
    } 
-   else if (isInViewport(downArrow)){
+   else if (!header.classList.contains('headerRelative') && isInViewport(downArrow)){
       header.classList.remove('headerFixed');
       header.classList.add('headerRelative');
       main.classList.remove('mainHeaderFixed');
