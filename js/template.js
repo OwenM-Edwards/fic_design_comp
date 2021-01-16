@@ -7,6 +7,7 @@ let scrollButton = document.getElementById("scrollBtn");
 if(landingPage){
    let headerObserver = new IntersectionObserver(
       (entries, observer) => {
+         console.log('test');
          if(header.classList.contains('headerRelative')){
             if(entries[0].intersectionRatio==0){
                header.classList.remove('headerRelative');
