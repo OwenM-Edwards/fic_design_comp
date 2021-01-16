@@ -265,7 +265,7 @@ main {
 
 
 // Media Queries.
-@media only screen and (max-width:900px) {
+@media only screen and (max-width:800px) {
 
    #landing-logo {
       bottom:40vh;
@@ -280,4 +280,29 @@ main {
       right:70vw;
       opacity:0;
    }
+
+   #header.headerFixed {
+      min-width: 100vw;
+      max-height:40px;
+      padding-bottom:90px;
+      #headerNav {
+         position: relative;
+         bottom:20px;
+      }
+      #mobileMenuToggle{
+         position: relative;
+         left:85vw;
+         bottom: 86px;
+      }
+   } 
+
+   .contentGrid-a {
+      height:500px!important;
+      overflow: hidden;
+   }
+   .contentGrid-b {
+      height:200px!important;
+      overflow: hidden;
+   }
+
 }

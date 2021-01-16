@@ -28,6 +28,7 @@ html {
 body {
   padding: 0;
   margin: 0 auto;
+  width: 100%;
   max-width: 1300px;
   z-index: 1;
   min-height: 94vh;
@@ -38,6 +39,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
+  max-width: 100vw;
+}
+
+header {
+  max-width: 100vw;
 }
 
 .headerFixed {
@@ -53,6 +59,15 @@ body {
   transition: background-color 1000ms ease-out;
   transition: color 1000ms linear;
   margin: 0 auto;
+}
+
+.headerFixedShown {
+  opacity: 1;
+}
+
+.headerFixedHidden {
+  opacity: 0;
+  z-index: -1;
 }
 
 .headerRelative {
@@ -223,7 +238,7 @@ input:checked + .slider:before {
   display: none;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
   #scrollBtn-container {
     position: fixed;
     right: 0px;
@@ -235,20 +250,6 @@ input:checked + .slider:before {
     height: 50px;
   }
 
-  #landing-logo {
-    bottom: 60vh;
-  }
-
-  .contentGrid-a {
-    height: 400px !important;
-    overflow: hidden;
-  }
-
-  .contentGrid-b {
-    height: 200px !important;
-    overflow: hidden;
-  }
-
   h2 {
     text-align: center;
     font-size: 2rem;
@@ -257,12 +258,6 @@ input:checked + .slider:before {
   html {
     padding: 5px;
     max-width: 100vw;
-  }
-
-  header#header {
-    min-width: 100vw;
-    height: 130px;
-    padding-right: 10px;
   }
 
   #links {

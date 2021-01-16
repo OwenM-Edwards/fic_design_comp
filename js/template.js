@@ -1,10 +1,11 @@
-let header = document.getElementById("header");
+let headerFixed = document.querySelector(".headerFixed");
 let landingPage = document.getElementById("landing");
 // Scroll back to top of page button.
 let scrollButton = document.getElementById("scrollBtn");
 
 // Set app window size
 const appHeight = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+
 window.addEventListener('resize', appHeight);
 appHeight();
 
@@ -12,30 +13,27 @@ appHeight();
 if(landingPage){
    let headerObserver = new IntersectionObserver(
       (entries, observer) => {
-         if(header.classList.contains('headerRelative')){
+         if(headerFixed.classList.contains('headerFixedHidden')){
             if(entries[0].intersectionRatio==0){
-               header.classList.remove('headerRelative');
-               header.classList.add('headerFixed');
-               main.classList.remove('mainHeaderRelative');
-               main.classList.add('mainHeaderFixed');
+               headerFixed.classList.remove('headerFixedHidden');
+               headerFixed.classList.add('headerFixedShown');
             }
          }
-         else if(header.classList.contains('headerFixed')) {
+         else if(headerFixed.classList.contains('headerFixedShown')) {
             if(entries[0].intersectionRatio>0){
-               header.classList.remove('headerFixed');
-               header.classList.add('headerRelative');
-               main.classList.remove('mainHeaderFixed');
-               main.classList.add('mainHeaderRelative');
+               headerFixed.classList.remove('headerFixedShown');
+               headerFixed.classList.add('headerFixedHidden');
             }
          }
       },
       {
          root: null,
          rootMargin:'0px',
-         threshhold:1
+         threshhold:0
       }
    );
    headerObserver.observe(landingPage);
+   
 }
 
 
