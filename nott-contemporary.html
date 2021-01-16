@@ -18,52 +18,53 @@
 
    <body>
       <!-- Header -->
-      <header id="header" class="headerFixed">
+      <header>
+         <div id="header" class="sub-page-header">
+            <!-- Desktop nav -->
+            <nav id="headerNav">
+               <div id="mainLogo">
+                  <a href="./index.html"><h1>myth-des</h1></a>
+               </div>
 
-         <!-- Desktop nav -->
-         <nav id="headerNav">
-            <div id="mainLogo">
-               <a href="./index.html"><h1>myth-des</h1></a>
+               <div id="links">
+                  <a href="./about.html">About</a>
+                  <p>||</p>
+                  <a href="./contact.html">Contact</a>
+                  <!-- Night mode toggle -->
+                  <div class="nightModeToggle-wrapper">
+                     <label class="nightModeToggle" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                     </label>
+                     <em>Dark Mode</em>
+                  </div> 
+                  
+               </div>
+            </nav>
+            <!-- Mobile Nav -->
+            <div id="mobileMenuToggle">
+               <input type="checkbox" />
+               <span></span>
+               <span></span>
+               <span></span>
+               <ul id="mobileMenu">
+                  <li><a href="./about.html">About</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
+                  <!-- Night mode toggle -->
+                  <li><div class="nightModeToggle-wrapper">
+                     <label class="nightModeToggle" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                     </label>
+                     <em>Dark Mode</em>
+               </div></li>
+               </ul>
             </div>
-
-            <div id="links">
-               <a href="./about.html">About</a>
-               <p>||</p>
-               <a href="./contact.html">Contact</a>
-               <!-- Night mode toggle -->
-               <div class="nightModeToggle-wrapper">
-                  <label class="nightModeToggle nightModeCheck" for="checkbox">
-                      <input type="checkbox" id="checkbox" />
-                      <div class="slider round"></div>
-                  </label>
-                  <em>Dark Mode</em>
-              </div> 
-            </div>
-         </nav>
-
-         <!-- Mobile Nav -->
-         <div id="mobileMenuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-            <ul id="mobileMenu">
-               <li><a href="./about.html">About</a></li>
-               <li><a href="./contact.html">Contact</a></li>
-               <!-- Night mode toggle -->
-               <li><div class="nightModeToggle-wrapper">
-                  <label class="nightModeToggle nightModeCheckMobile" for="checkbox">
-                      <input type="checkbox" id="checkbox" />
-                      <div class="slider round"></div>
-                  </label>
-                  <em>Dark Mode</em>
-              </div></li>
-            </ul>
          </div>
       </header>
 
       <!-- Main -->
-      <main>
+      <main class="sub-page-main">
          
          <h2>Nottingham Contemporary</h2>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum repudiandae porro? Fugiat qui possimus velit doloremque provident numquam quibusdam.</p>
