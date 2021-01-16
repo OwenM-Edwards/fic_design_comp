@@ -4,48 +4,61 @@ let landingPage = document.getElementById("landing");
 let scrollButton = document.getElementById("scrollBtn");
 
 // Header fixed/relative switch.
-let headerObserver = new IntersectionObserver(
-   (entries, observer) => {
-      if(header.classList.contains('headerRelative')){
-         if(entries[0].intersectionRatio==0){
-            header.classList.remove('headerRelative');
-            header.classList.add('headerFixed');
-            main.classList.remove('mainHeaderRelative');
-            main.classList.add('mainHeaderFixed');
+if(landingPage){
+   let headerObserver = new IntersectionObserver(
+      (entries, observer) => {
+         if(header.classList.contains('headerRelative')){
+            if(entries[0].intersectionRatio==0){
+               header.classList.remove('headerRelative');
+               header.classList.add('headerFixed');
+               main.classList.remove('mainHeaderRelative');
+               main.classList.add('mainHeaderFixed');
+            }
          }
-      }
-      else if(header.classList.contains('headerFixed')) {
-         if(entries[0].intersectionRatio>0){
-            header.classList.remove('headerFixed');
-            header.classList.add('headerRelative');
-            main.classList.remove('mainHeaderFixed');
-            main.classList.add('mainHeaderRelative');
+         else if(header.classList.contains('headerFixed')) {
+            if(entries[0].intersectionRatio>0){
+               header.classList.remove('headerFixed');
+               header.classList.add('headerRelative');
+               main.classList.remove('mainHeaderFixed');
+               main.classList.add('mainHeaderRelative');
+            }
          }
+      },
+      {
+         root: null,
+         rootMargin:'0px',
+         threshhold:1
       }
-   },
-   {
-      root: null,
-      rootMargin:'0px',
-      threshhold:1
-   }
-);
-headerObserver.observe(landingPage);
+   );
+   headerObserver.observe(landingPage);
+}
+
 
 // Night mode toggle.
 const toggleSwitch = document.querySelector('.nightModeCheck input[type="checkbox"]');
 const toggleSwitchMobile = document.querySelector('.nightModeCheckMobile input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-
-if (currentTheme) {
+// default to dark if no prior select
+if(!currentTheme){
+   toggleSwitch.checked = true;
+   scrollButton.classList.remove('scrollBtnLight');
+   scrollButton.classList.add('scrollBtnDark');
+}
+else if (currentTheme) {
    document.documentElement.setAttribute('data-theme', currentTheme);
-
    if (currentTheme === 'dark') {
       toggleSwitch.checked = true;
       scrollButton.classList.remove('scrollBtnLight');
       scrollButton.classList.add('scrollBtnDark');
    }
+   else {
+      toggleSwitch.checked = false;
+      scrollButton.classList.add('scrollBtnLight');
+      scrollButton.classList.remove('scrollBtnDark');
+   }
 }
 switchTheme = (e) => {
+   console.log('test');
    if (e.target.checked) {
       document.documentElement.setAttribute('data-theme', 'dark');
       scrollButton.classList.remove('scrollBtnLight');
