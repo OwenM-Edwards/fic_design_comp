@@ -50,7 +50,9 @@ body {
 .headerFixed {
    width: calc(100% - 40px);
    max-width: $base-contentWidth;
+
    height:$header-sizePadding;
+   max-height: 200px;
    position: fixed;
    padding-bottom:20px;
    top:-10px;
@@ -64,6 +66,7 @@ body {
 .headerRelative {
    width: 100%;
    height:$header-sizePadding;
+   max-height: 200px;
    max-width: $base-contentWidth;
    background-color: var(--bg-color);
    position: relative;
