@@ -1,5 +1,6 @@
 let headerFixed = document.querySelector(".headerFixed");
 let landingPage = document.getElementById("landing");
+let downIcon = document.getElementById("downIcon");
 // Scroll back to top of page button.
 let scrollButton = document.getElementById("scrollBtn");
 
@@ -33,7 +34,23 @@ if(landingPage){
       }
    );
    headerObserver.observe(landingPage);
-   
+}
+// Check for stuck header by checking if downicon is in frame 
+if(landingPage){
+   let iconObserver = new IntersectionObserver(
+      (entries, observer) => {
+         if(entries[0].intersectionRatio>0){
+            headerFixed.classList.remove('headerFixedShown');
+            headerFixed.classList.add('headerFixedHidden');
+         }
+      },
+      {
+         root: null,
+         rootMargin:'0px',
+         threshhold:1
+      }
+   );
+   iconObserver.observe(downIcon);
 }
 
 
@@ -121,11 +138,13 @@ loadingBounceA = document.getElementById("loadingBounce-a");
 loadingBounceB = document.getElementById("loadingBounce-b");
 loadingLanding = document.getElementById("landing-cover");
 loadingLogoCover = document.getElementById("landing-logo-cover");
+loadingLogo = document.getElementById("landing-logo");
 
 loadingBounce = () => {
    loadingLanding.classList.add('landing-cover-hidden');
    loadingBounceA.classList.add('loadingBounceMoveA');
    loadingBounceB.classList.add('loadingBounceMoveB');
    loadingLogoCover.classList.add('landing-logo-cover-hidden');
+   loadingLogo.classList.add('landing-logo-colorShift');
 }
 
