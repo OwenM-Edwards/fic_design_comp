@@ -38,45 +38,60 @@ if(landingPage){
 
 
 // Night mode toggle.
-const toggleSwitch = document.querySelector('.nightModeCheck input[type="checkbox"]');
-const toggleSwitchMobile = document.querySelector('.nightModeCheckMobile input[type="checkbox"]');
+const toggleSwitches = document.querySelectorAll('.nightModeToggle input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 // default to dark if no prior select
 if(!currentTheme){
-   toggleSwitch.checked = true;
+   toggleSwitches.forEach (function(item,index){
+      item.checked = true
+   })
    scrollButton.classList.remove('scrollBtnLight');
    scrollButton.classList.add('scrollBtnDark');
 }
 else if (currentTheme) {
    document.documentElement.setAttribute('data-theme', currentTheme);
    if (currentTheme === 'dark') {
-      toggleSwitch.checked = true;
+      toggleSwitches.forEach (function(item,index){
+         item.checked = true
+      })
+      document.documentElement.setAttribute('data-theme', 'dark');
       scrollButton.classList.remove('scrollBtnLight');
       scrollButton.classList.add('scrollBtnDark');
    }
    else {
-      toggleSwitch.checked = false;
+      toggleSwitches.forEach (function(item,index){
+         item.checked = false
+      })
+      // toggleSwitchRelative.checked = false;
+      // toggleSwitchFixed.checked = false;
       scrollButton.classList.add('scrollBtnLight');
       scrollButton.classList.remove('scrollBtnDark');
    }
 }
 switchTheme = (e) => {
-   console.log('test');
+   console.log('res')
    if (e.target.checked) {
+      toggleSwitches.forEach (function(item,index){
+         item.checked = true
+      })
       document.documentElement.setAttribute('data-theme', 'dark');
       scrollButton.classList.remove('scrollBtnLight');
       scrollButton.classList.add('scrollBtnDark');
       localStorage.setItem('theme', 'dark'); //add this
    }
    else {
+      toggleSwitches.forEach (function(item,index){
+         item.checked = false
+      })
       document.documentElement.setAttribute('data-theme', 'light');
       scrollButton.classList.remove('scrollBtnDark');
       scrollButton.classList.add('scrollBtnLight');
       localStorage.setItem('theme', 'light'); //add this
    }    
 }
-toggleSwitch.addEventListener('change', switchTheme, false);
-toggleSwitchMobile.addEventListener('change', switchTheme, false);
+toggleSwitches.forEach (function(item,index){
+   item.addEventListener('change', switchTheme, false);
+})
 
 
 // Show scroll button when user scrolls down.
