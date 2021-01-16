@@ -244,6 +244,28 @@ footer {
 }
 
 
+// Sub pages main and header.
+main.sub-page-main{
+   padding-top:200px;
+}
+header {
+   #header.sub-page-header{
+      width: calc(100% - 40px);
+      max-width: $base-contentWidth;
+      height:$header-sizePadding;
+      max-height: 200px;
+      position: fixed;
+      padding-bottom:20px;
+      top:-10px;
+      background-color: var(--bg-color);
+      z-index: 3;
+      transition: background-color 1000ms ease-out;
+      transition: color 1000ms linear;
+      margin: 0 auto;
+   }
+}
+
+
 // Media Queries.
 @media only screen and (max-width:800px) {
    #scrollBtn-container {
@@ -281,7 +303,22 @@ footer {
          bottom: 86px;
       }
    } 
-
+   header {
+      #header.sub-page-header{
+         min-width: 100vw;
+         max-height:40px;
+         padding-bottom:90px;
+         #headerNav {
+            position: relative;
+            bottom:20px;
+         }
+         #mobileMenuToggle{
+            position: relative;
+            left:85vw;
+            bottom: 86px;
+         }
+      }
+   }
 
    // Mobile Nav.
    #mobileMenuToggle{
