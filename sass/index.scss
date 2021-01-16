@@ -7,120 +7,121 @@
    width:100%;
    height: var(--app-height);
    background-color:var(--bg-color);
-   background-image: url("../assets/img/landing/3.jpg");
+   background-image: url("../assets/img/landing/6.jpg");
    background-size: cover;
    background-position: center;
    display:flex;
    flex-wrap:wrap;
+   #landing-cover {
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height: var(--app-height);
+      background-color:var(--bg-color);
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      transition-property: opacity;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 2.1s;
+   }
+   
+   #landing-cover.landing-cover-hidden {
+      opacity: 0;
+   }
+   #loadingBounce-a {
+      position: absolute;
+      bottom:0vh;
+      width:3px;
+      height:60px;
+      background-color:var(--font-color);
+      border-radius: 100%;
+      z-index: 3;
+      left:50vw;
+      opacity: 1;
+      transition-property: transform, left, opacity;
+      transition-duration: 0.5s, 2s, 0.5s ;
+      transition-timing-function: ease-in-out;
+      transition-delay: 0s, 0.3s, 0.9s;
+   }
+   
+   #loadingBounce-b {
+      position: absolute;
+      bottom:0vh;
+      width:3px;
+      right:50vw;
+      height:60px;
+      background-color:var(--font-color);
+      border-radius: 100%;
+      z-index: 3;
+      opacity: 1;
+      transition-property: transform, right, opacity;
+      transition-duration: 0.5s, 2s, 0.5s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 0s, 0.3s, 0.9s;
+   
+   }
+   #loadingBounce-a.loadingBounceMoveA {
+      transform:translateY(-92vh);
+      left:70vw;
+      opacity:0;
+   }
+   #loadingBounce-b.loadingBounceMoveB {
+      transform:translateY(-92vh);
+      right:70vw;
+      opacity:0;
+   }
+   
+   #downIconContainer {
+      width:100%;
+      height:100px;
+      position: absolute;
+      bottom:0;
+      left:0 ;
+   }
+   #downIcon {
+      margin: 0 auto;
+      height:100px;
+      width:50px;
+      background-image: url('../assets/icons/scroll-down_white.png');
+      background-size: cover;
+      background-position: center;
+   }
+   
+   
+   #landing-logo {
+      margin:0 auto;
+      color: #f7f7f7;
+      display:inline;
+      align-self: center;
+      position: relative;
+      bottom:45vh;
+      font-size: 4rem;
+      font-family: 'Josefin Sans', sans-serif;
+   }
+   
+   #landing-logo-cover {
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100vh;
+      background-color:var(--bg-color);
+      opacity: 1;
+      transition-property: opacity;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 1.2s;
+   }
+   #landing-logo-cover.landing-logo-cover-hidden {
+      opacity:0;
+   }
 }
 
-#landing-cover {
-   position: absolute;
-   top:0;
-   left:0;
-   width:100%;
-   height: var(--app-height);
-   background-color:var(--bg-color);
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   opacity: 1;
-   transition-property: opacity;
-   transition-duration: 1s;
-   transition-timing-function: ease-in-out;
-   transition-delay: 2.1s;
-}
 
-#landing-cover.landing-cover-hidden {
-   opacity: 0;
-}
-#loadingBounce-a {
-   position: absolute;
-   bottom:0vh;
-   width:3px;
-   height:60px;
-   background-color:var(--font-color);
-   border-radius: 100%;
-   z-index: 3;
-   left:50vw;
-   opacity: 1;
-   transition-property: transform, left, opacity;
-   transition-duration: 0.5s, 2s, 0.5s ;
-   transition-timing-function: ease-in-out;
-   transition-delay: 0s, 0.3s, 0.9s;
-}
-
-#loadingBounce-b {
-   position: absolute;
-   bottom:0vh;
-   width:3px;
-   right:50vw;
-   height:60px;
-   background-color:var(--font-color);
-   border-radius: 100%;
-   z-index: 3;
-   opacity: 1;
-   transition-property: transform, right, opacity;
-   transition-duration: 0.5s, 2s, 0.5s;
-   transition-timing-function: ease-in-out;
-   transition-delay: 0s, 0.3s, 0.9s;
-
-}
-#loadingBounce-a.loadingBounceMoveA {
-   transform:translateY(-92vh);
-   left:70vw;
-   opacity:0;
-}
-#loadingBounce-b.loadingBounceMoveB {
-   transform:translateY(-92vh);
-   right:70vw;
-   opacity:0;
-}
-
-#downIconContainer {
-   width:100%;
-   height:100px;
-   position: absolute;
-   bottom:0;
-   left:0 ;
-}
-#downIcon {
-   margin: 0 auto;
-   height:100px;
-   width:50px;
-   background-image: url('../assets/icons/noun_scroll-down_54414.png');
-   background-size: cover;
-   background-position: center;
-}
-
-
-#landing-logo {
-   margin:0 auto;
-   color: var(--font-color);
-   display:inline;
-   align-self: center;
-   position: relative;
-   bottom:45vh;
-   font-size: 4rem;
-   font-family: 'Josefin Sans', sans-serif;
-}
-
-#landing-logo-cover {
-   position: absolute;
-   top:0;
-   left:0;
-   width:100%;
-   height:100vh;
-   background-color:var(--bg-color);
-   opacity: 1;
-   transition-property: opacity;
-   transition-duration: 1s;
-   transition-timing-function: ease-in-out;
-   transition-delay: 1.2s;
-}
-#landing-logo-cover.landing-logo-cover-hidden {
-   opacity:0;
-}
 
 
 
@@ -266,35 +267,27 @@ main {
 
 // Media Queries.
 @media only screen and (max-width:800px) {
-
-   #landing-logo {
-      bottom:40vh;
-   }
-   #loadingBounce-a.loadingBounceMoveA {
-      transform:translateY(-86vh);
-      left:70vw;
-      opacity:0;
-   }
-   #loadingBounce-b.loadingBounceMoveB {
-      transform:translateY(-86vh);
-      right:70vw;
-      opacity:0;
-   }
-
-   #header.headerFixed {
-      min-width: 100vw;
-      max-height:40px;
-      padding-bottom:90px;
-      #headerNav {
-         position: relative;
-         bottom:20px;
+   #landing {
+      #landing-logo {
+         bottom:40vh;
       }
-      #mobileMenuToggle{
-         position: relative;
-         left:85vw;
-         bottom: 86px;
+      #loadingBounce-a.loadingBounceMoveA {
+         transform:translateY(-86vh);
+         left:70vw;
+         opacity:0;
       }
-   } 
+      #loadingBounce-b.loadingBounceMoveB {
+         transform:translateY(-86vh);
+         right:70vw;
+         opacity:0;
+      }
+      #downIcon {
+         height:70px;
+         width:40px;
+         position: relative;
+         bottom:-3vh;
+      }
+   }
 
    .contentGrid-a {
       height:500px!important;
@@ -304,5 +297,4 @@ main {
       height:200px!important;
       overflow: hidden;
    }
-
 }
