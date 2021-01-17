@@ -10,8 +10,10 @@ const appHeight = () => document.documentElement.style.setProperty('--app-height
 window.addEventListener('resize', appHeight);
 appHeight();
 
-// Header fixed/relative switch.
 
+
+
+// Header fixed/relative switch.
 if(landingPage){
    let headerObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -128,9 +130,25 @@ loadingBounce = () => {
    
 }
 
-const mobileMenuInput = document.getElementById("MobileInputCheckbox");
+// Mobile menu toggle.
+const mobileMenuInputs = document.querySelectorAll("#MobileInputCheckbox");
 const mobileMenu = document.getElementById("linksMobile");
-testFrame = () =>{
+//  reset mobile check inputs on reload.
+mobileMenuInputs.forEach(function(item, index){
+   item.checked = false;
+});
+
+mobileMenuToggle = (e) =>{
+   if(e.target.checked == true){
+      mobileMenuInputs.forEach(function(item, index){
+         item.checked = true;
+      });
+   }
+   else {
+      mobileMenuInputs.forEach(function(item, index){
+         item.checked = false;
+      });
+   }
    if(!mobileMenu.classList.contains('linkMobileShown')){
       mobileMenu.classList.remove('linkMobileHidden');
       mobileMenu.classList.add('linkMobileShown');
@@ -143,5 +161,7 @@ testFrame = () =>{
    
 }
 // Open mobile menu.
+mobileMenuInputs.forEach(function(item, index){
+   item.addEventListener('change', mobileMenuToggle);
+});
 
-mobileMenuInput.addEventListener('change', testFrame);
