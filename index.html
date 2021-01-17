@@ -25,7 +25,7 @@
             <div id="landing-cover"></div>
             <h1 id="landing-logo">myth-des</h1>
             <div id="downIconContainer">
-               <div id="downIcon"></div>
+               <a href="./index.html#anchorPoint"><div id="downIcon"></div></a>
             </div>
             <div id="landing-logo-cover"></div>
             <div id="loadingBounce-a"></div>
@@ -39,14 +39,12 @@
          <!-- Header -->
          <header>
             <!-- Relative Header -->
-            <div id="header" class="headerRelative">
+            <div id="headerWrapper" class="headerRelative">
                <!-- Desktop nav -->
                <nav id="headerNav">
                   <div id="mainLogo">
-      
                      <a href="./index.html"><h1>myth-des</h1></a>
                   </div>
-
                   <div id="links">
                      <a href="./about.html">About</a>
                      <p>||</p>
@@ -60,19 +58,34 @@
                         <em>Dark Mode</em>
                      </div> 
                   </div>
+
+                  <!-- mobile links & menu -->
                   <div id="linksMobileInput">
                      <input id="MobileInputCheckbox" type="checkbox" />
-                        <span class="closedSpan"></span>
-                        <span class="closedSpan"></span>
-                        <span class="closedSpan"></span>
-                        <span class="openSpan"></span>
-                        <span class="openSpan"></span>
+                     <span class="closedSpan"></span>
+                     <span class="closedSpan"></span>
+                     <span class="closedSpan"></span>
+                     <span class="openSpan"></span>
+                     <span class="openSpan"></span>
                   </div>
                   <div id="linksMobile">
-                     
+                     <div id="mainLogo">
+                        <a href="./index.html"><h1>myth-des</h1></a>
+                     </div>
+                     <!-- Night mode toggle -->
+                     <div class="nightModeToggle-wrapper">
+                        <label class="nightModeToggle" for="checkbox">
+                           <input type="checkbox" id="checkbox" />
+                           <div class="slider round"></div>
+                        </label>
+                        <em>Dark Mode</em>
+                     </div>
+                     <div id="mobileLinksContainer">
+                        <a href="./about.html">About</a>
+                        <a href="./contact.html">Contact</a>
+                     </div>
                   </div>
                </nav>
-               
             </div>
 
             <!-- Fixed Header -->
@@ -97,11 +110,34 @@
                      </div> 
                   </div>
 
+                  <!-- mobile links & menu -->
+                  <div id="linksMobileInput">
+                     <input id="MobileInputCheckbox" type="checkbox" />
+                     <span class="closedSpan"></span>
+                     <span class="closedSpan"></span>
+                     <span class="closedSpan"></span>
+                     <span class="openSpan"></span>
+                     <span class="openSpan"></span>
+                  </div>
+                  <div id="linksMobile">
+                     <div id="mainLogo">
+                        <a href="./index.html"><h1>myth-des</h1></a>
+                     </div>
+                     <!-- Night mode toggle -->
+                     <div class="nightModeToggle-wrapper">
+                        <label class="nightModeToggle" for="checkbox">
+                           <input type="checkbox" id="checkbox" />
+                           <div class="slider round"></div>
+                        </label>
+                        <em>Dark Mode</em>
+                     </div>
+                     <div id="mobileLinksContainer">
+                        <a href="./about.html">About</a>
+                        <a href="./contact.html">Contact</a>
+                     </div>
+                  </div>
                </nav>
-               
             </div>
-
-            
          </header>
 
          <!-- Main -->
@@ -177,12 +213,8 @@
       <script src="js/template.js"></script>
       <script>   
          ScrollReveal().reveal('#header');
-         ScrollReveal().reveal('#img-keyborders');
-         ScrollReveal().reveal('#img-myth-sets');
-         ScrollReveal().reveal('#img-beeston-art');
-         ScrollReveal().reveal('#img-nott-comtemp');
-         ScrollReveal().reveal('#img-china-tea');
-         ScrollReveal().reveal('#img-vegan-art');
+         ScrollReveal().reveal('.contentGrid-a');
+         ScrollReveal().reveal('.contentGrid-b');
          ScrollReveal().reveal('footer');
       </script>
    </body>
