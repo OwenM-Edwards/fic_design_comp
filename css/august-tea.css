@@ -1,11 +1,13 @@
 :root {
   --bg-color: #f7f7f7;
+  --bg-color-pop:#fbfbfb;
   --font-color:#1b1b1b;
   --pop-color:#db8722;
 }
 
 [data-theme=dark] {
   --bg-color: #1b1b1b;
+  --bg-color-pop:#171717;
   --font-color:#f7f7f7;
   --pop-color:#db8722;
 }
@@ -21,10 +23,26 @@
   position: fixed;
   top: 0;
   left: -100%;
-  background-color: #171717;
-  width: 300px;
+  background-color: var(--bg-color-pop);
+  width: 60%;
+  min-width: 230px;
+  max-width: 300px;
   height: 100%;
   z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#linksMobile #nightModeToggle-wrapper {
+  margin-top: 40px;
+}
+#linksMobile #mobileLinksContainer {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-top: 40px;
 }
 
 .linkMobileShown {
@@ -57,6 +75,7 @@
   scale: 1.2;
   position: relative;
   top: 40px;
+  display: none;
 }
 #linksMobileInput input {
   cursor: pointer;
@@ -71,7 +90,7 @@
   right: 5px;
 }
 #linksMobileInput span {
-  background-color: #f7f7f7;
+  background-color: var(--font-color);
   border-radius: 3px;
   display: block;
   height: 4px;
@@ -80,7 +99,7 @@
   transform-origin: 4px 0px;
   width: 33px;
   z-index: 1;
-  transition: background-color 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), width 1s;
+  transition: background-color 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), width 0.8s;
 }
 #linksMobileInput span:nth-of-type(1) {
   transition-delay: 0.2s;
@@ -105,9 +124,6 @@
   width: 0px;
   top: -20px;
 }
-#linksMobileInput input:checked ~ span {
-  background-color: orange;
-}
 #linksMobileInput input:checked ~ span:nth-of-type(1) {
   width: 0;
 }
@@ -118,10 +134,12 @@
   width: 0;
 }
 #linksMobileInput input:checked ~ span:nth-of-type(4) {
+  background-color: var(--pop-color);
   width: 33px;
   transition-delay: 1.2s;
 }
 #linksMobileInput input:checked ~ span:nth-of-type(5) {
+  background-color: var(--pop-color);
   width: 33px;
   transition-delay: 1.2s;
 }
@@ -137,6 +155,7 @@ html {
   color: var(--font-color);
   transition: background-color 1000ms ease-out;
   transition: color 1000ms linear;
+  overflow-x: hidden;
 }
 
 body {
@@ -213,6 +232,8 @@ header nav #mainLogo {
 }
 header nav #links {
   font-size: 1.4rem;
+  position: relative;
+  right: 20px;
 }
 header nav p {
   display: inline;
@@ -321,7 +342,7 @@ footer #companyName span {
   cursor: pointer;
 }
 #scrollBtn-container #scrollBtn:hover {
-  scale: 0.68;
+  scale: 0.5;
 }
 #scrollBtn-container .scrollBtnLight {
   background-image: url(../assets/icons/lightModeArrow.png);
@@ -330,12 +351,13 @@ footer #companyName span {
   background-image: url(../assets/icons/darkModeArrow.png);
 }
 
-main.sub-page-main {
-  padding-top: 200px;
+header.sub-page-header {
+  width: 100%;
+  max-height: 200px;
 }
 
-header #header.sub-page-header {
-  width: calc(100% - 40px);
+header.sub-page-header #sub-page-headerWrapper {
+  width: 100%;
   max-width: 1300px;
   height: 160px;
   max-height: 200px;
@@ -350,6 +372,10 @@ header #header.sub-page-header {
 }
 
 @media only screen and (max-width: 800px) {
+  #linksMobileInput {
+    display: block;
+  }
+
   #scrollBtn-container {
     position: fixed;
     right: 0px;
@@ -375,31 +401,20 @@ header #header.sub-page-header {
     display: none;
   }
 
-  #header.headerFixed {
-    max-height: 40px;
-    min-width: 100vw;
-    padding-bottom: 90px;
-  }
-  #header.headerFixed #headerNav {
-    position: relative;
-    bottom: 20px;
-  }
-  #header.headerFixed #mobileMenuToggle {
-    position: relative;
-    left: 85vw;
-    bottom: 86px;
+  #headerWrapper.headerFixed {
+    width: calc(100% - 10px);
   }
 
-  header #header.sub-page-header {
+  header #headerWrapper.sub-page-header {
     min-width: 100vw;
     max-height: 40px;
     padding-bottom: 90px;
   }
-  header #header.sub-page-header #headerNav {
+  header #headerWrapper.sub-page-header #headerNav {
     position: relative;
     bottom: 20px;
   }
-  header #header.sub-page-header #mobileMenuToggle {
+  header #headerWrapper.sub-page-header #mobileMenuToggle {
     position: relative;
     left: 85vw;
     bottom: 86px;
