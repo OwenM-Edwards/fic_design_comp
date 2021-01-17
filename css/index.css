@@ -1,3 +1,11 @@
+@keyframes textReveal {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
 :root {
   --bg-color: #f7f7f7;
   --bg-color-pop:#fbfbfb;
@@ -12,11 +20,29 @@
   --pop-color:#db8722;
 }
 
+.header-fade-in-anim {
+  overflow: hidden;
+  white-space: nowrap;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 10s;
+  animation: textReveal 3.3s;
+}
+
+.text-fade-in-anim {
+  overflow: hidden;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 10s;
+  animation: textReveal 3.3s;
+}
+
 #achorPoint {
   visibility: hidden;
   pointer-events: none;
   position: relative;
-  margin-top: 400px;
 }
 
 #linksMobile {
@@ -145,6 +171,7 @@
 }
 
 html {
+  padding: 40px;
   height: 100%;
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -351,6 +378,10 @@ footer #companyName span {
   background-image: url(../assets/icons/darkModeArrow.png);
 }
 
+main.sub-page-main {
+  width: 100%;
+}
+
 header.sub-page-header {
   width: 100%;
   max-height: 200px;
@@ -371,6 +402,15 @@ header.sub-page-header #sub-page-headerWrapper {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 1370px) {
+  header .headerFixed #links {
+    padding-right: 60px;
+  }
+
+  header.sub-page-header #sub-page-headerWrapper #links {
+    padding-right: 60px;
+  }
+}
 @media only screen and (max-width: 800px) {
   #linksMobileInput {
     display: block;
@@ -388,7 +428,6 @@ header.sub-page-header #sub-page-headerWrapper {
   }
 
   h2 {
-    text-align: center;
     font-size: 2rem;
   }
 
@@ -405,6 +444,9 @@ header.sub-page-header #sub-page-headerWrapper {
     width: calc(100% - 10px);
   }
 
+  header nav #mainLogo {
+    padding-left: 0px;
+  }
   header #headerWrapper.sub-page-header {
     min-width: 100vw;
     max-height: 40px;
@@ -427,12 +469,17 @@ header.sub-page-header #sub-page-headerWrapper {
   width: 100%;
   height: var(--app-height);
   background-color: var(--bg-color);
-  background-image: url("../assets/img/landing/6.jpg");
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
+}
+#landing #landing-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--app-height);
+  object-fit: cover;
 }
 #landing #landing-cover {
   position: absolute;
@@ -463,6 +510,8 @@ header.sub-page-header #sub-page-headerWrapper {
   z-index: 3;
   left: 50vw;
   opacity: 0;
+}
+#landing #loadingBounce-a.animation {
   transition-property: transform, left, opacity;
   transition-duration: 0.8s, 2s, 0.5s;
   transition-timing-function: ease-in-out;
@@ -479,6 +528,8 @@ header.sub-page-header #sub-page-headerWrapper {
   border-radius: 100%;
   z-index: 3;
   opacity: 0;
+}
+#landing #loadingBounce-b.animation {
   transition-property: transform, right, opacity;
   transition-duration: 0.8s, 2s, 0.5s;
   transition-timing-function: ease-in-out;
@@ -493,6 +544,9 @@ header.sub-page-header #sub-page-headerWrapper {
   transform: translateY(-92vh);
   right: 70vw;
   opacity: 0;
+}
+#landing #loadingBounce-b.loadingBounceHidden {
+  display: none;
 }
 #landing #downIconContainer {
   width: 100%;
@@ -676,8 +730,12 @@ main .contentGrid-b #img-vegan-art img {
 main .contentGrid-b #a-vegan-art {
   grid-area: 1/2/2/3;
 }
-main h2 {
-  font-size: 2rem;
+main #main-h2 {
+  font-size: 3rem;
+  height: auto;
+}
+main #main-h2 span {
+  color: var(--pop-color);
 }
 
 @media only screen and (max-width: 800px) {
@@ -709,6 +767,10 @@ main h2 {
   .contentGrid-b {
     height: 200px !important;
     overflow: hidden;
+  }
+
+  main #main-h2 {
+    font-size: 2rem;
   }
 }
 

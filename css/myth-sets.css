@@ -1,3 +1,11 @@
+@keyframes textReveal {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
 :root {
   --bg-color: #f7f7f7;
   --bg-color-pop:#fbfbfb;
@@ -12,11 +20,29 @@
   --pop-color:#db8722;
 }
 
+.header-fade-in-anim {
+  overflow: hidden;
+  white-space: nowrap;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 10s;
+  animation: textReveal 3.3s;
+}
+
+.text-fade-in-anim {
+  overflow: hidden;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 10s;
+  animation: textReveal 3.3s;
+}
+
 #achorPoint {
   visibility: hidden;
   pointer-events: none;
   position: relative;
-  margin-top: 400px;
 }
 
 #linksMobile {
@@ -145,6 +171,7 @@
 }
 
 html {
+  padding: 40px;
   height: 100%;
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -351,6 +378,10 @@ footer #companyName span {
   background-image: url(../assets/icons/darkModeArrow.png);
 }
 
+main.sub-page-main {
+  width: 100%;
+}
+
 header.sub-page-header {
   width: 100%;
   max-height: 200px;
@@ -371,6 +402,15 @@ header.sub-page-header #sub-page-headerWrapper {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 1370px) {
+  header .headerFixed #links {
+    padding-right: 60px;
+  }
+
+  header.sub-page-header #sub-page-headerWrapper #links {
+    padding-right: 60px;
+  }
+}
 @media only screen and (max-width: 800px) {
   #linksMobileInput {
     display: block;
@@ -388,7 +428,6 @@ header.sub-page-header #sub-page-headerWrapper {
   }
 
   h2 {
-    text-align: center;
     font-size: 2rem;
   }
 
@@ -405,6 +444,9 @@ header.sub-page-header #sub-page-headerWrapper {
     width: calc(100% - 10px);
   }
 
+  header nav #mainLogo {
+    padding-left: 0px;
+  }
   header #headerWrapper.sub-page-header {
     min-width: 100vw;
     max-height: 40px;
@@ -457,6 +499,7 @@ h2 {
   font-size: 2.1rem;
   font-weight: bold;
   margin: 20px 0;
+  height: auto;
 }
 
 p {
