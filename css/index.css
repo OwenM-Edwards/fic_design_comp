@@ -24,7 +24,7 @@
   overflow: hidden;
   white-space: nowrap;
   transition-property: width;
-  animation: textReveal 4s;
+  animation: textReveal 5s;
 }
 
 .text-fade-in-anim {
@@ -602,9 +602,10 @@ header.sub-page-header #sub-page-headerWrapper {
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
   transition-delay: 1.3s;
+  text-shadow: 3px 3px 3px #1b1b1b;
 }
 #landing #landing-logo.landing-logo-colorShift {
-  color: #f7f7f7;
+  color: white;
 }
 #landing #landing-logo-cover {
   position: absolute;

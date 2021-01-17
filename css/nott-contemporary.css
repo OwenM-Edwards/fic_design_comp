@@ -24,7 +24,7 @@
   overflow: hidden;
   white-space: nowrap;
   transition-property: width;
-  animation: textReveal 4s;
+  animation: textReveal 5s;
 }
 
 .text-fade-in-anim {
