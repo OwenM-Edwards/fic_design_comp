@@ -3,6 +3,14 @@
 $header-sizePadding: 160px;
 $base-contentWidth: 1300px;
 
+@keyframes textReveal {
+   0% {
+      width:0px;
+   }
+   100% {
+      width:100%;
+   }
+}
 // Themes.
 :root {
    --bg-color: #f7f7f7;
@@ -17,12 +25,28 @@ $base-contentWidth: 1300px;
    --pop-color:#db8722;
 }
 
+.header-fade-in-anim {
+   overflow: hidden;
+   white-space:nowrap;
+   transition-property: width;
+   transition-duration: 2s;
+   transition-timing-function: ease-in-out;
+   transition-delay: 10s;
+   animation:textReveal 3.3s;
+}
+.text-fade-in-anim {
+   overflow: hidden;
+   transition-property: width;
+   transition-duration: 2s;
+   transition-timing-function: ease-in-out;
+   transition-delay: 10s;
+   animation:textReveal 3.3s;
+}
 
 #achorPoint { 
    visibility: hidden; 
    pointer-events: none;
    position: relative;
-   margin-top:400px;
 }
 
 #linksMobile {
@@ -146,6 +170,7 @@ $base-contentWidth: 1300px;
 
 
 html {
+   padding:40px;
    height:100%;
    scroll-behavior: smooth;
    box-sizing:border-box;
@@ -186,6 +211,7 @@ header {
       height:$header-sizePadding;
       max-height: 200px;
       position: fixed;
+      
       padding-bottom:20px;
       top:-10px;
       background-color: var(--bg-color);
@@ -246,6 +272,7 @@ header {
       }
    }
 } 
+
 
 main {
    width:100%;
@@ -374,6 +401,7 @@ footer {
 
 // Sub pages main and header.
 main.sub-page-main{
+   width:100%;
 
 }
 header.sub-page-header {
@@ -398,6 +426,26 @@ header.sub-page-header {
 }
 
 
+
+
+
+// Media Queries.
+@media only screen and (max-width:1370px) {
+   header {
+      .headerFixed {
+         #links {
+            padding-right:60px;
+         }
+      }
+   } 
+   header.sub-page-header {
+      #sub-page-headerWrapper{
+         #links {
+            padding-right:60px;
+         }
+      }
+   }
+}
 // Media Queries.
 @media only screen and (max-width:800px) {
    #linksMobileInput {
@@ -414,7 +462,6 @@ header.sub-page-header {
       }
    }
    h2 {
-      text-align: center;
       font-size: 2rem;
    }
    html {
@@ -428,6 +475,11 @@ header.sub-page-header {
       width:calc(100% - 10px);
    } 
    header {
+      nav {
+         #mainLogo {
+            padding-left:0px;
+         }
+      }
       #headerWrapper.sub-page-header{
          min-width: 100vw;
          max-height:40px;
