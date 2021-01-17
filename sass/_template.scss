@@ -6,11 +6,13 @@ $base-contentWidth: 1300px;
 // Themes.
 :root {
    --bg-color: #f7f7f7;
+   --bg-color-pop:#fbfbfb;
    --font-color:#1b1b1b;
    --pop-color:#db8722;
 }
 [data-theme="dark"] {
    --bg-color: #1b1b1b;
+   --bg-color-pop:#171717;
    --font-color:#f7f7f7;
    --pop-color:#db8722;
 }
@@ -27,10 +29,26 @@ $base-contentWidth: 1300px;
    position: fixed;
    top:0;
    left:-100%;
-   background-color: #171717;
-   width:300px;
+   background-color: var(--bg-color-pop);
+   width:60%;
+   min-width: 230px;
+   max-width:300px;
    height:100%;
    z-index: 6;
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   #nightModeToggle-wrapper{
+      margin-top:40px;
+   }
+   #mobileLinksContainer {
+      margin:0 auto;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.5rem;
+      margin-top:40px;
+   }
 }
 .linkMobileShown{
    animation:showMobileMenu 1s ease-out;
@@ -54,6 +72,7 @@ $base-contentWidth: 1300px;
    scale:1.2;
    position: relative;
    top:40px;
+   display:none;
    input {
       cursor: pointer;
       display: block;
@@ -67,7 +86,7 @@ $base-contentWidth: 1300px;
       right:5px;
    }
    span {
-      background-color:#f7f7f7;
+      background-color:var(--font-color);
       border-radius: 3px;
       display: block;
       height: 4px;
@@ -78,7 +97,7 @@ $base-contentWidth: 1300px;
       z-index: 1;
       transition: 
          background-color 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-         width 1s;
+         width 0.8s;
       &:nth-of-type(1){
          transition-delay: 0.2s;
       }
@@ -104,9 +123,6 @@ $base-contentWidth: 1300px;
       top:-20px;
    }
 
-   input:checked ~ span {
-      background-color: orange;
-   }
    input:checked ~ span:nth-of-type(1) {
       width: 0;
    }
@@ -117,15 +133,15 @@ $base-contentWidth: 1300px;
       width: 0;
    }
    input:checked ~ span:nth-of-type(4) {
+      background-color: var(--pop-color);
       width: 33px;
       transition-delay: 1.2s;
    }
    input:checked ~ span:nth-of-type(5) {
+      background-color: var(--pop-color);
       width: 33px;
       transition-delay: 1.2s;
    }
-
-   
 }
 
 
@@ -140,7 +156,7 @@ html {
    color: var(--font-color);
    transition: background-color 1000ms ease-out;
    transition: color 1000ms linear;
-
+   overflow-x: hidden;
 }
 
 body {
@@ -222,6 +238,8 @@ header {
       }
       #links {
          font-size: 1.4rem;
+         position: relative;
+         right:20px;
       }
       p {
          display: inline;
@@ -342,7 +360,7 @@ footer {
       display:none;
       cursor:pointer;
       &:hover {
-         scale: 0.68;
+         scale: 0.5;
       }
    }
    .scrollBtnLight {
@@ -356,11 +374,15 @@ footer {
 
 // Sub pages main and header.
 main.sub-page-main{
-   padding-top:200px;
+
 }
-header {
-   #header.sub-page-header{
-      width: calc(100% - 40px);
+header.sub-page-header {
+   width:100%;
+   max-height:200px;
+}
+header.sub-page-header {
+   #sub-page-headerWrapper{
+      width: 100%;
       max-width: $base-contentWidth;
       height:$header-sizePadding;
       max-height: 200px;
@@ -378,6 +400,9 @@ header {
 
 // Media Queries.
 @media only screen and (max-width:800px) {
+   #linksMobileInput {
+      display:block;
+   }
    #scrollBtn-container {
       position:fixed;
       right:0px;
@@ -399,22 +424,11 @@ header {
    #links {
       display:none;
    }
-   #header.headerFixed {
-      max-height:40px;
-      min-width: 100vw;
-      padding-bottom:90px;
-      #headerNav {
-         position: relative;
-         bottom:20px;
-      }
-      #mobileMenuToggle{
-         position: relative;
-         left:85vw;
-         bottom: 86px;
-      }
+   #headerWrapper.headerFixed {
+      width:calc(100% - 10px);
    } 
    header {
-      #header.sub-page-header{
+      #headerWrapper.sub-page-header{
          min-width: 100vw;
          max-height:40px;
          padding-bottom:90px;
