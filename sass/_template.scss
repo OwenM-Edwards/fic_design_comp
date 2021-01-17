@@ -29,17 +29,11 @@ $base-contentWidth: 1300px;
    overflow: hidden;
    white-space:nowrap;
    transition-property: width;
-   transition-duration: 2s;
-   transition-timing-function: ease-in-out;
-   transition-delay: 10s;
-   animation:textReveal 3.3s;
+   animation:textReveal 4.5s;
 }
 .text-fade-in-anim {
    overflow: hidden;
    transition-property: width;
-   transition-duration: 2s;
-   transition-timing-function: ease-in-out;
-   transition-delay: 10s;
    animation:textReveal 3.3s;
 }
 
