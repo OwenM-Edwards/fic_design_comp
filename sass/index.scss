@@ -93,7 +93,11 @@
       background-image: url('../assets/icons/scroll-down_white.png');
       background-size: cover;
       background-position: center;
+      transition: scale 0.1s linear;
       z-index: 5;
+      &:hover {
+         scale:0.9;
+      }
    }
    
    @keyframes bounceFadeIn {
