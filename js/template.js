@@ -1,6 +1,6 @@
 const headerFixed = document.querySelector(".headerFixed");
 const landingPage = document.getElementById("landing");
-const downIcon = document.querySelector(".headerRelative");
+const downIcon = document.querySelector("#downIconContainer");
 // Scroll back to top of page button.
 const scrollButton = document.getElementById("scrollBtn");
 
@@ -127,6 +127,7 @@ loadingBounce = () => {
    loadingBounceB.classList.add('loadingBounceMoveB');
    loadingLogoCover.classList.add('landing-logo-cover-hidden');
    loadingLogo.classList.add('landing-logo-colorShift');
+   downIcon.classList.add('downIcon-fadeIn');
    // Hide bounce icons when finished.
    setTimeout(function(){
       loadingBounceA.classList.remove('loadingBounceMoveA');
