@@ -7,12 +7,17 @@
    width:100%;
    height: var(--app-height);
    background-color:var(--bg-color);
-   background-image: url("../assets/img/landing/6.jpg");
-   background-size: cover;
-   background-position: center;
    display:flex;
    flex-wrap:wrap;
    max-width:100%;
+   #landing-image {
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height: var(--app-height);
+      object-fit: cover;
+   }
    #landing-cover {
       position: absolute;
       top:0;
@@ -43,12 +48,14 @@
       z-index: 3;
       left:50vw;
       opacity: 0;
+
+   }
+   #loadingBounce-a.animation {
       transition-property: transform, left, opacity;
       transition-duration: 0.8s, 2s, 0.5s;
       transition-timing-function: ease-in-out;
       transition-delay: 0s, 0.6s, 0.9s;
       animation:bounceFadeIn 2s;
-
    }
 
    #loadingBounce-b {
@@ -61,12 +68,16 @@
       border-radius: 100%;
       z-index: 3;
       opacity:0;
+
+   }
+   #loadingBounce-b.animation {
       transition-property: transform, right, opacity;
       transition-duration: 0.8s, 2s, 0.5s;
       transition-timing-function: ease-in-out;
       transition-delay: 0s, 0.6s, 0.9s;
       animation:bounceFadeIn 2s;
    }
+
    #loadingBounce-a.loadingBounceMoveA {
       transform:translateY(-92vh);
       left:70vw;
@@ -76,6 +87,9 @@
       transform:translateY(-92vh);
       right:70vw;
       opacity:0;
+   }
+   #loadingBounce-b.loadingBounceHidden {
+      display:none;
    }
    
    #downIconContainer {
@@ -176,6 +190,7 @@ main {
       grid-row-gap: 20px; 
       .gridItem {
          text-decoration: none;
+      
          &:hover {
             .hoverText {
                opacity: 1;
@@ -284,10 +299,15 @@ main {
       }
    }
 
-   h2 {
+   #main-h2 {
       // font-family: 'Josefin Sans', sans-serif;
-      font-size: 2rem;
+      font-size: 3rem;
+      height:auto;
+      span {
+         color:var(--pop-color);
+      }
    }
+
 }
 
 
@@ -322,5 +342,10 @@ main {
    .contentGrid-b {
       height:200px!important;
       overflow: hidden;
+   }
+   main {
+      #main-h2 {
+         font-size: 2rem;
+      }
    }
 }
