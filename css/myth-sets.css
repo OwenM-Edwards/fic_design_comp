@@ -24,7 +24,7 @@
   overflow: hidden;
   white-space: nowrap;
   transition-property: width;
-  animation: textReveal 4.5s;
+  animation: textReveal 4s;
 }
 
 .text-fade-in-anim {
@@ -440,6 +440,10 @@ header.sub-page-header #sub-page-headerWrapper {
 
   header nav #mainLogo {
     padding-left: 0px;
+    left: 5px;
+  }
+  header nav #linksMobileInput {
+    right: 5px;
   }
   header #headerWrapper.sub-page-header {
     min-width: 100vw;
