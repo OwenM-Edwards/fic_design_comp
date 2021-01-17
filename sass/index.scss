@@ -153,9 +153,10 @@
       transition-duration: 1s;
       transition-timing-function: ease-in-out;
       transition-delay: 1.3s;
+      text-shadow: 3px 3px 3px #1b1b1b;
    }
    #landing-logo.landing-logo-colorShift {
-      color:#f7f7f7;
+      color:white;
    }
 
    
@@ -319,6 +320,7 @@ main {
       // font-family: 'Josefin Sans', sans-serif;
       font-size:2.5rem;
       height:auto;
+
       span {
          color:var(--pop-color);
       }
