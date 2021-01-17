@@ -127,6 +127,15 @@ loadingBounce = () => {
    loadingBounceB.classList.add('loadingBounceMoveB');
    loadingLogoCover.classList.add('landing-logo-cover-hidden');
    loadingLogo.classList.add('landing-logo-colorShift');
+   // Hide bounce icons when finished.
+   setTimeout(function(){
+      loadingBounceA.classList.remove('loadingBounceMoveA');
+      loadingBounceB.classList.remove('loadingBounceMoveB');
+      loadingBounceA.classList.remove('animation');
+      loadingBounceB.classList.remove('animation');
+      loadingBounceA.classList.add('loadingBounceHidden');
+      loadingBounceB.classList.add('loadingBounceHidden');
+   }, 1500 );
    
 }
 
@@ -165,3 +174,57 @@ mobileMenuInputs.forEach(function(item, index){
    item.addEventListener('change', mobileMenuToggle);
 });
 
+
+// Controller for text fade in animation.
+const fadeInText = document.querySelectorAll('.fade-in-text');
+const fadeInHeader = document.querySelectorAll('.fade-in-header');
+if(fadeInText){
+   fadeInText.forEach(function(item, index){
+      let fadeInTextObserver = new IntersectionObserver(
+         (entries, observer) => {
+            if(entries[0].intersectionRatio==0){
+               item.classList.remove('text-fade-in-anim');
+            }
+            if(entries[0].intersectionRatio>0){
+               item.classList.add('text-fade-in-anim');
+            } 
+         },
+         {
+            root: null,
+            rootMargin:'30px',
+            threshhold:1
+         }
+      );
+      fadeInTextObserver.observe(item);
+   })
+   console.log('detected');
+}
+if(fadeInHeader){
+   fadeInHeader.forEach(function(item, index){
+      let fadeInHeaderObserver = new IntersectionObserver(
+         (entries, observer) => {
+            if(entries[0].intersectionRatio==0){
+               item.classList.remove('header-fade-in-anim');
+            }
+            if(entries[0].intersectionRatio>0){
+               item.classList.add('header-fade-in-anim');
+            } 
+         },
+         {
+            root: null,
+            rootMargin:'30px',
+            threshhold:1
+         }
+      );
+      fadeInHeaderObserver.observe(item);
+   })
+   console.log('detected');
+   
+}
+
+
+// Text carousel animation.
+// Array of text.
+// Current displayed, previous displayed, next displayed vars.
+// Three divs for each.
+// Cycle through switching them as you go.
