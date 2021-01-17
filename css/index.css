@@ -24,18 +24,12 @@
   overflow: hidden;
   white-space: nowrap;
   transition-property: width;
-  transition-duration: 2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 10s;
-  animation: textReveal 3.3s;
+  animation: textReveal 4.5s;
 }
 
 .text-fade-in-anim {
   overflow: hidden;
   transition-property: width;
-  transition-duration: 2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 10s;
   animation: textReveal 3.3s;
 }
 
@@ -481,6 +475,14 @@ header.sub-page-header #sub-page-headerWrapper {
   height: var(--app-height);
   object-fit: cover;
 }
+#landing #landing-image-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--app-height);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.35));
+}
 #landing #landing-cover {
   position: absolute;
   top: 0;
@@ -502,27 +504,27 @@ header.sub-page-header #sub-page-headerWrapper {
 }
 #landing #loadingBounce-a {
   position: absolute;
-  bottom: 0vh;
+  bottom: 48vh;
   width: 3px;
   height: 60px;
   background-color: #f7f7f7;
   border-radius: 100%;
   z-index: 3;
-  left: 50vw;
+  left: 45vw;
   opacity: 0;
 }
 #landing #loadingBounce-a.animation {
-  transition-property: transform, left, opacity;
-  transition-duration: 0.8s, 2s, 0.5s;
+  transition-property: left, opacity;
+  transition-duration: 2s, 0.5s;
   transition-timing-function: ease-in-out;
-  transition-delay: 0s, 0.6s, 0.9s;
+  transition-delay: 0.6s, 0.9s;
   animation: bounceFadeIn 2s;
 }
 #landing #loadingBounce-b {
   position: absolute;
-  bottom: 0vh;
+  bottom: 48vh;
   width: 3px;
-  right: 50vw;
+  right: 45vw;
   height: 60px;
   background-color: #f7f7f7;
   border-radius: 100%;
@@ -530,20 +532,17 @@ header.sub-page-header #sub-page-headerWrapper {
   opacity: 0;
 }
 #landing #loadingBounce-b.animation {
-  transition-property: transform, right, opacity;
-  transition-duration: 0.8s, 2s, 0.5s;
+  transition-property: right, opacity;
+  transition-duration: 2s, 0.5s;
   transition-timing-function: ease-in-out;
-  transition-delay: 0s, 0.6s, 0.9s;
+  transition-delay: 0.6s, 0.9s;
   animation: bounceFadeIn 2s;
 }
 #landing #loadingBounce-a.loadingBounceMoveA {
-  transform: translateY(-92vh);
   left: 70vw;
 }
 #landing #loadingBounce-b.loadingBounceMoveB {
-  transform: translateY(-92vh);
   right: 70vw;
-  opacity: 0;
 }
 #landing #loadingBounce-b.loadingBounceHidden {
   display: none;
@@ -554,7 +553,15 @@ header.sub-page-header #sub-page-headerWrapper {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 5;
+  z-index: 1;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 1.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 1.9s;
+}
+#landing #downIconContainer.downIcon-fadeIn {
+  opacity: 1;
 }
 #landing #downIcon {
   margin: 0 auto;
@@ -564,7 +571,8 @@ header.sub-page-header #sub-page-headerWrapper {
   background-size: cover;
   background-position: center;
   transition: scale 0.1s linear;
-  z-index: 5;
+  z-index: 1;
+  opacity: 1;
 }
 #landing #downIcon:hover {
   scale: 0.9;
@@ -583,13 +591,13 @@ header.sub-page-header #sub-page-headerWrapper {
   display: inline;
   align-self: center;
   position: relative;
-  bottom: 45vh;
-  font-size: 4rem;
+  bottom: 0vh;
+  font-size: 5rem;
   font-family: "Josefin Sans", sans-serif;
   transition-property: color;
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
-  transition-delay: 1.5s;
+  transition-delay: 1.3s;
 }
 #landing #landing-logo.landing-logo-colorShift {
   color: #f7f7f7;
