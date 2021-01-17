@@ -20,12 +20,12 @@
 
    <body>
       <!-- Header -->
-      <header>
-         <div id="header" class="sub-page-header">
+      <header class="sub-page-header">
+         <div id="sub-page-headerWrapper" >
             <!-- Desktop nav -->
             <nav id="headerNav">
                <div id="mainLogo">
-                  <a href="./index.html"><h1>myth-des</h1></a>
+                  <a href="./index.html#anchorPoint"><h1>myth-des</h1></a>
                </div>
 
                <div id="links">
@@ -42,26 +42,33 @@
                   </div> 
                   
                </div>
-            </nav>
-            <!-- Mobile Nav -->
-            <div id="mobileMenuToggle">
-               <input type="checkbox" />
-               <span></span>
-               <span></span>
-               <span></span>
-               <ul id="mobileMenu">
-                  <li><a href="./about.html">About</a></li>
-                  <li><a href="./contact.html">Contact</a></li>
+               <!-- mobile links & menu -->
+               <div id="linksMobileInput">
+                  <input id="MobileInputCheckbox" type="checkbox" />
+                  <span class="closedSpan"></span>
+                  <span class="closedSpan"></span>
+                  <span class="closedSpan"></span>
+                  <span class="openSpan"></span>
+                  <span class="openSpan"></span>
+               </div>
+               <div id="linksMobile">
+                  <div id="mainLogo">
+                     <a href="./index.html"><h1>myth-des</h1></a>
+                  </div>
                   <!-- Night mode toggle -->
-                  <li><div class="nightModeToggle-wrapper">
+                  <div class="nightModeToggle-wrapper">
                      <label class="nightModeToggle" for="checkbox">
                         <input type="checkbox" id="checkbox" />
                         <div class="slider round"></div>
                      </label>
                      <em>Dark Mode</em>
-               </div></li>
-               </ul>
-            </div>
+                  </div>
+                  <div id="mobileLinksContainer">
+                     <a href="./about.html">About</a>
+                     <a href="./contact.html">Contact</a>
+                  </div>
+               </div>
+            </nav>
          </div>
       </header>
 
