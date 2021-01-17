@@ -12,6 +12,7 @@
    background-position: center;
    display:flex;
    flex-wrap:wrap;
+   max-width:100%;
    #landing-cover {
       position: absolute;
       top:0;
@@ -83,6 +84,7 @@
       position: absolute;
       bottom:0;
       left:0 ;
+      z-index: 5;
    }
    #downIcon {
       margin: 0 auto;
@@ -91,6 +93,7 @@
       background-image: url('../assets/icons/scroll-down_white.png');
       background-size: cover;
       background-position: center;
+      z-index: 5;
    }
    
    @keyframes bounceFadeIn {
@@ -146,7 +149,7 @@
 
 main {
    .hoverText {
-      transition: .5s ease;
+      transition: opacity .5s ease;
       opacity:0;
       color:#f7f7f7;
       font-size:2rem;
@@ -159,6 +162,8 @@ main {
    }
    .contentGrid-a {
       height:1000px;
+      max-height: 1000px;
+      overflow: hidden;
       width:100%;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -167,7 +172,6 @@ main {
       grid-row-gap: 20px; 
       .gridItem {
          text-decoration: none;
-         transition: .5s ease;
          &:hover {
             .hoverText {
                opacity: 1;
@@ -241,7 +245,6 @@ main {
 
       .gridItem {
          text-decoration: none;
-         transition: .5s ease;
          &:hover {
             cursor: pointer;  
             .hoverText {

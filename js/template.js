@@ -1,8 +1,8 @@
-let headerFixed = document.querySelector(".headerFixed");
-let landingPage = document.getElementById("landing");
-let downIcon = document.getElementById("downIcon");
+const headerFixed = document.querySelector(".headerFixed");
+const landingPage = document.getElementById("landing");
+const downIcon = document.querySelector(".headerRelative");
 // Scroll back to top of page button.
-let scrollButton = document.getElementById("scrollBtn");
+const scrollButton = document.getElementById("scrollBtn");
 
 // Set app window size
 const appHeight = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
@@ -11,46 +11,26 @@ window.addEventListener('resize', appHeight);
 appHeight();
 
 // Header fixed/relative switch.
+
 if(landingPage){
    let headerObserver = new IntersectionObserver(
       (entries, observer) => {
-         if(headerFixed.classList.contains('headerFixedHidden')){
-            if(entries[0].intersectionRatio==0){
-               headerFixed.classList.remove('headerFixedHidden');
-               headerFixed.classList.add('headerFixedShown');
-            }
+         if(entries[0].intersectionRatio==0){
+            headerFixed.classList.remove('headerFixedHidden');
+            headerFixed.classList.add('headerFixedShown');
          }
-         else if(headerFixed.classList.contains('headerFixedShown')) {
-            if(entries[0].intersectionRatio>0){
-               headerFixed.classList.remove('headerFixedShown');
-               headerFixed.classList.add('headerFixedHidden');
-            }
-         }
-      },
-      {
-         root: null,
-         rootMargin:'0px',
-         threshhold:0
-      }
-   );
-   headerObserver.observe(landingPage);
-}
-// Check for stuck header by checking if downicon is in frame 
-if(landingPage){
-   let iconObserver = new IntersectionObserver(
-      (entries, observer) => {
          if(entries[0].intersectionRatio>0){
             headerFixed.classList.remove('headerFixedShown');
             headerFixed.classList.add('headerFixedHidden');
-         }
+         } 
       },
       {
          root: null,
-         rootMargin:'0px',
+         rootMargin:'30px',
          threshhold:1
       }
    );
-   iconObserver.observe(downIcon);
+   headerObserver.observe(landingPage);
 }
 
 
@@ -86,7 +66,6 @@ else if (currentTheme) {
    }
 }
 switchTheme = (e) => {
-   console.log('res')
    if (e.target.checked) {
       toggleSwitches.forEach (function(item,index){
          item.checked = true
@@ -146,5 +125,23 @@ loadingBounce = () => {
    loadingBounceB.classList.add('loadingBounceMoveB');
    loadingLogoCover.classList.add('landing-logo-cover-hidden');
    loadingLogo.classList.add('landing-logo-colorShift');
+   
 }
 
+const mobileMenuInput = document.getElementById("MobileInputCheckbox");
+const mobileMenu = document.getElementById("linksMobile");
+testFrame = () =>{
+   if(!mobileMenu.classList.contains('linkMobileShown')){
+      mobileMenu.classList.remove('linkMobileHidden');
+      mobileMenu.classList.add('linkMobileShown');
+      
+   }
+   else {
+      mobileMenu.classList.remove('linkMobileShown');
+      mobileMenu.classList.add('linkMobileHidden');
+   }
+   
+}
+// Open mobile menu.
+
+mobileMenuInput.addEventListener('change', testFrame);

@@ -14,185 +14,176 @@
 
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300&display=swap" rel="stylesheet"> 
+      <script src="https://unpkg.com/scrollreveal"></script>
    </head>
 
 
    <body onload="loadingBounce()">
-      <div id="wrapper">
-      <!-- Animated Landing Page -->
-      <div id="landing">
-         <div id="landing-cover"></div>
-         <h1 id="landing-logo">myth-des</h1>
-         <div id="downIconContainer">
-            <div id="downIcon"></div>
+
+         <!-- Animated Landing Page -->
+         <div id="landing">
+            <div id="landing-cover"></div>
+            <h1 id="landing-logo">myth-des</h1>
+            <div id="downIconContainer">
+               <div id="downIcon"></div>
+            </div>
+            <div id="landing-logo-cover"></div>
+            <div id="loadingBounce-a"></div>
+            <div id="loadingBounce-b"></div>
          </div>
-         <div id="landing-logo-cover"></div>
-         <div id="loadingBounce-a"></div>
-         <div id="loadingBounce-b"></div>
 
-      </div>
+         
 
+         <div id="wrapper">
+         <a id="anchorPoint"></a>
+         <!-- Header -->
+         <header>
+            <!-- Relative Header -->
+            <div id="header" class="headerRelative">
+               <!-- Desktop nav -->
+               <nav id="headerNav">
+                  <div id="mainLogo">
       
+                     <a href="./index.html"><h1>myth-des</h1></a>
+                  </div>
 
+                  <div id="links">
+                     <a href="./about.html">About</a>
+                     <p>||</p>
+                     <a href="./contact.html">Contact</a>
+                     <!-- Night mode toggle -->
+                     <div class="nightModeToggle-wrapper">
+                        <label class="nightModeToggle" for="checkbox">
+                           <input type="checkbox" id="checkbox" />
+                           <div class="slider round"></div>
+                        </label>
+                        <em>Dark Mode</em>
+                     </div> 
+                  </div>
+                  <div id="linksMobileInput">
+                     <input id="MobileInputCheckbox" type="checkbox" />
+                        <span class="closedSpan"></span>
+                        <span class="closedSpan"></span>
+                        <span class="closedSpan"></span>
+                        <span class="openSpan"></span>
+                        <span class="openSpan"></span>
+                  </div>
+                  <div id="linksMobile">
+                     
+                  </div>
+               </nav>
+               
+            </div>
 
-      <!-- Header -->
-      <header>
-         <!-- Relative Header -->
-         <div id="header" class="headerRelative">
-            <!-- Desktop nav -->
-            <nav id="headerNav">
-               <div id="mainLogo">
-                  <a href="./index.html"><h1>myth-des</h1></a>
+            <!-- Fixed Header -->
+            <div id="header" class="headerFixed headerFixedHidden">
+               <!-- Desktop nav -->
+               <nav id="headerNav">
+                  <div id="mainLogo">
+                     <a href="./index.html"><h1>myth-des</h1></a>
+                  </div>
+
+                  <div id="links">
+                     <a href="./about.html">About</a>
+                     <p>||</p>
+                     <a href="./contact.html">Contact</a>
+                     <!-- Night mode toggle -->
+                     <div class="nightModeToggle-wrapper">
+                        <label class="nightModeToggle" for="checkbox">
+                           <input type="checkbox" id="checkbox" />
+                           <div class="slider round"></div>
+                        </label>
+                        <em>Dark Mode</em>
+                     </div> 
+                  </div>
+
+               </nav>
+               
+            </div>
+
+            
+         </header>
+
+         <!-- Main -->
+         
+
+         <main id="main" class="mainHeader">
+            <a id="1"></a>
+            <div class="contentGrid-a">
+               <div id="img-keyborders">
+                  <img loading="lazy" src="assets/img/index/1.jpg">
                </div>
+               <a class="gridItem" id="a-keyborders" href="./keyborders.html">
+                  <div class="hoverText" id="a-keyborders-hover">Keyborders</div>
+               </a>
 
-               <div id="links">
-                  <a href="./about.html">About</a>
-                  <p>||</p>
-                  <a href="./contact.html">Contact</a>
-                  <!-- Night mode toggle -->
-                  <div class="nightModeToggle-wrapper">
-                     <label class="nightModeToggle" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                     </label>
-                     <em>Dark Mode</em>
-                  </div> 
-                  
+               <div id="img-myth-sets">
+                  <img loading="lazy" src="assets/img/index/2.jpg">
                </div>
-            </nav>
-            <!-- Mobile Nav -->
-            <div id="mobileMenuToggle">
-               <input type="checkbox" />
-               <span></span>
-               <span></span>
-               <span></span>
-               <ul id="mobileMenu">
-                  <li><a href="./about.html">About</a></li>
-                  <li><a href="./contact.html">Contact</a></li>
-                  <!-- Night mode toggle -->
-                  <li><div class="nightModeToggle-wrapper">
-                     <label class="nightModeToggle" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                     </label>
-                     <em>Dark Mode</em>
-               </div></li>
-               </ul>
-            </div>
-         </div>
+               <a class="gridItem" id="a-myth-sets" href="./myth-sets.html">
+                  <div class="hoverText" >myth-sets</div>
+               </a>
 
-         <!-- Fixed Header -->
-         <div id="header" class="headerFixed headerFixedHidden">
-            <!-- Desktop nav -->
-            <nav id="headerNav">
-               <div id="mainLogo">
-                  <a href="./index.html"><h1>myth-des</h1></a>
+               <div id="img-beeston-art">
+                  <img loading="lazy" src="assets/img/index/3.jpg">
                </div>
+               <a class="gridItem" id="a-beeston-art" href="./Beeston-StreetArt.html">
+                  <div class="hoverText" >Beeston Street Art</div>
+               </a>
 
-               <div id="links">
-                  <a href="./about.html">About</a>
-                  <p>||</p>
-                  <a href="./contact.html">Contact</a>
-                  <!-- Night mode toggle -->
-                  <div class="nightModeToggle-wrapper">
-                     <label class="nightModeToggle" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                     </label>
-                     <em>Dark Mode</em>
-               </div> 
+               <div id="img-nott-comtemp">
+                  <img loading="lazy" src="assets/img/index/4.jpg">
                </div>
-            </nav>
-            <!-- Mobile Nav -->
-            <div id="mobileMenuToggle">
-               <input type="checkbox" />
-               <span></span>
-               <span></span>
-               <span></span>
-               <ul id="mobileMenu">
-                  <li><a href="./about.html">About</a></li>
-                  <li><a href="./contact.html">Contact</a></li>
-                  <!-- Night mode toggle -->
-                  <li><div class="nightModeToggle-wrapper">
-                     <label class="nightModeToggle" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                     </label>
-                     <em>Dark Mode</em>
-               </div></li>
-               </ul>
+               <a class="gridItem" id="a-nott-comtemp" href="./nott-contemporary.html">
+                  <div class="hoverText" >Nott Contemporary</div>
+               </a>
             </div>
-         </div>
-      </header>
 
-      <!-- Main -->
-      <main id="main" class="mainHeader">
-         <a id="1"></a>
-         <div class="contentGrid-a">
-            <div id="img-keyborders">
-               <img loading="lazy" src="assets/img/index/1.jpg">
+
+            <h2>We build your brand.</h2>
+
+            <div class="contentGrid-b">
+               <div id="img-china-tea">
+                  <img loading="lazy" src="assets/img/index/5.jpg">
+               </div>
+               <a class="gridItem" id="a-china-tea" href="./august-tea.html" >
+                  <div class="hoverText" >August Tea</div>
+               </a>
+
+               <div id="img-vegan-art">
+                  <img loading="lazy" src="assets/img/index/6.jpg">
+               </div>
+               <a class="gridItem" id="a-vegan-art" href="./vegan-art-products.html">
+                  <div class="hoverText" >Vegan Art Products</div>
+               </a>  
             </div>
-            <a class="gridItem" id="a-keyborders" href="./keyborders.html">
-               <div class="hoverText" id="a-keyborders-hover">Keyborders</div>
-            </a>
 
-            <div id="img-myth-sets">
-               <img loading="lazy" src="assets/img/index/2.jpg">
+            <!-- Scroll back to top button -->
+            <div id="scrollBtn-container">
+               <div class="scrollBtnLight" onclick="scrollToTop()" id="scrollBtn"></div>
             </div>
-            <a class="gridItem" id="a-myth-sets" href="./myth-sets.html">
-               <div class="hoverText" >myth-sets</div>
-            </a>
+         </main>
 
-            <div id="img-beeston-art">
-               <img loading="lazy" src="assets/img/index/3.jpg">
-            </div>
-            <a class="gridItem" id="a-beeston-art" href="./Beeston-StreetArt.html">
-               <div class="hoverText" >Beeston Street Art</div>
-            </a>
-
-            <div id="img-nott-comtemp">
-               <img loading="lazy" src="assets/img/index/4.jpg">
-            </div>
-            <a class="gridItem" id="a-nott-comtemp" href="./nott-contemporary.html">
-               <div class="hoverText" >Nott Contemporary</div>
-            </a>
-         </div>
-
-
-         <h2>We build your brand.</h2>
-
-         <div class="contentGrid-b">
-            <div id="img-china-tea">
-               <img loading="lazy" src="assets/img/index/5.jpg">
-            </div>
-            <a class="gridItem" id="a-china-tea" href="./august-tea.html" >
-               <div class="hoverText" >August Tea</div>
-            </a>
-
-            <div id="img-vegan-art">
-               <img loading="lazy" src="assets/img/index/6.jpg">
-            </div>
-            <a class="gridItem" id="a-vegan-art" href="./vegan-art-products.html">
-               <div class="hoverText" >Vegan Art Products</div>
-            </a>  
-         </div>
-
-         <!-- Scroll back to top button -->
-         <div id="scrollBtn-container">
-            <div class="scrollBtnLight" onclick="scrollToTop()" id="scrollBtn"></div>
-         </div>
-      </main>
-
-      <!-- Footer -->
-      <footer>
-         <ul>
-            <li><a>Facebook</a></li>
-            <li><a>Twitter</a></li>
-            <li id="companyName"><span>©</span>myth-des <span>2021</span></li>
-         </ul>
-      </footer>
-   </div>
-
+         <!-- Footer -->
+         <footer>
+            <ul>
+               <li><a>Facebook</a></li>
+               <li><a>Twitter</a></li>
+               <li id="companyName"><span>©</span>myth-des <span>2021</span></li>
+            </ul>
+         </footer>
+      <!-- Wrapper ends -->
+      </div>
       <script src="js/template.js"></script>
+      <script>   
+         ScrollReveal().reveal('#header');
+         ScrollReveal().reveal('#img-keyborders');
+         ScrollReveal().reveal('#img-myth-sets');
+         ScrollReveal().reveal('#img-beeston-art');
+         ScrollReveal().reveal('#img-nott-comtemp');
+         ScrollReveal().reveal('#img-china-tea');
+         ScrollReveal().reveal('#img-vegan-art');
+         ScrollReveal().reveal('footer');
+      </script>
    </body>
 </html>

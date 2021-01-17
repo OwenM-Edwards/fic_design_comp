@@ -14,6 +14,7 @@
 
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300&display=swap" rel="stylesheet"> 
+      <script src="https://unpkg.com/scrollreveal"></script>
    </head>
 
    <body>
@@ -76,10 +77,10 @@
          <img loading="lazy" id="first-image" src="assets/img/china-tea/5.jpg">
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, eius iure cum qui omnis dolorem non voluptatibus. Ab, perferendis deserunt!</p>
          <div id="sub-image-grid-b">
-            <img loading="lazy" id="sub-image-one" src="assets/img/china-tea/6.jpg">
-            <img loading="lazy" id="sub-image-two" src="assets/img/china-tea/7.jpg">
-            <img loading="lazy" id="sub-image-three" src="assets/img/china-tea/8.jpg">
-            <img loading="lazy" id="sub-image-four" src="assets/img/china-tea/9.jpg">
+            <img loading="lazy" id="sub-image-b-one" src="assets/img/china-tea/6.jpg">
+            <img loading="lazy" id="sub-image-b-two" src="assets/img/china-tea/7.jpg">
+            <img loading="lazy" id="sub-image-b-three" src="assets/img/china-tea/8.jpg">
+            <img loading="lazy" id="sub-image-b-four" src="assets/img/china-tea/9.jpg">
          </div>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, eius iure cum qui omnis dolorem non voluptatibus. Ab, perferendis deserunt!</p>
 
@@ -101,5 +102,17 @@
       </footer>
 
       <script src="js/template.js"></script>
+      <script>   
+         ScrollReveal().reveal('#sub-image-one');
+         ScrollReveal().reveal('#sub-image-two');
+         ScrollReveal().reveal('#sub-image-three');
+         ScrollReveal().reveal('#sub-image-four');
+         ScrollReveal().reveal('#sub-image-b-one');
+         ScrollReveal().reveal('#sub-image-b-two');
+         ScrollReveal().reveal('#sub-image-b-three');
+         ScrollReveal().reveal('#sub-image-b-four');
+         ScrollReveal().reveal('#map');
+         ScrollReveal().reveal('footer');
+      </script>
    </body>
 </html>
