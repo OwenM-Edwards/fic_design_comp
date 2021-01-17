@@ -29,7 +29,7 @@ $base-contentWidth: 1300px;
    overflow: hidden;
    white-space:nowrap;
    transition-property: width;
-   animation:textReveal 4.5s;
+   animation:textReveal 4.0s;
 }
 .text-fade-in-anim {
    overflow: hidden;
@@ -472,6 +472,10 @@ header.sub-page-header {
       nav {
          #mainLogo {
             padding-left:0px;
+            left:5px;
+         }
+         #linksMobileInput {
+            right:5px;
          }
       }
       #headerWrapper.sub-page-header{
