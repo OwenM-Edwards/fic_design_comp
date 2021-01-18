@@ -73,19 +73,30 @@
 
       <!-- Main -->
       <main class="sub-page-main">
-         <img id="header-image" src="assets/img/keyborders/1.jpg">
-         <h2 class="fade-in-header" >Keyborders</h2>
-         
-         <div class="fade-in-text" id="p-container">
-            <div>
-               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa soluta fugiat assumenda alias sed qui vitae repellendus facilis veniam deleniti?</p>
+         <h2 class="fade-in-header-once">Keyborders</h2>
+
+         <div class="container" id="container-a">
+            <div id="text-container">
+               <p>A mechanical keyboard is built with high quality, typically spring activated key switches. These key switches vary based on the keyboard’s application or user preference.</p>
             </div>
+            <div class="container-image" id="container-image-a"></div>
+         </div>
+         
+         <h3 class="fade-in-header-once" >Feel the difference.</h3>
+
+         <div id="image-grid"> 
+            <img loading="lazy" class="grid-image" id="grid-image-one" src="assets/img/keyborders/9.jpg">
+            <img loading="lazy" class="grid-image" id="grid-image-two" src="assets/img/keyborders/7.jpg">
+            <img loading="lazy" class="grid-image" id="grid-image-three" src="assets/img/keyborders/8.jpg">
          </div>
 
-         <div id="sub-image-grid"> 
-            <img loading="lazy" id="sub-image-one" src="assets/img/keyborders/9.jpg">
-            <img loading="lazy" id="sub-image-two" src="assets/img/keyborders/7.jpg">
-            <img loading="lazy" id="sub-image-three" src="assets/img/keyborders/8.jpg">
+         <h3 class="fade-in-header-once" >Custom Designs</h3>
+
+         <div class="container" id="container-b">
+            <div class="container-image" id="container-image-b"></div>
+            <div id="text-container">
+               <p>Mechanical keyboards raise the bar in every way. A mechanical keyboard’s switches, framing, functionality, type print methods, key construction, PCB board, LED lighting (sharpness, brightness, adjustability), and a slew of other features are far superior compared to traditional rubber dome keyboards. Most of these improvements boil down to one thing - feel. Mechanical keyboards simply feel better than rubber dome keyboards.</p>
+            </div>
          </div>
 
          <!-- Scroll back to top button -->
@@ -105,10 +116,12 @@
 
       <script src="js/template.js"></script>
       <script>   
-         ScrollReveal().reveal('#header-image');
-         ScrollReveal().reveal('#sub-image-one');
-         ScrollReveal().reveal('#sub-image-two');
-         ScrollReveal().reveal('#sub-image-three');
+         ScrollReveal().reveal('#container-a#container-image');
+         ScrollReveal().reveal('#grid-image-one');
+         ScrollReveal().reveal('#grid-image-two');
+         ScrollReveal().reveal('#grid-image-three');
+         ScrollReveal().reveal('#container-image-b');
+         ScrollReveal().reveal('footer');
       </script>
    </body>
 </html>

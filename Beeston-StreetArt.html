@@ -14,7 +14,7 @@
 
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300&display=swap" rel="stylesheet"> 
-      <script src="https://unpkg.com/scrollreveal"></script>
+      <script src="https://unpkg.com/scrollreveal"></script>      
    </head>
 
 
@@ -74,15 +74,25 @@
 
       <!-- Main -->
       <main class="sub-page-main">
-         <img id="header-image" src="assets/img/beeston-art/1.jpg">
-         <h2>Beeston Street Art</h2>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum repudiandae porro? Fugiat qui possimus velit doloremque provident numquam quibusdam.</p>
+         <img id="main-image" src="assets/img/beeston-art/1.jpg">
+
+         <h2 class="fade-in-header-once">Beeston Street Art</h2>
+
+         <p>Following the festival 16-17 June 2018 and the first council commission by Zabou we now have many works around town and Beeston is fast becoming a top destination in the UK for visitors to tour street art. More pieces are on the way. Click HERE to open a printable .pdf of the map of existing works plus news of what is coming next below.</p>
+
          <img loading="lazy" id="second-image" src="assets/img/beeston-art/2.jpg">
-         <div id="sub-image-grid">
-            <img loading="lazy" id="sub-image-one" src="assets/img/beeston-art/4.jpg">
-            <img loading="lazy" id="sub-image-two" src="assets/img/beeston-art/5.jpg">
+
+         <h3 class="fade-in-header-once" >Bespoke Keyboards</h3>
+
+         <div id="image-grid">
+            <img loading="lazy" class="grid-image" id="grid-image-one" src="assets/img/beeston-art/4.jpg">
+            <img loading="lazy" class="grid-image" id="grid-image-two" src="assets/img/beeston-art/5.jpg">
          </div>
+
          <img loading="lazy" id="third-image" src="assets/img/beeston-art/6.jpg">
+
+         <h3 class="fade-in-header-once" >Bespoke Keyboards</h3>
+
 
          <!-- Scroll back to top button -->
          <div id="scrollBtn-container">
@@ -101,11 +111,11 @@
 
       <script src="js/template.js"></script>
       <script>   
-         ScrollReveal().reveal('#header-image');
+         ScrollReveal().reveal('#main-image');
          ScrollReveal().reveal('#second-image');
-         ScrollReveal().reveal('#sub-image-one');
-         ScrollReveal().reveal('#sub-image-two');
-         ScrollReveal().reveal('third-image');
+         ScrollReveal().reveal('#grid-image-one');
+         ScrollReveal().reveal('#grid-image-two');
+         ScrollReveal().reveal('#third-image');
          ScrollReveal().reveal('footer');
       </script>
    </body>

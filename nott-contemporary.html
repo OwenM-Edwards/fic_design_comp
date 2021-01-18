@@ -75,25 +75,36 @@
 
       <!-- Main -->
       <main class="sub-page-main">
-         
-         <h2>Nottingham Contemporary</h2>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum repudiandae porro? Fugiat qui possimus velit doloremque provident numquam quibusdam.</p>
-         <img id="header-image" src="assets/img/nott-contemp/1.jpg">
+         <h2  class="fade-in-header-once">Nottingham Contemporary</h2>
+
+         <p>The first exhibition in the UK devoted to the work of Sun Ra, the legendary jazz musician and Afro-Futurist. It aims to present him as a “total artist”. Besides his compositions, recordings and concerts, Sun Ra was a writer, philosopher and poet. He also designed his Arkestra’s record covers and publicity, and conceived and starred in a feature film, Space Is the Place (1974). Sun Ra took the name of the Egyptian sun god and claimed to have come from Saturn. The exhibition is designed by leading French scenographer Nadia Lauro.</p>
+
+         <img id="main-image" src="assets/img/nott-contemp/1.jpg">
+
+         <h3 class="fade-in-header-once" >Sun Ra (1914-1993)</h3>
+
          <div id="small-images-container">
-            <img loading="lazy" id="small-image-one" src="assets/img/nott-contemp/2.jpg">
-            <img loading="lazy" id="small-image-two" src="assets/img/nott-contemp/3.jpg">
+            <img loading="lazy" class="small-image" id="small-image-one" src="assets/img/nott-contemp/2.jpg">
+            <img loading="lazy" class="small-image" id="small-image-two" src="assets/img/nott-contemp/3.jpg">
          </div>
+
          <div id="second-image-container">
             <img loading="lazy" id="second-image" src="assets/img/nott-contemp/7.jpg">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates atque illum perferendis magni rerum, non accusamus illo possimus aspernatur similique?</p>
+            <p>This exhibition was part of Alien Encounters – four solo exhibitions, each featuring new commissions. The four artists use performance, theatre and film. For them, fiction and alternative realities become ways of transforming and extending our understanding of identity, social norms and world history.</p>
          </div>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum repudiandae porro? Fugiat qui possimus velit doloremque provident numquam quibusdam.</p>
 
-         <div id="sub-image-grid">
-            <img loading="lazy" id="sub-image-one" src="assets/img/nott-contemp/7.jpg">
-            <img loading="lazy" id="sub-image-two" src="assets/img/nott-contemp/8.jpg">
-            <img loading="lazy" id="sub-image-three" src="assets/img/nott-contemp/6.jpg">
+         <h3 class="fade-in-header-once" >The Cosmo Man.</h3>
+
+         <p>The idea for the season developed out of conversations with Collabor-8 Collective, Nottingham Contemporary’s young people’s group, and was curated to coincide with Circuit, our arts festival for 15 to 25 years olds in Nov.</p>
+
+         <div id="image-grid">
+            <img loading="lazy" class="grid-image" id="grid-image-one" src="assets/img/nott-contemp/7.jpg">
+            <img loading="lazy" class="grid-image" id="grid-image-two" src="assets/img/nott-contemp/8.jpg">
+            <img loading="lazy" class="grid-image" id="grid-image-three" src="assets/img/nott-contemp/6.jpg">
          </div>
+
+         <h3 class="fade-in-header-once" >Alien Encounters</h3>
+         
          <img loading="lazy" id="third-image" src="assets/img/nott-contemp/4.jpg">
 
          <!-- Scroll back to top button -->
@@ -113,14 +124,14 @@
 
       <script src="js/template.js"></script>
       <script>   
-         ScrollReveal().reveal('#header-image');
+         ScrollReveal().reveal('#main-image');
          ScrollReveal().reveal('#small-image-one');
          ScrollReveal().reveal('#small-image-two');
          ScrollReveal().reveal('#second-image');
-         ScrollReveal().reveal('#sub-image-one');
-         ScrollReveal().reveal('#sub-image-two');
-         ScrollReveal().reveal('sub-image-three');
-         ScrollReveal().reveal('third-image');
+         ScrollReveal().reveal('#grid-image-one');
+         ScrollReveal().reveal('#grid-image-two');
+         ScrollReveal().reveal('#grid-image-three');
+         ScrollReveal().reveal('#third-image');
          ScrollReveal().reveal('footer');
       </script>
    </body>
