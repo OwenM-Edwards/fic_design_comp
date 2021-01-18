@@ -3,6 +3,11 @@
 $header-sizePadding: 160px;
 $base-contentWidth: 1300px;
 
+body {
+   scrollbar-width: thin;
+   scrollbar-color: blue orange;
+}
+
 @keyframes textReveal {
    0% {
       width:0px;
@@ -11,6 +16,7 @@ $base-contentWidth: 1300px;
       width:100%;
    }
 }
+
 // Themes.
 :root {
    --bg-color: #f7f7f7;
@@ -396,7 +402,30 @@ footer {
 // Sub pages main and header.
 main.sub-page-main{
    width:100%;
+   h2{
+      text-align: end;
+      width:100%;
+      height:auto;
+      font-size: 3.2rem;
+      font-weight: bold;
+      margin:20px 0;
+      border-bottom: 2px solid var(--pop-color);
+   }
+ 
+   h3 {
+      width:100%;
+      height:auto;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin:100px 0;
+      border-bottom: 2px solid var(--pop-color);
+      text-align: end;
+   }
 
+   p {
+      font-size: 1.3rem;
+      max-width:900px;
+   }
 }
 header.sub-page-header {
    width:100%;
@@ -418,6 +447,15 @@ header.sub-page-header {
       margin: 0 auto;
    }
 }
+
+
+
+
+
+
+
+
+
 
 
 
