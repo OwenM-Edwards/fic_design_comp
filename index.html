@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Myth-Des</title>
+      <title>myth-des</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- CSS -->
@@ -144,60 +144,61 @@
 
 
          <!-- Main -->
-         <main id="main" class="mainHeader">
-            <a id="1"></a>
-            <h2 id="main-h2" class="fade-in-header">We build your <span>ideas</span>.</h2>
-            <div class="contentGrid-a">
+         <main id="main">
+            <h2 class="fade-in-header">We build your <span>ideas</span>.</h2>
+
+            <div id="content-grid-a">
                <div id="img-keyborders">
                   <img loading="lazy" src="assets/img/index/1.jpg">
                </div>
-               <a class="gridItem" id="a-keyborders" href="./keyborders.html">
-                  <div class="hoverText" id="a-keyborders-hover"><p>Keyborders</p></div>
+               <a class="grid-item" id="a-keyborders" href="./keyborders.html">
+                  <div class="hover-text" id="a-keyborders-hover"><p>Keyborders</p></div>
                </a>
 
                <div id="img-myth-sets">
                   <img loading="lazy" src="assets/img/index/2.jpg">
                </div>
-               <a class="gridItem" id="a-myth-sets" href="./myth-sets.html">
-                  <div class="hoverText" >myth-sets</div>
+               <a class="grid-item" id="a-myth-sets" href="./myth-sets.html">
+                  <div class="hover-text" ><p>myth-sets</p></div>
                </a>
 
                <div id="img-beeston-art">
                   <img loading="lazy" src="assets/img/index/3.jpg">
                </div>
-               <a class="gridItem" id="a-beeston-art" href="./Beeston-StreetArt.html">
-                  <div class="hoverText" >Beeston Street Art</div>
+               <a class="grid-item" id="a-beeston-art" href="./Beeston-StreetArt.html">
+                  <div class="hover-text" ><p>Beeston Street Art</p></div>
                </a>
 
                <div id="img-nott-comtemp">
                   <img loading="lazy" src="assets/img/index/4.jpg">
                </div>
-               <a class="gridItem" id="a-nott-comtemp" href="./nott-contemporary.html">
-                  <div class="hoverText" >Nott Contemporary</div>
+               <a class="grid-item" id="a-nott-comtemp" href="./nott-contemporary.html">
+                  <div class="hover-text" ><p>Notts Contemporary</p></div>
                </a>
             </div>
 
-            <h2 id="main-h2" class="fade-in-header">We build your <span>brand</span>.</h2>
+            <h2 class="fade-in-header">We build your <span>brand</span>.</h2>
             
 
-            <div class="contentGrid-b">
+            <div id="content-grid-b">
                <div id="img-china-tea">
                   <img loading="lazy" src="assets/img/index/5.jpg">
                </div>
-               <a class="gridItem" id="a-china-tea" href="./august-tea.html" >
-                  <div class="hoverText" >August Tea</div>
+               <a class="grid-item" id="a-china-tea" href="./august-tea.html" >
+                  <div class="hover-text" ><p>August Tea</p></div>
                </a>
 
                <div id="img-vegan-art">
                   <img loading="lazy" src="assets/img/index/6.jpg">
                </div>
-               <a class="gridItem" id="a-vegan-art" href="./vegan-art-products.html">
-                  <div class="hoverText" >Vegan Art Products</div>
+               <a class="grid-item" id="a-vegan-art" href="./vegan-art-products.html">
+                  <div class="hover-text" ><p>Vegan Art Products</p></div>
                </a>  
             </div>
 
-            <h2 id="main-h2" class="fade-in-header">We build your <span>business</span>.</h2>
+            <h2 class="fade-in-header">We build your <span>business</span>.</h2>
 
+            
             <!-- Scroll back to top button -->
             <div id="scrollBtn-container">
                <div class="scrollBtnLight" onclick="scrollToTop()" id="scrollBtn"></div>
@@ -217,8 +218,8 @@
       <script src="js/template.js"></script>
       <script>   
          ScrollReveal().reveal('#header');
-         ScrollReveal().reveal('.contentGrid-a');
-         ScrollReveal().reveal('.contentGrid-b');
+         ScrollReveal().reveal('#content-grid-a');
+         ScrollReveal().reveal('#content-grid-b');
          ScrollReveal().reveal('footer');
       </script>
    </body>
