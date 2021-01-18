@@ -1,3 +1,8 @@
+body {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+
 @keyframes textReveal {
   0% {
     width: 0px;
@@ -375,6 +380,28 @@ footer #companyName span {
 main.sub-page-main {
   width: 100%;
 }
+main.sub-page-main h2 {
+  text-align: end;
+  width: 100%;
+  height: auto;
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin: 20px 0;
+  border-bottom: 2px solid var(--pop-color);
+}
+main.sub-page-main h3 {
+  width: 100%;
+  height: auto;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 100px 0;
+  border-bottom: 2px solid var(--pop-color);
+  text-align: end;
+}
+main.sub-page-main p {
+  font-size: 1.3rem;
+  max-width: 900px;
+}
 
 header.sub-page-header {
   width: 100%;
@@ -460,11 +487,15 @@ header.sub-page-header #sub-page-headerWrapper {
     bottom: 86px;
   }
 }
-#header-image {
+#main-image {
   height: 600px;
   width: 100%;
   margin-bottom: 70px;
   object-fit: cover;
+}
+
+main.sub-page-main #top-text {
+  width: 50%;
 }
 
 #second-image-container {
@@ -491,19 +522,6 @@ header.sub-page-header #sub-page-headerWrapper {
   width: 100%;
   object-fit: cover;
   margin-bottom: 70px;
-}
-
-h2 {
-  font-size: 2.1rem;
-  font-weight: bold;
-  margin: 20px 0;
-  height: auto;
-}
-
-p {
-  font-size: 1.3rem;
-  max-width: 900px;
-  font-weight: bold;
 }
 
 @media only screen and (max-width: 900px) {

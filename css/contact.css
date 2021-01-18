@@ -1,3 +1,8 @@
+body {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+
 @keyframes textReveal {
   0% {
     width: 0px;
@@ -374,6 +379,28 @@ footer #companyName span {
 
 main.sub-page-main {
   width: 100%;
+}
+main.sub-page-main h2 {
+  text-align: end;
+  width: 100%;
+  height: auto;
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin: 20px 0;
+  border-bottom: 2px solid var(--pop-color);
+}
+main.sub-page-main h3 {
+  width: 100%;
+  height: auto;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 100px 0;
+  border-bottom: 2px solid var(--pop-color);
+  text-align: end;
+}
+main.sub-page-main p {
+  font-size: 1.3rem;
+  max-width: 900px;
 }
 
 header.sub-page-header {

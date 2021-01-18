@@ -1,3 +1,8 @@
+body {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+
 @keyframes textReveal {
   0% {
     width: 0px;
@@ -375,6 +380,28 @@ footer #companyName span {
 main.sub-page-main {
   width: 100%;
 }
+main.sub-page-main h2 {
+  text-align: end;
+  width: 100%;
+  height: auto;
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin: 20px 0;
+  border-bottom: 2px solid var(--pop-color);
+}
+main.sub-page-main h3 {
+  width: 100%;
+  height: auto;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 100px 0;
+  border-bottom: 2px solid var(--pop-color);
+  text-align: end;
+}
+main.sub-page-main p {
+  font-size: 1.3rem;
+  max-width: 900px;
+}
 
 header.sub-page-header {
   width: 100%;
@@ -577,9 +604,10 @@ header.sub-page-header #sub-page-headerWrapper {
   transition: scale 0.1s linear;
   z-index: 1;
   opacity: 1;
+  scale: 0.7;
 }
 #landing #downIcon:hover {
-  scale: 0.9;
+  scale: 0.6;
 }
 @keyframes bounceFadeIn {
   0% {
@@ -624,12 +652,12 @@ header.sub-page-header #sub-page-headerWrapper {
   opacity: 0;
 }
 
-main .hoverText {
+main .hover-text {
+  position: relative;
+  top: 0;
+  right: 0;
   transition: opacity 0.5s ease;
   opacity: 0;
-  color: var(--pop-color);
-  text-shadow: 1px 1px 3px #1b1b1b;
-  font-size: 2rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -637,7 +665,14 @@ main .hoverText {
   align-items: center;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75));
 }
-main .contentGrid-a {
+main .hover-text p {
+  background-color: var(--bg-color);
+  padding: 5px 10px 2px 10px;
+  border-radius: 2px;
+  color: var(--pop-color);
+  font-size: 2rem;
+}
+main #content-grid-a {
   height: 1000px;
   max-height: 1000px;
   overflow: hidden;
@@ -648,61 +683,64 @@ main .contentGrid-a {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
-main .contentGrid-a .gridItem {
+main #content-grid-a .grid-item {
   text-decoration: none;
 }
-main .contentGrid-a .gridItem:hover .hoverText {
+main #content-grid-a .grid-item:hover .hoverTextBackground {
   opacity: 1;
 }
-main .contentGrid-a #img-keyborders {
+main #content-grid-a .grid-item:hover .hover-text {
+  opacity: 1;
+}
+main #content-grid-a #img-keyborders {
   grid-area: 1/1/2/3;
 }
-main .contentGrid-a #img-keyborders img {
+main #content-grid-a #img-keyborders img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
-main .contentGrid-a #a-keyborders {
+main #content-grid-a #a-keyborders {
   grid-area: 1/1/2/3;
 }
-main .contentGrid-a #img-myth-sets {
+main #content-grid-a #img-myth-sets {
   grid-area: 2/1/4/3;
 }
-main .contentGrid-a #img-myth-sets img {
+main #content-grid-a #img-myth-sets img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
-main .contentGrid-a #a-myth-sets {
+main #content-grid-a #a-myth-sets {
   grid-area: 2/1/4/3;
 }
-main .contentGrid-a #img-beeston-art {
+main #content-grid-a #img-beeston-art {
   grid-area: 1/3/3/5;
 }
-main .contentGrid-a #img-beeston-art img {
+main #content-grid-a #img-beeston-art img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
-main .contentGrid-a #a-beeston-art {
+main #content-grid-a #a-beeston-art {
   grid-area: 1/3/3/5;
 }
-main .contentGrid-a #img-nott-comtemp {
+main #content-grid-a #img-nott-comtemp {
   grid-area: 3/3/4/5;
 }
-main .contentGrid-a #img-nott-comtemp img {
+main #content-grid-a #img-nott-comtemp img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
-main .contentGrid-a #a-nott-comtemp {
+main #content-grid-a #a-nott-comtemp {
   grid-area: 3/3/4/5;
 }
-main .contentGrid-b {
+main #content-grid-b {
   height: 600px;
   width: 100%;
   display: grid;
@@ -711,44 +749,44 @@ main .contentGrid-b {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
-main .contentGrid-b .gridItem {
+main #content-grid-b .grid-item {
   text-decoration: none;
 }
-main .contentGrid-b .gridItem:hover {
+main #content-grid-b .grid-item:hover {
   cursor: pointer;
 }
-main .contentGrid-b .gridItem:hover .hoverText {
+main #content-grid-b .grid-item:hover .hover-text {
   opacity: 1;
 }
-main .contentGrid-b #img-china-tea {
+main #content-grid-b #img-china-tea {
   grid-area: 1/1/2/2;
 }
-main .contentGrid-b #img-china-tea img {
+main #content-grid-b #img-china-tea img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
-main .contentGrid-b #a-china-tea {
+main #content-grid-b #a-china-tea {
   grid-area: 1/1/2/2;
 }
-main .contentGrid-b #img-vegan-art {
+main #content-grid-b #img-vegan-art {
   grid-area: 1/2/2/3;
 }
-main .contentGrid-b #img-vegan-art img {
+main #content-grid-b #img-vegan-art img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
-main .contentGrid-b #a-vegan-art {
+main #content-grid-b #a-vegan-art {
   grid-area: 1/2/2/3;
 }
-main #main-h2 {
+main h2 {
   font-size: 2.5rem;
   height: auto;
 }
-main #main-h2 span {
+main h2 span {
   color: var(--pop-color);
 }
 
@@ -779,12 +817,12 @@ main #main-h2 span {
     right: 45vw;
   }
 
-  .contentGrid-a {
+  #content-grid-a {
     height: 500px !important;
     overflow: hidden;
   }
 
-  .contentGrid-b {
+  #content-grid-b {
     height: 200px !important;
     overflow: hidden;
   }
