@@ -1,11 +1,22 @@
 @use 'template';
 
-#header-image {
+#main-image {
    height:600px;
    width:100%;
    margin-bottom: 70px;
    object-fit: cover;
 }
+
+main.sub-page-main{
+
+   #top-text{
+      width:50%;
+   }
+}
+
+
+
+
 
 #second-image-container{
    display:flex;
@@ -31,19 +42,6 @@
    width:100%;
    object-fit: cover;
    margin-bottom: 70px;
-}
-
-h2 {
-   font-size: 2.1rem;
-   font-weight: bold;
-   margin:20px 0;
-   height:auto;
-}
-
-p {
-   font-size: 1.3rem;
-   max-width:900px;
-   font-weight: bold;
 }
 
 
