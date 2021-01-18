@@ -179,6 +179,7 @@ mobileMenuInputs.forEach(function(item, index){
 // Controller for text fade in animation.
 const fadeInText = document.querySelectorAll('.fade-in-text');
 const fadeInHeader = document.querySelectorAll('.fade-in-header');
+fadeInHeaderOnce = document.querySelectorAll('.fade-in-header-once');
 if(fadeInText){
    fadeInText.forEach(function(item, index){
       let fadeInTextObserver = new IntersectionObserver(
@@ -198,7 +199,6 @@ if(fadeInText){
       );
       fadeInTextObserver.observe(item);
    })
-   console.log('detected');
 }
 if(fadeInHeader){
    fadeInHeader.forEach(function(item, index){
@@ -218,9 +218,24 @@ if(fadeInHeader){
          }
       );
       fadeInHeaderObserver.observe(item);
-   })
-   console.log('detected');
-   
+   }) 
+}
+if(fadeInHeaderOnce){
+   fadeInHeaderOnce.forEach(function(item, index){
+      let fadeInHeaderOnceObserver = new IntersectionObserver(
+         (entries, observer) => {
+            if(entries[0].intersectionRatio>0){
+               item.classList.add('header-fade-in-anim');
+            } 
+         },
+         {
+            root: null,
+            rootMargin:'30px',
+            threshhold:1
+         }
+      );
+      fadeInHeaderOnceObserver.observe(item);
+   }) 
 }
 
 
