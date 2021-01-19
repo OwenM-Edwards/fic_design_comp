@@ -47,7 +47,7 @@
    #landing-cover.landing-cover-hidden {
       opacity: 0;
    }
-   #loadingBounce-a {
+   #loading-bounce-a {
       position: absolute;
       bottom:48vh;
       width:3px;
@@ -59,7 +59,7 @@
       opacity: 0;
 
    }
-   #loadingBounce-a.animation {
+   #loading-bounce-a.animation {
       transition-property: left, opacity;
       transition-duration: 2s, 0.5s;
       transition-timing-function: ease-in-out;
@@ -67,7 +67,7 @@
       animation:bounceFadeIn 2s;
    }
 
-   #loadingBounce-b {
+   #loading-bounce-b {
       position: absolute;
       bottom:48vh;
       width:3px;
@@ -79,7 +79,7 @@
       opacity:0;
 
    }
-   #loadingBounce-b.animation {
+   #loading-bounce-b.animation {
       transition-property: right, opacity;
       transition-duration: 2s, 0.5s;
       transition-timing-function: ease-in-out;
@@ -87,17 +87,17 @@
       animation:bounceFadeIn 2s;
    }
 
-   #loadingBounce-a.loadingBounceMoveA {
+   #loading-bounce-a.loadingBounceMoveA {
       left:70vw;
    }
-   #loadingBounce-b.loadingBounceMoveB {
+   #loading-bounce-b.loadingBounceMoveB {
       right:70vw;
    }
-   #loadingBounce-b.loadingBounceHidden {
+   #loading-bounce-b.loadingBounceHidden {
       display:none;
    }
    
-   #downIconContainer {
+   #down-icon-container {
       width:100%;
       height:100px;
       position: absolute;
@@ -110,7 +110,7 @@
       transition-timing-function: ease-in-out;
       transition-delay: 1.9s;
    }
-   #downIconContainer.downIcon-fadeIn{
+   #down-icon-container.downIcon-fadeIn{
       opacity: 1;
       
    }
@@ -231,7 +231,7 @@ main {
          }
       }
 
-      #img-keyborders {
+      #img-china-tea {
          grid-area: 1 / 1 / 2 / 3; 
          img {
             width: 100%;
@@ -240,9 +240,10 @@ main {
             object-fit: cover;
          }
       }
-      #a-keyborders{
+      #a-china-tea{
          grid-area: 1 / 1 / 2 / 3; 
       }
+
 
       #img-myth-sets {
          grid-area: 2 / 1 / 4 / 3; 
@@ -251,6 +252,7 @@ main {
             height: 100%;
             display: block;
             object-fit: cover;
+            object-position:center;
          }
       }
       #a-myth-sets{
@@ -303,8 +305,7 @@ main {
             }
          }
       }
-
-      #img-china-tea {
+      #img-keyborders {
          grid-area: 1 / 1 / 2 / 2;
          img {
             width: 100%;
@@ -313,9 +314,11 @@ main {
             object-fit: cover;
          }
       }
-      #a-china-tea{
+      #a-keyborders{
          grid-area: 1 / 1 / 2 / 2;
       }
+
+
 
       #img-vegan-art {
          grid-area: 1 / 2 / 2 / 3;
@@ -359,11 +362,11 @@ main {
       #landing-logo {
          font-size: 4rem;
       }
-      #loadingBounce-a.loadingBounceMoveA {
+      #loading-bounce-a.loadingBounceMoveA {
          left:90vw;
          opacity:0;
       }
-      #loadingBounce-b.loadingBounceMoveB {
+      #loading-bounce-b.loadingBounceMoveB {
          right:90vw;
          opacity:0;
       }
@@ -373,12 +376,12 @@ main {
          position: relative;
          bottom:-3vh;
       }
-      #loadingBounce-a {
+      #loading-bounce-a {
          bottom:46vh;
          left:45vw;
    
       }
-      #loadingBounce-b {
+      #loading-bounce-b {
          bottom:46vh;
          right:45vw;
       }
@@ -389,12 +392,28 @@ main {
       overflow: hidden;
    }
    #content-grid-b {
-      height:200px!important;
+      height:200px!important; 
       overflow: hidden;
    }
    main {
-      #main-h2 {
+      h2 {
          font-size: 2rem;
+      }
+      .hover-text {
+         position: relative;
+         top:0;
+         right:0;
+         transition: opacity .5s ease;
+         opacity:0;
+         width:100%;
+         height:100%;
+         display:flex;
+         justify-content: center;
+         align-items: center;
+         background-image:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.75));
+         p {
+            font-size:1rem;
+         }
       }
    }
 }

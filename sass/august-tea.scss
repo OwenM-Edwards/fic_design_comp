@@ -71,9 +71,11 @@
 
 
 // Media Queries.
-@media only screen and (max-width:1100px) {
-   p {
-      text-align: center;
-      font-size: 1.1rem;
+@media only screen and (max-width:900px) {
+   #image-grid-a {
+      height:400px;
+      .grid-image {
+         height:100%;
+      }
    }
 }
