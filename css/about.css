@@ -32,12 +32,6 @@ body {
   animation: textReveal 5s;
 }
 
-.text-fade-in-anim {
-  overflow: hidden;
-  transition-property: width;
-  animation: textReveal 3.3s;
-}
-
 #achorPoint {
   visibility: hidden;
   pointer-events: none;
@@ -81,12 +75,12 @@ body {
   top: 7px;
 }
 
-.linkMobileShown {
+.mobile-menu-shown {
   animation: showMobileMenu 0.6s ease-out;
   animation-fill-mode: forwards;
 }
 
-.linkMobileHidden {
+.mobile-menu-hidden {
   animation: hideMobileMenu 1s;
   animation-fill-mode: forwards;
 }
@@ -356,7 +350,7 @@ footer #companyName span {
   border-radius: 50%;
 }
 
-#scrollBtn-container {
+#scroll-to-top-button-container {
   position: fixed;
   width: 100px;
   height: 100px;
@@ -364,7 +358,7 @@ footer #companyName span {
   bottom: 0;
   z-index: 3;
 }
-#scrollBtn-container #scrollBtn {
+#scroll-to-top-button-container #scroll-to-top-button {
   height: 100px;
   background-size: cover;
   background-position: center;
@@ -373,13 +367,13 @@ footer #companyName span {
   display: none;
   cursor: pointer;
 }
-#scrollBtn-container #scrollBtn:hover {
+#scroll-to-top-button-container #scroll-to-top-button:hover {
   scale: 0.5;
 }
-#scrollBtn-container .scrollBtnLight {
+#scroll-to-top-button-container .scroll-to-top-buttonLight {
   background-image: url(../assets/icons/lightModeArrow.png);
 }
-#scrollBtn-container .scrollBtnDark {
+#scroll-to-top-button-container .scroll-to-top-buttonDark {
   background-image: url(../assets/icons/darkModeArrow.png);
 }
 
@@ -462,14 +456,14 @@ header.sub-page-header #sub-page-header-wrapper {
     display: block;
   }
 
-  #scrollBtn-container {
+  #scroll-to-top-button-container {
     position: fixed;
     right: 0px;
     bottom: -40px;
     width: 100px;
     height: 80px;
   }
-  #scrollBtn-container #scrollBtn {
+  #scroll-to-top-button-container #scroll-to-top-button {
     height: 50px;
   }
 
