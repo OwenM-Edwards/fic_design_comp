@@ -49,7 +49,7 @@ body {
    position: relative;
 }
 
-#linksMobile {
+#links-mobile {
    position: fixed;
    top:0;
    left:-100%;
@@ -59,23 +59,34 @@ body {
    max-width:300px;
    height:100%;
    z-index: 6;
-   display:flex;
+   display:none;
    flex-direction: column;
    align-items: center;
-   #nightModeToggle-wrapper{
+   #night-mode-toggle-wrapper{
       margin-top:40px;
    }
-   #mobileLinksContainer {
+   #mobile-links-container {  
       margin:0 auto;
       display:flex;
       flex-direction: column;
-      align-items: center;
-      font-size: 1.5rem;
+      align-items:center;
+      font-size: 1.2rem;
       margin-top:40px;
+      :nth-child(1){
+         font-size: 1.5rem;
+      }
+      :nth-child(2){
+         margin-bottom:20px;
+         font-size: 1.5rem;
+      }
+   }
+   #main-logo{
+      position: relative;
+      top:7px;
    }
 }
-.linkMobileShown{
-   animation:showMobileMenu 1s ease-out;
+.linkMobileShown{ 
+   animation:showMobileMenu 0.6s ease-out;
    animation-fill-mode: forwards;
 }
 .linkMobileHidden{
@@ -92,9 +103,10 @@ body {
 }
 
 
-#linksMobileInput {
+#links-mobile-input {
    scale:1.2;
    position: relative;
+
    top:40px;
    display:none;
    input {
@@ -122,27 +134,22 @@ body {
       transition: 
          background-color 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
          width 0.8s;
-      &:nth-of-type(1){
+      &:nth-of-type(2){
          transition-delay: 0.2s;
       }
-      &:nth-of-type(2){
-         transition-delay: 0.4s;
-      }
       &:nth-of-type(3){
-         transition-delay: 0.8s;
+         transition-delay: 0.4s;
       }
       &:nth-of-type(4){
          transform: rotate(35deg) translate(0px, -5px);
-         width: 0;
-         transition-delay: 0.2s;
+         width: 0;  
       }
       &:nth-of-type(5){
          transform: rotate(-35deg) translate(0, 1px);
-         width: 0;
-         transition-delay: 0.2s;
+         width: 0; 
       }
    }
-   span.openSpan {
+   span.open-span {
       width:0px;
       top:-20px;
    }
@@ -159,12 +166,12 @@ body {
    input:checked ~ span:nth-of-type(4) {
       background-color: var(--pop-color);
       width: 33px;
-      transition-delay: 1.2s;
+      transition-delay: 0.7s;
    }
    input:checked ~ span:nth-of-type(5) {
       background-color: var(--pop-color);
       width: 33px;
-      transition-delay: 1.2s;
+      transition-delay: 0.7s;
    }
 }
 
@@ -205,7 +212,7 @@ body {
 header {
    width:100%;
    height:100%;
-   .headerFixed {
+   .header-fixed {
       width: 100%;
       max-width: $base-contentWidth;
       height:$header-sizePadding;
@@ -220,10 +227,10 @@ header {
       transition: color 1000ms linear;
       margin: 0 auto;
    } 
-   .headerFixedShown {
+   .header-fixedShown {
       opacity: 1;
    }
-   .headerFixedHidden {
+   .header-fixed-hidden {
       opacity: 0;
       z-index: -1;
    }
@@ -256,11 +263,11 @@ header {
       justify-content: space-between;
       align-items: baseline;
 
-      #mainLogo {
+      #main-logo {
          font-family: 'Josefin Sans', sans-serif;
          font-size: 2.3rem;
          position: relative;
-         top:20px;
+         top:20px; 
       }
       #links {
          font-size: 1.4rem;
@@ -310,7 +317,7 @@ footer {
 }
 
 // Night mode toggle
-.nightModeToggle-wrapper {
+.night-mode-toggle-wrapper {
    display: flex;
    align-items: center;
 
@@ -319,7 +326,7 @@ footer {
      padding-top:6px;
      font-size: 1.1rem;
    }
-   .nightModeToggle {
+   .night-mode-toggle {
       display: inline-block;
       height: 24px;
       position: relative;
@@ -406,7 +413,7 @@ main.sub-page-main{
       text-align: end;
       width:100%;
       height:auto;
-      font-size: 3.2rem;
+      font-size: 2rem;
       font-weight: bold;
       margin:20px 0;
       border-bottom: 2px solid var(--pop-color);
@@ -415,15 +422,14 @@ main.sub-page-main{
    h3 {
       width:100%;
       height:auto;
-      font-size: 2.5rem;
+      font-size: 1.6rem;
       font-weight: bold;
-      margin:100px 0;
       border-bottom: 2px solid var(--pop-color);
       text-align: end;
    }
 
    p {
-      font-size: 1.3rem;
+      font-size: 1rem;
       max-width:900px;
    }
 }
@@ -432,7 +438,7 @@ header.sub-page-header {
    max-height:200px;
 }
 header.sub-page-header {
-   #sub-page-headerWrapper{
+   #sub-page-header-wrapper{
       width: 100%;
       max-width: $base-contentWidth;
       height:$header-sizePadding;
@@ -464,14 +470,14 @@ header.sub-page-header {
 // Media Queries.
 @media only screen and (max-width:1370px) {
    header {
-      .headerFixed {
+      .header-fixed {
          #links {
             padding-right:60px;
          }
       }
    } 
    header.sub-page-header {
-      #sub-page-headerWrapper{
+      #sub-page-header-wrapper{
          #links {
             padding-right:60px;
          }
@@ -480,7 +486,27 @@ header.sub-page-header {
 }
 // Media Queries.
 @media only screen and (max-width:800px) {
-   #linksMobileInput {
+   #links-mobile {
+      display:flex;
+   }
+   main.sub-page-main{
+      width:100%;
+      margin-top:-60px;
+      padding:5px;
+      box-sizing: border-box;
+      h2{
+         font-size: 1.5rem;
+      }
+    
+      h3 {
+         font-size: 1.2rem;
+      }
+   
+      p {
+         font-size: 0.9rem;
+      }
+   }
+   #links-mobile-input {
       display:block;
    }
    #scrollBtn-container {
@@ -503,24 +529,24 @@ header.sub-page-header {
    #links {
       display:none;
    }
-   #headerWrapper.headerFixed {
+   #header-wrapper.header-fixed {
       width:calc(100% - 10px);
    } 
    header {
       nav {
-         #mainLogo {
+         #main-logo {
             padding-left:0px;
             left:5px;
          }
-         #linksMobileInput {
+         #links-mobile-input {
             right:5px;
          }
       }
-      #headerWrapper.sub-page-header{
+      #header-wrapper.sub-page-header{
          min-width: 100vw;
          max-height:40px;
          padding-bottom:90px;
-         #headerNav {
+         #header-nav {
             position: relative;
             bottom:20px;
          }
@@ -529,6 +555,9 @@ header.sub-page-header {
             left:85vw;
             bottom: 86px;
          }
+      }
+      .header-fixed {
+         height:150px;
       }
    }
 }
