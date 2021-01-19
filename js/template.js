@@ -1,6 +1,6 @@
-const headerFixed = document.querySelector(".headerFixed");
+const headerFixed = document.querySelector(".header-fixed");
 const landingPage = document.getElementById("landing");
-const downIcon = document.querySelector("#downIconContainer");
+const downIcon = document.querySelector("#down-icon-container");
 // Scroll back to top of page button.
 const scrollButton = document.getElementById("scrollBtn");
 
@@ -18,12 +18,12 @@ if(landingPage){
    let headerObserver = new IntersectionObserver(
       (entries, observer) => {
          if(entries[0].intersectionRatio==0){
-            headerFixed.classList.remove('headerFixedHidden');
-            headerFixed.classList.add('headerFixedShown');
+            headerFixed.classList.remove('header-fixed-hidden');
+            headerFixed.classList.add('header-fixedShown');
          }
          if(entries[0].intersectionRatio>0){
-            headerFixed.classList.remove('headerFixedShown');
-            headerFixed.classList.add('headerFixedHidden');
+            headerFixed.classList.remove('header-fixedShown');
+            headerFixed.classList.add('header-fixed-hidden');
          } 
       },
       {
@@ -37,7 +37,7 @@ if(landingPage){
 
 
 // Night mode toggle.
-const toggleSwitches = document.querySelectorAll('.nightModeToggle input[type="checkbox"]');
+const toggleSwitches = document.querySelectorAll('.night-mode-toggle input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 // default to dark if no prior select
 if(!currentTheme){
@@ -115,8 +115,8 @@ scrollToTop = () => {
 
 
 // Loading bounce animation trigger.
-loadingBounceA = document.getElementById("loadingBounce-a");
-loadingBounceB = document.getElementById("loadingBounce-b");
+loadingBounceA = document.getElementById("loading-bounce-a");
+loadingBounceB = document.getElementById("loading-bounce-b");
 loadingLanding = document.getElementById("landing-cover");
 loadingLogoCover = document.getElementById("landing-logo-cover");
 loadingLogo = document.getElementById("landing-logo");
@@ -141,8 +141,8 @@ loadingBounce = () => {
 }
 
 // Mobile menu toggle.
-const mobileMenuInputs = document.querySelectorAll("#MobileInputCheckbox");
-const mobileMenu = document.getElementById("linksMobile");
+const mobileMenuInputs = document.querySelectorAll("#mobile-input-checkbox");
+const mobileMenu = document.getElementById("links-mobile");
 //  reset mobile check inputs on reload.
 mobileMenuInputs.forEach(function(item, index){
    item.checked = false;
