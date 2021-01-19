@@ -8,7 +8,7 @@
    height: var(--app-height);
    background-color:var(--bg-color);
    display:flex;
-   flex-wrap:wrap;
+   flex-wrap:wrap;  
    max-width:100%;
    #landing-image {
       position: absolute;
@@ -87,13 +87,13 @@
       animation:bounceFadeIn 2s;
    }
 
-   #loading-bounce-a.loadingBounceMoveA {
+   #loading-bounce-a.loading-bounce-move-a {
       left:70vw;
    }
-   #loading-bounce-b.loadingBounceMoveB {
+   #loading-bounce-b.loading-bounce-move-b {
       right:70vw;
    }
-   #loading-bounce-b.loadingBounceHidden {
+   #loading-bounce-b.loading-bounce-hidden {
       display:none;
    }
    
@@ -110,7 +110,7 @@
       transition-timing-function: ease-in-out;
       transition-delay: 1.9s;
    }
-   #down-icon-container.downIcon-fadeIn{
+   #down-icon-container.down-icon-fade-in{
       opacity: 1;
       
    }
@@ -143,7 +143,7 @@
    
    #landing-logo {
       margin:0 auto;
-      color:#1b1b1b;
+      color:white;
       display:inline;
       align-self: center;
       position: relative;
@@ -155,9 +155,6 @@
       transition-timing-function: ease-in-out;
       transition-delay: 1.3s;
       text-shadow: 3px 3px 3px #1b1b1b;
-   }
-   #landing-logo.landing-logo-colorShift {
-      color:white;
    }
 
    
@@ -362,11 +359,11 @@ main {
       #landing-logo {
          font-size: 4rem;
       }
-      #loading-bounce-a.loadingBounceMoveA {
+      #loading-bounce-a.loading-bounce-move-a {
          left:90vw;
          opacity:0;
       }
-      #loading-bounce-b.loadingBounceMoveB {
+      #loading-bounce-b.loading-bounce-move-b {
          right:90vw;
          opacity:0;
       }

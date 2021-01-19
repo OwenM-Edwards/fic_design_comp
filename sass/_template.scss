@@ -37,11 +37,6 @@ body {
    transition-property: width;
    animation:textReveal 5.0s;
 }
-.text-fade-in-anim {
-   overflow: hidden;
-   transition-property: width;
-   animation:textReveal 3.3s;
-}
 
 #achorPoint { 
    visibility: hidden; 
@@ -85,11 +80,11 @@ body {
       top:7px;
    }
 }
-.linkMobileShown{ 
+.mobile-menu-shown{ 
    animation:showMobileMenu 0.6s ease-out;
    animation-fill-mode: forwards;
 }
-.linkMobileHidden{
+.mobile-menu-hidden{
    animation:hideMobileMenu 1s;
    animation-fill-mode: forwards;
 }
@@ -376,7 +371,7 @@ footer {
 
 
 // Scroll back to top button.
-#scrollBtn-container {
+#scroll-to-top-button-container {
    position: fixed;
    width: 100px;
    height:100px;
@@ -385,7 +380,7 @@ footer {
    bottom:0;
 
    z-index:3;
-   #scrollBtn {
+   #scroll-to-top-button {
       height:100px;
       background-size:cover ;
       background-position: center;
@@ -397,10 +392,10 @@ footer {
          scale: 0.5;
       }
    }
-   .scrollBtnLight {
+   .scroll-to-top-buttonLight {
       background-image: url(../assets/icons/lightModeArrow.png);
    }
-   .scrollBtnDark {
+   .scroll-to-top-buttonDark {
       background-image: url(../assets/icons/darkModeArrow.png);
    }
 }
@@ -509,13 +504,13 @@ header.sub-page-header {
    #links-mobile-input {
       display:block;
    }
-   #scrollBtn-container {
+   #scroll-to-top-button-container {
       position:fixed;
       right:0px;
       bottom:-40px;
       width: 100px;
       height:80px;
-      #scrollBtn {
+      #scroll-to-top-button {
          height:50px;
       }
    }
