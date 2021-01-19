@@ -44,7 +44,7 @@ body {
   position: relative;
 }
 
-#linksMobile {
+#links-mobile {
   position: fixed;
   top: 0;
   left: -100%;
@@ -54,24 +54,35 @@ body {
   max-width: 300px;
   height: 100%;
   z-index: 6;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 }
-#linksMobile #nightModeToggle-wrapper {
+#links-mobile #night-mode-toggle-wrapper {
   margin-top: 40px;
 }
-#linksMobile #mobileLinksContainer {
+#links-mobile #mobile-links-container {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-top: 40px;
+}
+#links-mobile #mobile-links-container :nth-child(1) {
+  font-size: 1.5rem;
+}
+#links-mobile #mobile-links-container :nth-child(2) {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+#links-mobile #main-logo {
+  position: relative;
+  top: 7px;
 }
 
 .linkMobileShown {
-  animation: showMobileMenu 1s ease-out;
+  animation: showMobileMenu 0.6s ease-out;
   animation-fill-mode: forwards;
 }
 
@@ -96,13 +107,13 @@ body {
     left: -100%;
   }
 }
-#linksMobileInput {
+#links-mobile-input {
   scale: 1.2;
   position: relative;
   top: 40px;
   display: none;
 }
-#linksMobileInput input {
+#links-mobile-input input {
   cursor: pointer;
   display: block;
   height: 32px;
@@ -114,7 +125,7 @@ body {
   top: 30px;
   right: 5px;
 }
-#linksMobileInput span {
+#links-mobile-input span {
   background-color: var(--font-color);
   border-radius: 3px;
   display: block;
@@ -126,47 +137,42 @@ body {
   z-index: 1;
   transition: background-color 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), width 0.8s;
 }
-#linksMobileInput span:nth-of-type(1) {
+#links-mobile-input span:nth-of-type(2) {
   transition-delay: 0.2s;
 }
-#linksMobileInput span:nth-of-type(2) {
+#links-mobile-input span:nth-of-type(3) {
   transition-delay: 0.4s;
 }
-#linksMobileInput span:nth-of-type(3) {
-  transition-delay: 0.8s;
-}
-#linksMobileInput span:nth-of-type(4) {
+#links-mobile-input span:nth-of-type(4) {
   transform: rotate(35deg) translate(0px, -5px);
   width: 0;
-  transition-delay: 0.2s;
 }
-#linksMobileInput span:nth-of-type(5) {
+#links-mobile-input span:nth-of-type(5) {
   transform: rotate(-35deg) translate(0, 1px);
   width: 0;
-  transition-delay: 0.2s;
 }
-#linksMobileInput span.openSpan {
+#links-mobile-input span.open-span {
   width: 0px;
   top: -20px;
 }
-#linksMobileInput input:checked ~ span:nth-of-type(1) {
+#links-mobile-input input:checked ~ span:nth-of-type(1) {
   width: 0;
 }
-#linksMobileInput input:checked ~ span:nth-of-type(2) {
+#links-mobile-input input:checked ~ span:nth-of-type(2) {
   width: 0;
 }
-#linksMobileInput input:checked ~ span:nth-of-type(3) {
+#links-mobile-input input:checked ~ span:nth-of-type(3) {
   width: 0;
 }
-#linksMobileInput input:checked ~ span:nth-of-type(4) {
+#links-mobile-input input:checked ~ span:nth-of-type(4) {
   background-color: var(--pop-color);
   width: 33px;
-  transition-delay: 1.2s;
+  transition-delay: 0.7s;
 }
-#linksMobileInput input:checked ~ span:nth-of-type(5) {
+#links-mobile-input input:checked ~ span:nth-of-type(5) {
   background-color: var(--pop-color);
   width: 33px;
-  transition-delay: 1.2s;
+  transition-delay: 0.7s;
 }
 
 html {
@@ -204,7 +210,7 @@ header {
   width: 100%;
   height: 100%;
 }
-header .headerFixed {
+header .header-fixed {
   width: 100%;
   max-width: 1300px;
   height: 160px;
@@ -218,10 +224,10 @@ header .headerFixed {
   transition: color 1000ms linear;
   margin: 0 auto;
 }
-header .headerFixedShown {
+header .header-fixedShown {
   opacity: 1;
 }
-header .headerFixedHidden {
+header .header-fixed-hidden {
   opacity: 0;
   z-index: -1;
 }
@@ -250,7 +256,7 @@ header nav {
   justify-content: space-between;
   align-items: baseline;
 }
-header nav #mainLogo {
+header nav #main-logo {
   font-family: "Josefin Sans", sans-serif;
   font-size: 2.3rem;
   position: relative;
@@ -298,26 +304,26 @@ footer #companyName span {
   font-size: 1.2rem;
 }
 
-.nightModeToggle-wrapper {
+.night-mode-toggle-wrapper {
   display: flex;
   align-items: center;
 }
-.nightModeToggle-wrapper em {
+.night-mode-toggle-wrapper em {
   margin-left: 20px;
   padding-top: 6px;
   font-size: 1.1rem;
 }
-.nightModeToggle-wrapper .nightModeToggle {
+.night-mode-toggle-wrapper .night-mode-toggle {
   display: inline-block;
   height: 24px;
   position: relative;
   left: 5px;
   width: 50px;
 }
-.nightModeToggle-wrapper .nightModeToggle input {
+.night-mode-toggle-wrapper .night-mode-toggle input {
   display: none;
 }
-.nightModeToggle-wrapper .slider {
+.night-mode-toggle-wrapper .slider {
   background-color: #ccc;
   bottom: 0;
   cursor: pointer;
@@ -327,7 +333,7 @@ footer #companyName span {
   top: 0;
   transition: 0.4s;
 }
-.nightModeToggle-wrapper .slider:before {
+.night-mode-toggle-wrapper .slider:before {
   background-color: #fff;
   bottom: 4px;
   content: "";
@@ -337,16 +343,16 @@ footer #companyName span {
   transition: 0.4s;
   width: 16px;
 }
-.nightModeToggle-wrapper input:checked + .slider {
+.night-mode-toggle-wrapper input:checked + .slider {
   background-color: #db8722;
 }
-.nightModeToggle-wrapper input:checked + .slider:before {
+.night-mode-toggle-wrapper input:checked + .slider:before {
   transform: translateX(26px);
 }
-.nightModeToggle-wrapper .slider.round {
+.night-mode-toggle-wrapper .slider.round {
   border-radius: 34px;
 }
-.nightModeToggle-wrapper .slider.round:before {
+.night-mode-toggle-wrapper .slider.round:before {
   border-radius: 50%;
 }
 
@@ -384,7 +390,7 @@ main.sub-page-main h2 {
   text-align: end;
   width: 100%;
   height: auto;
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-weight: bold;
   margin: 20px 0;
   border-bottom: 2px solid var(--pop-color);
@@ -392,14 +398,13 @@ main.sub-page-main h2 {
 main.sub-page-main h3 {
   width: 100%;
   height: auto;
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  margin: 100px 0;
   border-bottom: 2px solid var(--pop-color);
   text-align: end;
 }
 main.sub-page-main p {
-  font-size: 1.3rem;
+  font-size: 1rem;
   max-width: 900px;
 }
 
@@ -408,7 +413,7 @@ header.sub-page-header {
   max-height: 200px;
 }
 
-header.sub-page-header #sub-page-headerWrapper {
+header.sub-page-header #sub-page-header-wrapper {
   width: 100%;
   max-width: 1300px;
   height: 160px;
@@ -424,16 +429,36 @@ header.sub-page-header #sub-page-headerWrapper {
 }
 
 @media only screen and (max-width: 1370px) {
-  header .headerFixed #links {
+  header .header-fixed #links {
     padding-right: 60px;
   }
 
-  header.sub-page-header #sub-page-headerWrapper #links {
+  header.sub-page-header #sub-page-header-wrapper #links {
     padding-right: 60px;
   }
 }
 @media only screen and (max-width: 800px) {
-  #linksMobileInput {
+  #links-mobile {
+    display: flex;
+  }
+
+  main.sub-page-main {
+    width: 100%;
+    margin-top: -60px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  main.sub-page-main h2 {
+    font-size: 1.5rem;
+  }
+  main.sub-page-main h3 {
+    font-size: 1.2rem;
+  }
+  main.sub-page-main p {
+    font-size: 0.9rem;
+  }
+
+  #links-mobile-input {
     display: block;
   }
 
@@ -461,30 +486,33 @@ header.sub-page-header #sub-page-headerWrapper {
     display: none;
   }
 
-  #headerWrapper.headerFixed {
+  #header-wrapper.header-fixed {
     width: calc(100% - 10px);
   }
 
-  header nav #mainLogo {
+  header nav #main-logo {
     padding-left: 0px;
     left: 5px;
   }
-  header nav #linksMobileInput {
+  header nav #links-mobile-input {
     right: 5px;
   }
-  header #headerWrapper.sub-page-header {
+  header #header-wrapper.sub-page-header {
     min-width: 100vw;
     max-height: 40px;
     padding-bottom: 90px;
   }
-  header #headerWrapper.sub-page-header #headerNav {
+  header #header-wrapper.sub-page-header #header-nav {
     position: relative;
     bottom: 20px;
   }
-  header #headerWrapper.sub-page-header #mobileMenuToggle {
+  header #header-wrapper.sub-page-header #mobileMenuToggle {
     position: relative;
     left: 85vw;
     bottom: 86px;
+  }
+  header .header-fixed {
+    height: 150px;
   }
 }
 main {
@@ -556,7 +584,7 @@ main #form #submit {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 900px) {
   main {
     display: flex;
     flex-direction: column;
