@@ -117,11 +117,11 @@ scrollFunction = () => {
 }
 window.onscroll = function () { scrollFunction() };
 // When user click scroll back to top button, scroll them to top of page.
-// Fired from the button itself.
-scrollToTop = () => {
+scrollToTopButton.addEventListener("click", function(){
    document.body.scrollTop = 0; //Safari
    document.documentElement.scrollTop = 0; //Chrome, FF, IE, Opera.
-}
+})
+
 
 
 // Landing page intro animation.
