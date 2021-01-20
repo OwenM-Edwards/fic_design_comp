@@ -1,143 +1,165 @@
 <!DOCTYPE html>
 
 <html>
-   <head>
-      <link rel="icon" href="./favicon.png" type="image/icon type">
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title></title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="./css/nott-contemporary.css">
-      <!-- Google Font -->
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300&display=swap" rel="stylesheet"> 
-      <script src="https://unpkg.com/scrollreveal"></script>
+<head>
+   <link rel="icon" href="./favicon.png" type="image/icon type">
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title></title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="./css/nott-contemporary.css">
+   <!-- Google Font -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 
-   </head>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300&display=swap" rel="stylesheet">
+   <script src="https://unpkg.com/scrollreveal"></script>
 
-   <body>
-      <!-- Header -->
-      <header class="sub-page-header">
-         <div id="sub-page-header-wrapper" >
-            <!-- Desktop nav -->
-            <nav id="header-nav">
+</head>
+
+<body>
+   <!-- Header -->
+   <header class="sub-page-header">
+      <div id="sub-page-header-wrapper">
+         <!-- Desktop nav -->
+         <nav id="header-nav">
+            <div id="main-logo">
+               <a href="./index.html#anchorPoint">
+                  <h1>myth-des</h1>
+               </a>
+            </div>
+
+            <div id="links">
+               <a href="./about.html">About</a>
+               <p>||</p>
+               <a href="./contact.html">Contact</a>
+               <!-- Night mode toggle -->
+               <div class="night-mode-toggle-wrapper">
+                  <label class="night-mode-toggle" for="checkbox">
+                     <input type="checkbox" id="checkbox" />
+                     <div class="slider round"></div>
+                  </label>
+                  <em>Dark Mode</em>
+               </div>
+
+            </div>
+            <!-- mobile links & menu -->
+            <div id="links-mobile-input">
+               <input id="mobile-input-checkbox" type="checkbox" />
+               <span class="closed-span"></span>
+               <span class="closed-span"></span>
+               <span class="closed-span"></span>
+               <span class="open-span"></span>
+               <span class="open-span"></span>
+            </div>
+            <div id="links-mobile">
                <div id="main-logo">
-                  <a href="./index.html#anchorPoint"><h1>myth-des</h1></a>
+                  <a href="./index.html">
+                     <h1>myth-des</h1>
+                  </a>
                </div>
-
-               <div id="links">
+               <!-- Night mode toggle -->
+               <div class="night-mode-toggle-wrapper">
+                  <label class="night-mode-toggle" for="checkbox">
+                     <input type="checkbox" id="checkbox" />
+                     <div class="slider round"></div>
+                  </label>
+                  <em>Dark Mode</em>
+               </div>
+               <div id="mobile-links-container">
                   <a href="./about.html">About</a>
-                  <p>||</p>
                   <a href="./contact.html">Contact</a>
-                  <!-- Night mode toggle -->
-                  <div class="night-mode-toggle-wrapper">
-                     <label class="night-mode-toggle" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                     </label>
-                     <em>Dark Mode</em>
-                  </div> 
-                  
+                  <a href="./august-tea.html">August Tea</a>
+                  <a href="./myth-sets.html">myth-sets</a>
+                  <a href="./Beeston-StreetArt.html">Beeston Street Art</a>
+                  <a href="./nott-contemporary.html">Notts Contemporary</a>
+                  <a href="./keyborders.html">keyborders</a>
+                  <a href="./vegan-art-products.html">Vegan Art Products</a>
                </div>
-               <!-- mobile links & menu -->
-               <div id="links-mobile-input">
-                  <input id="mobile-input-checkbox" type="checkbox" />
-                  <span class="closed-span"></span>
-                  <span class="closed-span"></span>
-                  <span class="closed-span"></span>
-                  <span class="open-span"></span>
-                  <span class="open-span"></span>
-               </div>
-               <div id="links-mobile">
-                  <div id="main-logo">
-                     <a href="./index.html"><h1>myth-des</h1></a>
-                  </div>
-                  <!-- Night mode toggle -->
-                  <div class="night-mode-toggle-wrapper">
-                     <label class="night-mode-toggle" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                     </label>
-                     <em>Dark Mode</em>
-                  </div>
-                  <div id="mobile-links-container">
-                     <a href="./about.html">About</a>
-                     <a href="./contact.html">Contact</a>
-                     <a href="./august-tea.html">August Tea</a>
-                     <a href="./myth-sets.html">myth-sets</a>
-                     <a href="./Beeston-StreetArt.html">Beeston Street Art</a>
-                     <a href="./nott-contemporary.html">Notts Contemporary</a>
-                     <a href="./keyborders.html">keyborders</a>
-                     <a href="./vegan-art-products.html">Vegan Art Products</a>
-                  </div>
-               </div>
-            </nav>
-         </div>
-      </header>
+            </div>
+         </nav>
+      </div>
+   </header>
 
-      <!-- Main -->
-      <main class="sub-page-main">
-         <h2  class="fade-in-header-once">Nottingham Contemporary</h2>
+   <!-- Main -->
+   <main class="sub-page-main">
+      <h2 class="fade-in-header-once">Nottingham Contemporary</h2>
 
-         <p>The first exhibition in the UK devoted to the work of Sun Ra, the legendary jazz musician and Afro-Futurist. It aims to present him as a “total artist”. Besides his compositions, recordings and concerts, Sun Ra was a writer, philosopher and poet. He also designed his Arkestra’s record covers and publicity, and conceived and starred in a feature film, Space Is the Place (1974). Sun Ra took the name of the Egyptian sun god and claimed to have come from Saturn. The exhibition is designed by leading French scenographer Nadia Lauro.</p>
+      <p>The first exhibition in the UK devoted to the work of Sun Ra, the legendary jazz musician and Afro-Futurist. It
+         aims to present him as a “total artist”. Besides his compositions, recordings and concerts, Sun Ra was a
+         writer, philosopher and poet. He also designed his Arkestra’s record covers and publicity, and conceived and
+         starred in a feature film, Space Is the Place (1974). Sun Ra took the name of the Egyptian sun god and claimed
+         to have come from Saturn. The exhibition is designed by leading French scenographer Nadia Lauro.</p>
 
-         <img alt="Art gallery, yellow lighting, headphones hanging from ceiling." id="main-image" src="assets/img/nott-contemp/1.jpg">
+      <img alt="Art gallery, yellow lighting, headphones hanging from ceiling." id="main-image"
+         src="assets/img/nott-contemp/1.jpg">
 
-         <h3 class="fade-in-header-once" >Sun Ra (1914-1993)</h3>
+      <h3 class="fade-in-header-once">Sun Ra (1914-1993)</h3>
 
-         <div id="small-images-container">
-            <img alt="Boy with headphones on taking notes." loading="lazy" class="small-image" id="small-image-one" src="assets/img/nott-contemp/2.jpg">
-            <img alt="Art exhibit, girl using headphones in yellow room" loading="lazy" class="small-image" id="small-image-two" src="assets/img/nott-contemp/3.jpg">
-         </div>
+      <div id="small-images-container">
+         <img alt="Boy with headphones on taking notes." loading="lazy" class="small-image" id="small-image-one"
+            src="assets/img/nott-contemp/2.jpg">
+         <img alt="Art exhibit, girl using headphones in yellow room" loading="lazy" class="small-image"
+            id="small-image-two" src="assets/img/nott-contemp/3.jpg">
+      </div>
 
-         <div id="second-image-container">
-            <img alt="Pictures of artist and his writings." loading="lazy" id="second-image" src="assets/img/nott-contemp/7.jpg">
-            <p>This exhibition was part of Alien Encounters – four solo exhibitions, each featuring new commissions. The four artists use performance, theatre and film. For them, fiction and alternative realities become ways of transforming and extending our understanding of identity, social norms and world history.</p>
-         </div>
+      <div id="second-image-container">
+         <img alt="Pictures of artist and his writings." loading="lazy" id="second-image"
+            src="assets/img/nott-contemp/7.jpg">
+         <p>This exhibition was part of Alien Encounters – four solo exhibitions, each featuring new commissions. The
+            four artists use performance, theatre and film. For them, fiction and alternative realities become ways of
+            transforming and extending our understanding of identity, social norms and world history.</p>
+      </div>
 
-         <h3 class="fade-in-header-once" >The Cosmo Man.</h3>
+      <h3 class="fade-in-header-once">The Cosmo Man.</h3>
 
-         <p>The idea for the season developed out of conversations with Collabor-8 Collective, Nottingham Contemporary’s young people’s group, and was curated to coincide with Circuit, our arts festival for 15 to 25 years olds in Nov.</p>
+      <p>The idea for the season developed out of conversations with Collabor-8 Collective, Nottingham Contemporary’s
+         young people’s group, and was curated to coincide with Circuit, our arts festival for 15 to 25 years olds in
+         Nov.</p>
 
-         <div id="image-grid">
-            <img alt="Several pictures of the artist." loading="lazy" class="grid-image" id="grid-image-one" src="assets/img/nott-contemp/7.jpg">
-            <img alt="Yellow art gallery, headphones hanging from ceiling." loading="lazy" class="grid-image" id="grid-image-two" src="assets/img/nott-contemp/8.jpg">
-            <img alt="Yellow art gallery, headphones hanging from ceiling." loading="lazy" class="grid-image" id="grid-image-three" src="assets/img/nott-contemp/6.jpg">
-         </div>
+      <div id="image-grid">
+         <img alt="Several pictures of the artist." loading="lazy" class="grid-image" id="grid-image-one"
+            src="assets/img/nott-contemp/7.jpg">
+         <img alt="Yellow art gallery, headphones hanging from ceiling." loading="lazy" class="grid-image"
+            id="grid-image-two" src="assets/img/nott-contemp/8.jpg">
+         <img alt="Yellow art gallery, headphones hanging from ceiling." loading="lazy" class="grid-image"
+            id="grid-image-three" src="assets/img/nott-contemp/6.jpg">
+      </div>
 
-         <h3 class="fade-in-header-once" >Alien Encounters</h3>
-         
-         <img alt="The Nottingham Contemporary art gallery" loading="lazy" id="third-image" src="assets/img/nott-contemp/4.jpg">
+      <h3 class="fade-in-header-once">Alien Encounters</h3>
 
-         <!-- Scroll back to top button -->
-         <div id="scroll-to-top-button-container">
-            <div class="scroll-to-top-buttonLight" onclick="scrollToTop()" id="scroll-to-top-button"></div>
-         </div>
-      </main>
+      <img alt="The Nottingham Contemporary art gallery" loading="lazy" id="third-image"
+         src="assets/img/nott-contemp/4.jpg">
 
-      <!-- Footer -->
-      <footer>
-         <ul>
-            <li><a>Facebook</a></li>
-            <li><a>Twitter</a></li>
-            <li><a>myth-des 2021</a></li>
-         </ul>
-      </footer>
+      <!-- Scroll back to top button -->
+      <div id="scroll-to-top-button-container">
+         <div class="scroll-to-top-buttonLight" onclick="scrollToTop()" id="scroll-to-top-button"></div>
+      </div>
+   </main>
 
-      <script src="js/template.js"></script>
-      <script>   
-         ScrollReveal().reveal('#main-image');
-         ScrollReveal().reveal('#small-image-one');
-         ScrollReveal().reveal('#small-image-two');
-         ScrollReveal().reveal('#second-image');
-         ScrollReveal().reveal('#grid-image-one');
-         ScrollReveal().reveal('#grid-image-two');
-         ScrollReveal().reveal('#grid-image-three');
-         ScrollReveal().reveal('#third-image');
-      </script>
-   </body>
+   <!-- Footer -->
+   <footer>
+      <ul>
+         <li><a>Facebook</a></li>
+         <li><a>Twitter</a></li>
+         <li><a>myth-des 2021</a></li>
+      </ul>
+   </footer>
+
+   <script src="js/template.js"></script>
+   <script>
+      ScrollReveal().reveal('#main-image');
+      ScrollReveal().reveal('#small-image-one');
+      ScrollReveal().reveal('#small-image-two');
+      ScrollReveal().reveal('#second-image');
+      ScrollReveal().reveal('#grid-image-one');
+      ScrollReveal().reveal('#grid-image-two');
+      ScrollReveal().reveal('#grid-image-three');
+      ScrollReveal().reveal('#third-image');
+   </script>
+</body>
+
 </html>

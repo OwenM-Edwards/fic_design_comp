@@ -1,212 +1,242 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <link rel="icon" href="./favicon.png" type="image/icon type">
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>myth-des</title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- CSS -->
-      <link rel="stylesheet" href="./css/index.css">
-      <!-- Google Fonts -->
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300&display=swap" rel="stylesheet"> 
-      <script src="https://unpkg.com/scrollreveal"></script>
-   </head>
+<head>
+   <link rel="icon" href="./favicon.png" type="image/icon type">
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>myth-des</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- CSS -->
+   <link rel="stylesheet" href="./css/index.css">
+   <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300&display=swap" rel="stylesheet">
+   <script src="https://unpkg.com/scrollreveal"></script>
+</head>
 
 
-   <body>
-         <!-- Animated Landing Page -->
-         <div id="landing">
-            <img  alt="Graphic art background." loading="lazy" id="landing-image" loading="lazy" src="assets/img/landing/8.jpg">
-            <div id="landing-image-gradient"></div>
-            <div id="landing-cover"></div>
-            <h1 id="landing-logo">myth-des</h1>
-            <div id="down-icon-container">
-               <a  alt="Scrolls past the landing page."  href="./index.html#anchorPoint"><div id="downIcon"></div></a>
-            </div>
-            <div id="landing-logo-cover"></div>
-            <div class="animation" id="loading-bounce-a"></div>
-            <div class="animation" id="loading-bounce-b"></div>
+<body>
+   <!-- Animated Landing Page -->
+   <div id="landing">
+      <img alt="Graphic art background." loading="lazy" id="landing-image" loading="lazy"
+         src="assets/img/landing/8.jpg">
+      <div id="landing-image-gradient"></div>
+      <div id="landing-cover"></div>
+      <h1 id="landing-logo">myth-des</h1>
+      <div id="down-icon-container">
+         <a alt="Scrolls past the landing page." href="./index.html#anchorPoint">
+            <div id="downIcon"></div>
+         </a>
+      </div>
+      <div id="landing-logo-cover"></div>
+      <div class="animation" id="loading-bounce-a"></div>
+      <div class="animation" id="loading-bounce-b"></div>
+   </div>
+
+   <div id="wrapper">
+      <a id="anchorPoint"></a>
+      <!-- Header -->
+      <header>
+         <!-- Relative Header -->
+         <div id="header-wrapper" class="headerRelative">
+            <!-- Desktop nav -->
+            <nav id="header-nav">
+               <div id="main-logo">
+                  <a href="./index.html">
+                     <h1>myth-des</h1>
+                  </a>
+               </div>
+               <div id="links">
+                  <a href="./about.html">About</a>
+                  <p>||</p>
+                  <a href="./contact.html">Contact</a>
+                  <!-- Night mode toggle -->
+                  <div class="night-mode-toggle-wrapper">
+                     <label class="night-mode-toggle" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                     </label>
+                     <em>Dark Mode</em>
+                  </div>
+               </div>
+
+               <!-- mobile links & menu -->
+               <div id="links-mobile-input">
+                  <input id="mobile-input-checkbox" type="checkbox" />
+                  <span class="closed-span"></span>
+                  <span class="closed-span"></span>
+                  <span class="closed-span"></span>
+                  <span class="open-span"></span>
+                  <span class="open-span"></span>
+               </div>
+               <div id="links-mobile">
+                  <div id="main-logo">
+                     <a href="./index.html">
+                        <h1>myth-des</h1>
+                     </a>
+                  </div>
+                  <!-- Night mode toggle -->
+                  <div class="night-mode-toggle-wrapper">
+                     <label class="night-mode-toggle" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                     </label>
+                     <em>Dark Mode</em>
+                  </div>
+                  <div id="mobile-links-container">
+                     <a href="./about.html">About</a>
+                     <a href="./contact.html">Contact</a>
+                     <a href="./august-tea.html">August Tea</a>
+                     <a href="./myth-sets.html">myth-sets</a>
+                     <a href="./Beeston-StreetArt.html">Beeston Street Art</a>
+                     <a href="./nott-contemporary.html">Notts Contemporary</a>
+                     <a href="./keyborders.html">keyborders</a>
+                     <a href="./vegan-art-products.html">Vegan Art Products</a>
+                  </div>
+               </div>
+            </nav>
          </div>
 
-         <div id="wrapper">
-            <a id="anchorPoint"></a>
-            <!-- Header -->
-            <header>
-               <!-- Relative Header -->
-               <div id="header-wrapper" class="headerRelative">
-                  <!-- Desktop nav -->
-                  <nav id="header-nav">
-                     <div id="main-logo">
-                        <a href="./index.html"><h1>myth-des</h1></a>
-                     </div>
-                     <div id="links">
-                        <a href="./about.html">About</a>
-                        <p>||</p>
-                        <a href="./contact.html">Contact</a>
-                        <!-- Night mode toggle -->
-                        <div class="night-mode-toggle-wrapper">
-                           <label class="night-mode-toggle" for="checkbox">
-                              <input type="checkbox" id="checkbox" />
-                              <div class="slider round"></div>
-                           </label>
-                           <em>Dark Mode</em>
-                        </div> 
-                     </div>
-
-                     <!-- mobile links & menu -->
-                     <div id="links-mobile-input">
-                        <input id="mobile-input-checkbox" type="checkbox" />
-                        <span class="closed-span"></span>
-                        <span class="closed-span"></span>
-                        <span class="closed-span"></span>
-                        <span class="open-span"></span>
-                        <span class="open-span"></span>
-                     </div>
-                     <div id="links-mobile">
-                        <div id="main-logo">
-                           <a href="./index.html"><h1>myth-des</h1></a>
-                        </div>
-                        <!-- Night mode toggle -->
-                        <div class="night-mode-toggle-wrapper">
-                           <label class="night-mode-toggle" for="checkbox">
-                              <input type="checkbox" id="checkbox" />
-                              <div class="slider round"></div>
-                           </label>
-                           <em>Dark Mode</em>
-                        </div>
-                        <div id="mobile-links-container">
-                           <a href="./about.html">About</a>
-                           <a href="./contact.html">Contact</a>
-                           <a href="./august-tea.html">August Tea</a>
-                           <a href="./myth-sets.html">myth-sets</a>
-                           <a href="./Beeston-StreetArt.html">Beeston Street Art</a>
-                           <a href="./nott-contemporary.html">Notts Contemporary</a>
-                           <a href="./keyborders.html">keyborders</a>
-                           <a href="./vegan-art-products.html">Vegan Art Products</a>
-                        </div>
-                     </div>
-                  </nav>
+         <!-- Fixed Header -->
+         <div id="header" class="header-fixed header-fixed-hidden">
+            <!-- Desktop nav -->
+            <nav id="header-nav">
+               <div id="main-logo">
+                  <a href="./index.html">
+                     <h1>myth-des</h1>
+                  </a>
                </div>
 
-               <!-- Fixed Header -->
-               <div id="header" class="header-fixed header-fixed-hidden">
-                  <!-- Desktop nav -->
-                  <nav id="header-nav">
-                     <div id="main-logo">
-                        <a href="./index.html"><h1>myth-des</h1></a>
-                     </div>
-
-                     <div id="links">
-                        <a href="./about.html">About</a>
-                        <p>||</p>
-                        <a href="./contact.html">Contact</a>
-                        <!-- Night mode toggle -->
-                        <div class="night-mode-toggle-wrapper">
-                           <label class="night-mode-toggle" for="checkbox">
-                              <input type="checkbox" id="checkbox" />
-                              <div class="slider round"></div>
-                           </label>
-                           <em>Dark Mode</em>
-                        </div> 
-                     </div>
-
-                     <!-- mobile input -->
-                     <div id="links-mobile-input">
-                        <input id="mobile-input-checkbox" type="checkbox" />
-                        <span class="closed-span"></span>
-                        <span class="closed-span"></span>
-                        <span class="closed-span"></span>
-                        <span class="open-span"></span>
-                        <span class="open-span"></span>
-                     </div>
-                  </nav>
+               <div id="links">
+                  <a href="./about.html">About</a>
+                  <p>||</p>
+                  <a href="./contact.html">Contact</a>
+                  <!-- Night mode toggle -->
+                  <div class="night-mode-toggle-wrapper">
+                     <label class="night-mode-toggle" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                     </label>
+                     <em>Dark Mode</em>
+                  </div>
                </div>
-            </header>
 
-
-         <!-- Main -->
-         <main id="main">
-            <h2 class="fade-in-header">We build your <span>ideas</span>.</h2>
-
-            <div id="content-grid-a">
-               <div id="img-china-tea">
-                  <img alt="Selection of tea cups - Links to august tea page." loading="lazy" src="assets/img/index/August-Tea.jpg">
+               <!-- mobile input -->
+               <div id="links-mobile-input">
+                  <input id="mobile-input-checkbox" type="checkbox" />
+                  <span class="closed-span"></span>
+                  <span class="closed-span"></span>
+                  <span class="closed-span"></span>
+                  <span class="open-span"></span>
+                  <span class="open-span"></span>
                </div>
-               <a class="grid-item" id="a-china-tea" href="./august-tea.html" >
-                  <div class="hover-text" ><p>August Tea</p></div>
-               </a> 
+            </nav>
+         </div>
+      </header>
 
 
-               <div id="img-myth-sets">
-                  <img alt="Selection of headphones - Links to myth-sets page." loading="lazy" src="assets/img/index/Myth-Sets.jpg">
-               </div>
-               <a class="grid-item" id="a-myth-sets" href="./myth-sets.html">
-                  <div class="hover-text" ><p>myth-sets</p></div>
-               </a>
+      <!-- Main -->
+      <main id="main">
+         <h2 class="fade-in-header">We build your <span>ideas</span>.</h2>
 
-               <div id="img-beeston-art">
-                  <img alt="Nottingham street art - links to Beeston street art page." loading="lazy" src="assets/img/index/Beeston-Art.jpg">
-               </div>
-               <a class="grid-item" id="a-beeston-art" href="./Beeston-StreetArt.html">
-                  <div class="hover-text" ><p>Beeston Street Art</p></div>
-               </a>
-
-               <div id="img-nott-comtemp">
-                  <img alt="Art exhibit, girl using headphones in yellow room. - links to Nottingham Contemporary page." loading="lazy" src="assets/img/index/Notts-Contemp.jpg">
-               </div>
-               <a class="grid-item" id="a-nott-comtemp" href="./nott-contemporary.html">
-                  <div class="hover-text" ><p>Notts Contemporary</p></div>
-               </a>
+         <div id="content-grid-a">
+            <div id="img-china-tea">
+               <img alt="Selection of tea cups - Links to august tea page." loading="lazy"
+                  src="assets/img/index/August-Tea.jpg">
             </div>
-
-            <h2 class="fade-in-header">We build your <span>brand</span>.</h2>
-            
-
-            <div id="content-grid-b">
-               <div id="img-keyborders">
-                  <img alt="Mechanical keyboard - links to keyborders page." loading="lazy" src="assets/img/index/keyborders.jpg">
+            <a class="grid-item" id="a-china-tea" href="./august-tea.html">
+               <div class="hover-text">
+                  <p>August Tea</p>
                </div>
-               <a class="grid-item" id="a-keyborders" href="./keyborders.html">
-                  <div class="hover-text" id="a-keyborders-hover"><p>Keyborders</p></div>
-               </a>
-               
-               <div id="img-vegan-art">
-                  <img alt="Art supplies - links to vegan art supplies page." loading="lazy" src="assets/img/index/Vegan-Art.jpg">
+            </a>
+
+
+            <div id="img-myth-sets">
+               <img alt="Selection of headphones - Links to myth-sets page." loading="lazy"
+                  src="assets/img/index/Myth-Sets.jpg">
+            </div>
+            <a class="grid-item" id="a-myth-sets" href="./myth-sets.html">
+               <div class="hover-text">
+                  <p>myth-sets</p>
                </div>
-               <a class="grid-item" id="a-vegan-art" href="./vegan-art-products.html">
-                  <div class="hover-text" ><p>Vegan Art Products</p></div>
-               </a>  
+            </a>
+
+            <div id="img-beeston-art">
+               <img alt="Nottingham street art - links to Beeston street art page." loading="lazy"
+                  src="assets/img/index/Beeston-Art.jpg">
             </div>
+            <a class="grid-item" id="a-beeston-art" href="./Beeston-StreetArt.html">
+               <div class="hover-text">
+                  <p>Beeston Street Art</p>
+               </div>
+            </a>
 
-            <h2 class="fade-in-header">We build your <span>business</span>.</h2>
-
-            
-            <!-- Scroll back to top button -->
-            <div id="scroll-to-top-button-container">
-               <div alt="Scrolls back to top of page." class="scroll-to-top-buttonLight" onclick="scrollToTop()" id="scroll-to-top-button"></div>
+            <div id="img-nott-comtemp">
+               <img alt="Art exhibit, girl using headphones in yellow room. - links to Nottingham Contemporary page."
+                  loading="lazy" src="assets/img/index/Notts-Contemp.jpg">
             </div>
-         </main>
+            <a class="grid-item" id="a-nott-comtemp" href="./nott-contemporary.html">
+               <div class="hover-text">
+                  <p>Notts Contemporary</p>
+               </div>
+            </a>
+         </div>
 
-         <!-- Footer -->
-         <footer>
-            <ul>
-               <li><a>Facebook</a></li>
-               <li><a>Twitter</a></li>
-               <li id="companyName"><span>©</span>myth-des <span>2021</span></li>
-            </ul>
-         </footer>
+         <h2 class="fade-in-header">We build your <span>brand</span>.</h2>
+
+
+         <div id="content-grid-b">
+            <div id="img-keyborders">
+               <img alt="Mechanical keyboard - links to keyborders page." loading="lazy"
+                  src="assets/img/index/keyborders.jpg">
+            </div>
+            <a class="grid-item" id="a-keyborders" href="./keyborders.html">
+               <div class="hover-text" id="a-keyborders-hover">
+                  <p>Keyborders</p>
+               </div>
+            </a>
+
+            <div id="img-vegan-art">
+               <img alt="Art supplies - links to vegan art supplies page." loading="lazy"
+                  src="assets/img/index/Vegan-Art.jpg">
+            </div>
+            <a class="grid-item" id="a-vegan-art" href="./vegan-art-products.html">
+               <div class="hover-text">
+                  <p>Vegan Art Products</p>
+               </div>
+            </a>
+         </div>
+
+         <h2 class="fade-in-header">We build your <span>business</span>.</h2>
+
+
+         <!-- Scroll back to top button -->
+         <div id="scroll-to-top-button-container">
+            <div alt="Scrolls back to top of page." class="scroll-to-top-buttonLight" onclick="scrollToTop()"
+               id="scroll-to-top-button"></div>
+         </div>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+         <ul>
+            <li><a>Facebook</a></li>
+            <li><a>Twitter</a></li>
+            <li id="companyName"><span>©</span>myth-des <span>2021</span></li>
+         </ul>
+      </footer>
       <!-- Wrapper ends -->
-      </div>
-      <script src="js/template.js"></script>
-      <script>   
-         ScrollReveal().reveal('#content-grid-a');
-         ScrollReveal().reveal('#content-grid-b');
-      </script>
-   </body>
+   </div>
+   <script src="js/template.js"></script>
+   <script>
+      ScrollReveal().reveal('#content-grid-a');
+      ScrollReveal().reveal('#content-grid-b');
+   </script>
+</body>
+
 </html>

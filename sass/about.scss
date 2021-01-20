@@ -1,21 +1,21 @@
 @use 'template';
 
 main {
+   align-items: center;
    display:flex;
    flex-wrap: nowrap;
-   align-items: center;
    justify-content: space-between;
    #header-image {
-      width:50%;
       background-color:var(--pop-color);
+      margin-right:100px;
       min-height:600px;
       object-fit: cover;
-      margin-right:100px;
+      width:50%;
    }
    p {
-      width:50%;
-      max-width:600px;
       font-size: 1.5rem;
+      max-width:600px;
+      width:50%;
    }
 }
 
@@ -26,18 +26,18 @@ main {
       flex-direction: column;
       justify-content: center;
       #header-image {
-         width:80%;
+         margin-bottom: 40px;
+         margin:0 auto;
          max-width: 600px;
          min-height:200px;
-         margin:0 auto;
-         margin-bottom: 40px;
+         width:80%;
       }
    
       p {
-         width:80%;
-         max-width: 600px;
          font-size: 1.1rem;
          margin:0 auto;
+         max-width: 600px;
+         width:80%;
       }
    }
 

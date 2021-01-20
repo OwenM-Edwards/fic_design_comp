@@ -2,28 +2,28 @@
 
 #main-image {
    height:600px;
-   width:100%;
    object-fit: cover;
+   width:100%;
 }
 
 #second-image {
    height:600px;
-   width:100%;
    object-fit: cover;
+   width:100%;
 }
 
 #image-grid {
-   margin-top:50px;
-   margin-bottom:50px;
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   grid-template-rows: repeat(2, 1fr);
    grid-column-gap: 20px;
    grid-row-gap: 20px; 
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   margin-bottom:50px;
+   margin-top:50px;
    .grid-image {
       height:400px;
-      width:100%;
       object-fit: cover;
+      width:100%;
    }
 
    #grid-image-one {
@@ -37,8 +37,8 @@
 
 #third-image {
    height:600px;
-   width:100%;
    object-fit: cover;
+   width:100%;
 }
 
 
@@ -56,13 +56,13 @@
       display: flex;
       flex-wrap:wrap;
       #grid-image-one {
-         width:100%;
          height:auto;
+         width:100%;
       }
       #grid-image-two {
-         width:100%;
          height:auto;
          margin:0 auto;
+         width:100%;
       }
    }
 }

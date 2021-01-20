@@ -34,27 +34,27 @@ appHeight();
 // When user scrolls past landing page, activate the fixed header.
 // Uses the header-fixed-hidden & header-fixedShown classes.
 // If landing page not present (on subpage, dont activate).
-if(landingPage){
+if (landingPage) {
    let headerObserver = new IntersectionObserver(
       (entries, observer) => {
-         if(entries[0].intersectionRatio==0){
+         if (entries[0].intersectionRatio == 0) {
             headerFixed.classList.remove('header-fixed-hidden');
             headerFixed.classList.add('header-fixedShown');
          }
-         if(entries[0].intersectionRatio>0){
+         if (entries[0].intersectionRatio > 0) {
             headerFixed.classList.remove('header-fixedShown');
             headerFixed.classList.add('header-fixed-hidden');
-         } 
+         }
       },
-      { root: null, rootMargin:'30px', threshhold:1 }
+      { root: null, rootMargin: '30px', threshhold: 1 }
    ); headerObserver.observe(landingPage);
 }
 
 
 // Night mode toggle.
 // default to dark if no prior select, pulled form local storage.
-if(!currentTheme){
-   toggleDarkModeInput.forEach (function(item,index){
+if (!currentTheme) {
+   toggleDarkModeInput.forEach(function (item, index) {
       item.checked = true
    })
    scrollToTopButton.classList.remove('scroll-to-top-buttonLight');
@@ -63,7 +63,7 @@ if(!currentTheme){
 else if (currentTheme) {
    document.documentElement.setAttribute('data-theme', currentTheme);
    if (currentTheme === 'dark') {
-      toggleDarkModeInput.forEach (function(item,index){
+      toggleDarkModeInput.forEach(function (item, index) {
          item.checked = true
       })
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -71,7 +71,7 @@ else if (currentTheme) {
       scrollToTopButton.classList.add('scroll-to-top-buttonDark');
    }
    else {
-      toggleDarkModeInput.forEach (function(item,index){
+      toggleDarkModeInput.forEach(function (item, index) {
          item.checked = false
       })
       // toggleSwitchRelative.checked = false;
@@ -83,7 +83,7 @@ else if (currentTheme) {
 // Switches theme, called from toggleSwitches.
 switchTheme = (e) => {
    if (e.target.checked) {
-      toggleDarkModeInput.forEach (function(item,index){
+      toggleDarkModeInput.forEach(function (item, index) {
          item.checked = true
       })
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -92,16 +92,16 @@ switchTheme = (e) => {
       localStorage.setItem('theme', 'dark'); //add this
    }
    else {
-      toggleDarkModeInput.forEach (function(item,index){
+      toggleDarkModeInput.forEach(function (item, index) {
          item.checked = false
       })
       document.documentElement.setAttribute('data-theme', 'light');
       scrollToTopButton.classList.remove('scroll-to-top-buttonDark');
       scrollToTopButton.classList.add('scroll-to-top-buttonLight');
       localStorage.setItem('theme', 'light'); //add this
-   }    
+   }
 }
-toggleDarkModeInput.forEach (function(item,index){
+toggleDarkModeInput.forEach(function (item, index) {
    item.addEventListener('change', switchTheme, false);
 })
 
@@ -115,7 +115,7 @@ scrollFunction = () => {
       scrollToTopButton.style.display = "none";
    }
 }
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 // When user click scroll back to top button, scroll them to top of page.
 // Fired from the button itself.
 scrollToTop = () => {
@@ -126,8 +126,8 @@ scrollToTop = () => {
 
 // Landing page intro animation.
 // Triggered on window load, if landing page present.
-if(landingPage){
-   window.onload = function() {
+if (landingPage) {
+   window.onload = function () {
       loadingLanding.classList.add('landing-cover-hidden');
       loadingAnimationIconA.classList.add('loading-bounce-move-a');
       loadingAnimationIconB.classList.add('loading-bounce-move-b');
@@ -135,81 +135,81 @@ if(landingPage){
       downIcon.classList.add('down-icon-fade-in');
       // Move animation icons to side of screen, then hide when finished.
       // Hiding prevents window resizing issues.
-      setTimeout(function(){
+      setTimeout(function () {
          loadingAnimationIconA.classList.remove('loading-bounce-move-a');
          loadingAnimationIconB.classList.remove('loading-bounce-move-b');
          loadingAnimationIconA.classList.remove('animation');
          loadingAnimationIconB.classList.remove('animation');
          loadingAnimationIconA.classList.add('loading-bounce-hidden');
          loadingAnimationIconB.classList.add('loading-bounce-hidden');
-      }, 1500 );
+      }, 1500);
    }
 }
 
 
 // Mobile menu.
 //  Reset the mobile input checkbox status for reloads. Input taken from localstore instead.
-mobileMenuInputs.forEach(function(item, index){
+mobileMenuInputs.forEach(function (item, index) {
    item.checked = false;
 });
 // Toggle mobile menu display.
 // Foreach used, as there are several different possible mobile menu inputs - 
 // Fixed and relative headers, and the mobile menu.
-mobileMenuToggle = (e) =>{
+mobileMenuToggle = (e) => {
    // If input checked, check all other inputs.
    // Then show mobile menu.
-   if(e.target.checked == true){
-      mobileMenuInputs.forEach(function(item, index){
+   if (e.target.checked == true) {
+      mobileMenuInputs.forEach(function (item, index) {
          item.checked = true;
       });
       mobileMenu.classList.remove('mobile-menu-hidden');
-      mobileMenu.classList.add('mobile-menu-shown');  
+      mobileMenu.classList.add('mobile-menu-shown');
    }
    // Else uncheck all other inputs.
    // Then hide mobile menu.
    else {
-      mobileMenuInputs.forEach(function(item, index){
+      mobileMenuInputs.forEach(function (item, index) {
          item.checked = false;
       });
       mobileMenu.classList.remove('mobile-menu-shown');
       mobileMenu.classList.add('mobile-menu-hidden');
    }
 }
-mobileMenuInputs.forEach(function(item, index){
+mobileMenuInputs.forEach(function (item, index) {
    item.addEventListener('change', mobileMenuToggle);
 });
 
 
 // Controller for header fade animations.
 // Fade in for h2's and h3's.
-if(fadeInHeader){
+if (fadeInHeader) {
    // Fades in the header once within view, then resets when out of view.
-   fadeInHeader.forEach(function(item, index){
+   fadeInHeader.forEach(function (item, index) {
       let fadeInHeaderObserver = new IntersectionObserver(
          (entries, observer) => {
-            if(entries[0].intersectionRatio==0){
+            if (entries[0].intersectionRatio == 0) {
                item.classList.remove('header-fade-in-anim');
             }
-            if(entries[0].intersectionRatio>0){
+            if (entries[0].intersectionRatio > 0) {
                item.classList.add('header-fade-in-anim');
-            } 
+            }
          },
-         { root: null, rootMargin:'30px', threshhold:1 }
+         { root: null, rootMargin: '30px', threshhold: 1 }
       );
       fadeInHeaderObserver.observe(item);
-   }) 
+   })
 }
-if(fadeInHeaderOnce){
+if (fadeInHeaderOnce) {
    // Fades in the header once within view, does not reset.
-   fadeInHeaderOnce.forEach(function(item, index){
+   fadeInHeaderOnce.forEach(function (item, index) {
       let fadeInHeaderOnceObserver = new IntersectionObserver(
          (entries, observer) => {
-            if(entries[0].intersectionRatio>0){
+            if (entries[0].intersectionRatio > 0) {
                item.classList.add('header-fade-in-anim');
-            } 
+            }
          },
-         { root: null, rootMargin:'30px', threshhold:1 }
+         { root: null, rootMargin: '30px', threshhold: 1 }
       );
       fadeInHeaderOnceObserver.observe(item);
-   }) 
+   })
 }

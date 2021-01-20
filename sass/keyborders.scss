@@ -1,30 +1,30 @@
 @use 'template';
 
 .container {
-   width:100%;
-   height:500px;
    display:flex;
    flex-direction: row;
+   height:500px;
+   justify-content: space-between;
    margin-bottom:60px;
    margin-top:60px;
-   justify-content: space-between;
+   width:100%;
    #text-container {
-      margin-top: 0px;
       height:100%;
-      width:40%;
+      margin-top: 0px;
+      max-width: 500px;
       padding-top:70px;
       text-justify: distribute;
-      max-width: 500px;
+      width:40%;
    }
 
    .container-image {
-      height:100%;
-      width:60%;
-      object-fit: cover;
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      height:100%;
+      object-fit: cover;
+      width:60%;
    }
 }
 
@@ -34,8 +34,8 @@
    }
 
    #container-image-a {
-      width:60%;
       background-image: url("../assets/img/keyborders/12.jpg");
+      width:60%;
    }
 }
 
@@ -45,23 +45,23 @@
    }
 
    #container-image-b {
-      width:60%;
       background-image: url("../assets/img/keyborders/11.jpg");
+      width:60%;
 
    }
 }
 
 #image-grid { 
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   grid-template-rows: repeat(4, 1fr);
    grid-column-gap: 20px;
    grid-row-gap: 20px; 
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(4, 1fr);
 
    .grid-image {
       height:400px;
-      width:100%;
       object-fit: cover;
+      width:100%;
    }
    #grid-image-one {
 
@@ -98,35 +98,27 @@
          object-fit: cover;
          width:100%;
       }
-      #grid-image-one {
-
-      }
-      #grid-image-two {
-      }
-      #grid-image-three {
-      }
    }
    #container-image-b {
       margin-right:0px;
    }
    
    .container {
-      width:100%;
-      height:400px;
       display:flex;
       flex-direction: row;
+      height:400px;
       margin-bottom:60px;
       margin-top:60px;
       overflow: hidden;
-      // justify-content:flex-start;
+      width:100%;
 
       #text-container {
          display: block;
          margin-top: 0px;
          max-height:100%;
          overflow: hidden;
-         width:100%;
          padding:10px;
+         width:100%;
       }
       .container-image {
          height:100%;
@@ -134,27 +126,27 @@
       }
    }
    #container-b {
-      width:100%;
-      height:500px;
       display:flex;
       flex-direction: column;
+      height:500px;
+      justify-content: center;
       margin-bottom:60px;
       margin-top:-20px;
       overflow: hidden;
-      justify-content: center;
+      width:100%;
       #container-image-b {
          height:100%;
          width:100%;
       }
       #text-container {
+         box-sizing: border-box;
          display: block;
+         margin-bottom: 30px;
          margin:0 auto;
          max-height:100%;
          overflow: hidden;
-         width:100%;
          padding:10px;
-         box-sizing: border-box;
-         margin-bottom: 30px;
+         width:100%;
       }
 
    }

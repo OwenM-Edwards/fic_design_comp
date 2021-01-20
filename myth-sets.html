@@ -1,122 +1,135 @@
 <!DOCTYPE html>
 
 <html>
-   <head>
-      <link rel="icon" href="./favicon.png" type="image/icon type">
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title></title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="./css/myth-sets.css">
-      <!-- Google Font -->
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300&display=swap" rel="stylesheet"> 
-      <script src="https://unpkg.com/scrollreveal"></script>
-   </head>
+<head>
+   <link rel="icon" href="./favicon.png" type="image/icon type">
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title></title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="./css/myth-sets.css">
+   <!-- Google Font -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 
-   <body>
-      <!-- Header -->
-      <header class="sub-page-header">
-         <div id="sub-page-header-wrapper" >
-            <!-- Desktop nav -->
-            <nav id="header-nav">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300&display=swap" rel="stylesheet">
+   <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+   <!-- Header -->
+   <header class="sub-page-header">
+      <div id="sub-page-header-wrapper">
+         <!-- Desktop nav -->
+         <nav id="header-nav">
+            <div id="main-logo">
+               <a href="./index.html#anchorPoint">
+                  <h1>myth-des</h1>
+               </a>
+            </div>
+
+            <div id="links">
+               <a href="./about.html">About</a>
+               <p>||</p>
+               <a href="./contact.html">Contact</a>
+               <!-- Night mode toggle -->
+               <div class="night-mode-toggle-wrapper">
+                  <label class="night-mode-toggle" for="checkbox">
+                     <input type="checkbox" id="checkbox" />
+                     <div class="slider round"></div>
+                  </label>
+                  <em>Dark Mode</em>
+               </div>
+
+            </div>
+            <!-- mobile links & menu -->
+            <div id="links-mobile-input">
+               <input id="mobile-input-checkbox" type="checkbox" />
+               <span class="closed-span"></span>
+               <span class="closed-span"></span>
+               <span class="closed-span"></span>
+               <span class="open-span"></span>
+               <span class="open-span"></span>
+            </div>
+            <div id="links-mobile">
                <div id="main-logo">
-                  <a href="./index.html#anchorPoint"><h1>myth-des</h1></a>
+                  <a href="./index.html">
+                     <h1>myth-des</h1>
+                  </a>
                </div>
-
-               <div id="links">
+               <!-- Night mode toggle -->
+               <div class="night-mode-toggle-wrapper">
+                  <label class="night-mode-toggle" for="checkbox">
+                     <input type="checkbox" id="checkbox" />
+                     <div class="slider round"></div>
+                  </label>
+                  <em>Dark Mode</em>
+               </div>
+               <div id="mobile-links-container">
                   <a href="./about.html">About</a>
-                  <p>||</p>
                   <a href="./contact.html">Contact</a>
-                  <!-- Night mode toggle -->
-                  <div class="night-mode-toggle-wrapper">
-                     <label class="night-mode-toggle" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                     </label>
-                     <em>Dark Mode</em>
-                  </div> 
-                  
+                  <a href="./august-tea.html">August Tea</a>
+                  <a href="./myth-sets.html">myth-sets</a>
+                  <a href="./Beeston-StreetArt.html">Beeston Street Art</a>
+                  <a href="./nott-contemporary.html">Notts Contemporary</a>
+                  <a href="./keyborders.html">keyborders</a>
+                  <a href="./vegan-art-products.html">Vegan Art Products</a>
                </div>
-               <!-- mobile links & menu -->
-               <div id="links-mobile-input">
-                  <input id="mobile-input-checkbox" type="checkbox" />
-                  <span class="closed-span"></span>
-                  <span class="closed-span"></span>
-                  <span class="closed-span"></span>
-                  <span class="open-span"></span>
-                  <span class="open-span"></span>
-               </div>
-               <div id="links-mobile">
-                  <div id="main-logo">
-                     <a href="./index.html"><h1>myth-des</h1></a>
-                  </div>
-                  <!-- Night mode toggle -->
-                  <div class="night-mode-toggle-wrapper">
-                     <label class="night-mode-toggle" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                     </label>
-                     <em>Dark Mode</em>
-                  </div>
-                  <div id="mobile-links-container">
-                     <a href="./about.html">About</a>
-                     <a href="./contact.html">Contact</a>
-                     <a href="./august-tea.html">August Tea</a>
-                     <a href="./myth-sets.html">myth-sets</a>
-                     <a href="./Beeston-StreetArt.html">Beeston Street Art</a>
-                     <a href="./nott-contemporary.html">Notts Contemporary</a>
-                     <a href="./keyborders.html">keyborders</a>
-                     <a href="./vegan-art-products.html">Vegan Art Products</a>
-                  </div>
-               </div>
-            </nav>
-         </div>
-      </header>
+            </div>
+         </nav>
+      </div>
+   </header>
 
-      <!-- Main -->
-      <main class="sub-page-main">
-         <h2  class="fade-in-header-once" >myth-sets</h2>
+   <!-- Main -->
+   <main class="sub-page-main">
+      <h2 class="fade-in-header-once">myth-sets</h2>
 
-         <img alt="Selection of headphone ear plates." id="main-image" src="assets/img/myth-sets/multiple-headphone-plates.jpg">
+      <img alt="Selection of headphone ear plates." id="main-image"
+         src="assets/img/myth-sets/multiple-headphone-plates.jpg">
 
-         <p id="top-text">Your day-to-day may change but your enjoyment of superior sound won’t. Powered by Sennheiser’s leading audio technology, the new CX 400BT True Wireless gives you total control over an exceptional sound experience.</p>
+      <p id="top-text">Your day-to-day may change but your enjoyment of superior sound won’t. Powered by Sennheiser’s
+         leading audio technology, the new CX 400BT True Wireless gives you total control over an exceptional sound
+         experience.</p>
 
-         <div id="second-image-container">
-            <img alt="Man wearing a set of myth-sets headphones." loading="lazy" id="second-image" src="assets/img/myth-sets/man-wearing-mythsets.jpg">
-            <p>Sennheiser headphones incorporate cutting edge technology to give you an excellent sound experience anytime, anywhere. Below we explain what each term means in connection with headphone technology and the concept behind it. </p>
-         </div>
+      <div id="second-image-container">
+         <img alt="Man wearing a set of myth-sets headphones." loading="lazy" id="second-image"
+            src="assets/img/myth-sets/man-wearing-mythsets.jpg">
+         <p>Sennheiser headphones incorporate cutting edge technology to give you an excellent sound experience anytime,
+            anywhere. Below we explain what each term means in connection with headphone technology and the concept
+            behind it. </p>
+      </div>
 
-         <h3 class="fade-in-header-once" >Planar Drivers</h3>
+      <h3 class="fade-in-header-once">Planar Drivers</h3>
 
-         <img alt="Black pair of myth-sets headphones." loading="lazy" id="third-image" src="assets/img/myth-sets/black-mythsets.jpg">
+      <img alt="Black pair of myth-sets headphones." loading="lazy" id="third-image"
+         src="assets/img/myth-sets/black-mythsets.jpg">
 
-         <h3 class="fade-in-header-once" >Comfort</h3>
+      <h3 class="fade-in-header-once">Comfort</h3>
 
-         <!-- Scroll back to top button -->
-         <div id="scroll-to-top-button-container">
-            <div class="scroll-to-top-buttonLight" onclick="scrollToTop()" id="scroll-to-top-button"></div>
-         </div>
-      </main>
+      <!-- Scroll back to top button -->
+      <div id="scroll-to-top-button-container">
+         <div class="scroll-to-top-buttonLight" onclick="scrollToTop()" id="scroll-to-top-button"></div>
+      </div>
+   </main>
 
-      <!-- Footer -->
-      <footer>
-         <ul>
-            <li><a>Facebook</a></li>
-            <li><a>Twitter</a></li>
-            <li><a>myth-des 2021</a></li>
-         </ul>
-      </footer>
+   <!-- Footer -->
+   <footer>
+      <ul>
+         <li><a>Facebook</a></li>
+         <li><a>Twitter</a></li>
+         <li><a>myth-des 2021</a></li>
+      </ul>
+   </footer>
 
-      <script src="js/template.js"></script>
-      <script>   
-         ScrollReveal().reveal('#main-image');
-         ScrollReveal().reveal('#second-image');
-         ScrollReveal().reveal('#third-image');
-      </script>
-   </body>
+   <script src="js/template.js"></script>
+   <script>
+      ScrollReveal().reveal('#main-image');
+      ScrollReveal().reveal('#second-image');
+      ScrollReveal().reveal('#third-image');
+   </script>
+</body>
+
 </html>

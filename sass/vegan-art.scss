@@ -2,29 +2,29 @@
 
 #main-image {
    height:600px;
-   width:100%;
    object-fit: cover;
+   width:100%;
 }
 
 #second-image {
    height:600px;
-   width:100%;
    object-fit: cover;
+   width:100%;
 }
 
 #third-image {
-   margin-top:50px;
    height:600px;
-   width:100%;
+   margin-top:50px;
    object-fit: cover;
+   width:100%;
 }
 
 #image-grid {
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   grid-template-rows: repeat(4, 1fr);
    grid-column-gap: 20px;
    grid-row-gap: 50px; 
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(4, 1fr);
    .grid-image {
       height:400px;
       width:100%;
@@ -50,7 +50,7 @@
 // Media Queries.
 @media only screen and (max-width:900px) {
    p {
-      text-align: center;
       font-size: 1.1rem;
+      text-align: center;
    }
 }
